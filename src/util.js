@@ -13,3 +13,7 @@ export async function extendContext(context) {
         footer: partials[1]
     };
 };
+
+export async function errorHandler(error) {
+    console.error(error);
+}

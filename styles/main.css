@@ -22,3 +22,17 @@
 .heroes-container {
     display: inline;
 }
+
+.navigation-link-blue {
+    color: blue;
+    text-decoration: none;
+}
+
+.navigation-link-blue:hover {
+    color: red;
+    transition: 0.5s ease;
+}
+
+.btn-primary {
+    align-items: center;
+}
