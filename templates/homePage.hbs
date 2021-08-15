@@ -1,3 +1,14 @@
 {{> header}}
-	<div>HOMEPAGE</div>
-{{>footer}}
+	<div class="home-container">
+		<div>
+			{{#each heroes}}
+			<div id="hero-containr">
+				<div>{{name}}</div>
+				<div>{{weapon}}</div>
+			</div>
+			{{else}}
+			<p>You don't have any heroes yet!</p>
+			{{/each}}
+		</div>
+	</div>
+{{> footer}}
