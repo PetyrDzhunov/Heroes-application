@@ -2,12 +2,19 @@
 	<div class="home-container">
 		<div>
 			{{#each heroes}}
-			<div id="hero-containr">
-				<div>{{name}}</div>
-				<div>{{weapon}}</div>
-			</div>
+			<div id="heroes-container">
+				<div><img class="hero-image" src="{{image}}" alt="{{name}}"></div>
+				<div>Name : {{name}}</div>
+				<div>Class : {{class}}</div>
+				<div>Health : {{health}}</div>
+				<div>Level : {{level}}</div>
+				<div>Mana : {{mana}}</div>
+				<div>Skills : {{#each skills}}</div>
+					<span>type: {{type}}</span>
+					<span>damage : {{damage}}</span>
+			{{/each}}
 			{{else}}
-			<p>You don't have any heroes yet!</p>
+			<span>You don't have any heroes yet!</span>
 			{{/each}}
 		</div>
 	</div>
