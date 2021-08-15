@@ -9,4 +9,3 @@ export default function init() {
     }
     firebase.initializeApp(firebaseConfig);
 };
-// Initialize Firebase
