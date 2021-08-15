@@ -1,4 +1,4 @@
-import { extendContext, userModel, errorHandler } from "../util.js";
+import { extendContext, userModel, errorHandler, saveUserData, getUserData, clearUserData } from "../util.js";
 
 
 export async function registerPage(context) {
@@ -7,7 +7,6 @@ export async function registerPage(context) {
 };
 
 export function registerPost(context) {
-    console.log(context);
     const { email, password, rePassword } = context.params;
     console.log(email, password, rePassword);
     if (password != rePassword) {
@@ -15,7 +14,6 @@ export function registerPost(context) {
     };
     userModel.createUserWithEmailAndPassword(email, password)
         .then((userData) => {
-            console.log(userData);
             this.redirect('/login')
         })
         .catch(errorHandler)
@@ -25,4 +23,14 @@ export function registerPost(context) {
 export async function loginPage(context) {
     await extendContext(context)
     this.partial('./templates/login.hbs');
+};
+
+export function loginPost(context) {
+    const { email, password } = context.params;
+    userModel.signInWithEmailAndPassword(email, password)
+        .then((userData) => {
+            saveUserData(userData);
+            this.redirect('/home')
+        })
+        .catch(errorHandler)
 };

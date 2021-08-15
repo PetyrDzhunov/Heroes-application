@@ -1,8 +1,12 @@
 <header>
 	<nav class="navbar navbar-dark bg-primary">
+		{{#if loggedIn}}
         	<a class="navigation-link" href="/home">Home</a>
+        	<a class="navigation-link" href="/create-hero">Create new Hero</a>
+			{{else}}
+        	<a class="navigation-link" href="/about">About</a>
        		<a class="navigation-link" href="/register">Register</a>
        		<a class="navigation-link" href="/login">Login</a>
-        	<a class="navigation-link" href="/about">About</a>
+		 {{/if}}
 	</nav>
 </header>
