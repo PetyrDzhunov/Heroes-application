@@ -1,10 +1,15 @@
-import { userModel, db } from "./util.js";
+import { userModel, db, getUserData } from "./util.js";
 import { homePage } from './controllers/home.js'
 import { Barbarian } from "./heroes.js";
-import { registerPage, registerPost, loginPage } from "./controllers/user.js";
+import { registerPage, registerPost, loginPage, loginPost } from "./controllers/user.js";
 
 const app = Sammy('#app', function() {
     this.use('Handlebars', 'hbs');
+    const user = getUserData();
+    this.userData = {
+        loggedIn: user ? true : false,
+        ...user
+    };
 
     this.get('/', homePage);
     this.get('/home', homePage);
@@ -13,10 +18,11 @@ const app = Sammy('#app', function() {
     this.get('/register', registerPage);
     this.post('/register', registerPost);
 
-    this.get('login', loginPage)
-
-
+    //Login
+    this.get('/login', loginPage)
+    this.post('/login', loginPost)
 
 });
+
 
 app.run('/home')

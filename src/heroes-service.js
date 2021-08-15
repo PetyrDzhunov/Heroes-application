@@ -32,7 +32,7 @@ async function get(url) {
     return request(url, 'GET')
 };
 
-async function post(url) {
+async function post(url, body) {
     return request(url, 'POST', body);
 };
 

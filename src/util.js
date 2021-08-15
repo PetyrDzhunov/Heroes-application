@@ -16,4 +16,18 @@ export async function extendContext(context) {
 
 export async function errorHandler(error) {
     console.error(error);
-}
+};
+
+export function saveUserData(data) {
+    const { user: { email, uid } } = data;
+    localStorage.setItem('user', JSON.stringify({ email, uid }))
+};
+
+export function getUserData() {
+    const user = localStorage.getItem('user');
+    return user ? JSON.parse(user) : null;
+};
+
+export function clearUserData() {
+    localStorage.removeItem('user');
+};
