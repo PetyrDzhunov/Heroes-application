@@ -1,0 +1,24 @@
+.navigation-link {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.navigation-link:active {
+    background-color: greenyellow;
+}
+
+.navigation-link:hover {
+    color: red;
+    transition: 0.5s ease;
+}
+
+.hero-image {
+    width: 300px;
+    border-radius: 8px;
+    height: 250px;
+}
+
+.heroes-container {
+    display: inline;
+}
