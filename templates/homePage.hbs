@@ -1,4 +1,40 @@
 {{> header}}
+
+<div class="heroes-container">
+		<div class="hero-container">
+		{{#each heroes}}
+			<div class="hero">
+		<img class="hero-image" src="{{image}}" alt="{{name}}">
+		<p>Name : {{name}}</p>
+				<p>Class : {{class}}</p>
+				<p>Health : {{health}}</p>
+				<p>Level : {{level}}</p>
+				{{#if mana}}
+				<p>Mana :{{mana}} </p>
+				{{/if}}
+			</div>
+			{{else}}
+			<p>You don't have any heroes yet!</p>
+			{{/each}}
+	</div>
+</div>
+{{> footer}}
+{{!-- 
+<div class="heroes-container">
+	<div class="hero-container">
+		{{#each heroes}}
+		<img class="hero-image" src="{{image}}" alt="{{name}}">
+		<div>Name : {{name}}</div>
+				<p>Class : {{class}}</p>
+				<p>Health : {{health}}</p>
+				<p>Level : {{level}}</p>
+				{{#if mana}}
+				<p>Mana :{{mana}} </p>
+				{{/if}}
+	</div>
+</div> --
+
+{{!-- 
 <div class="home-container">
 			{{#each heroes}}
 	<div class="heroes-container">
@@ -11,14 +47,12 @@
 				{{#if mana}}
 				<div>Mana :{{mana}} </div>
 				{{/if}}
-				<div class="skills-container">Skills : {{#each skills}}
+				 {{#each skills}}
 				<p class="skill-span">type: {{type}},damage : {{damage}}</p>
-				</div>
 			{{/each}}
 			{{else}}
 			<span>You don't have any heroes yet!</span>
-			{{/each}}
 		</div>
+			{{/each}}
 	</div>
-</div>
-{{> footer}}
+</div> --}}

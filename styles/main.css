@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Red-Hat Text', sans-serif;
+}
+
+:root {
+    --main-blue: #234465;
+    --main-orange: #FFA000;
+}
+
 .navigation-link {
     color: white;
     font-size: 20px;
@@ -48,4 +59,22 @@
     padding: 0 auto;
 }
 
-.heroes-container {}
+.hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+}
+
+.hero {
+    vertical-align: top;
+    padding: 1%;
+    margin: 0.5%;
+    border: solid black 1px;
+    border-radius: 6px;
+}
+
+.hero:hover {
+    border: 2px solid var(--main-blue);
+}
