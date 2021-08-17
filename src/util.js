@@ -1,7 +1,8 @@
 import init from './db-init.js';
 init();
 export const userModel = firebase.auth();
-export const db = firebase.database();
+export const db = firebase.firestore()
+
 
 export async function extendContext(context) {
     const partials = await Promise.all([
@@ -20,7 +21,7 @@ export async function errorHandler(error) {
 
 export function saveUserData(data) {
     const { user: { email, uid } } = data;
-    localStorage.setItem('user', JSON.stringify({ email, uid }))
+    localStorage.setItem('user', JSON.stringify({ email, uid, heroes: [] }))
 };
 
 export function getUserData() {
@@ -31,3 +32,12 @@ export function getUserData() {
 export function clearUserData() {
     localStorage.removeItem('user');
 };
+
+export function classToObject(theClass) {
+    const originalClass = theClass || {}
+    const keys = Object.getOwnPropertyNames(Object.getPrototypeOf(originalClass))
+    return keys.reduce((classAsObj, key) => {
+        classAsObj[key] = originalClass[key]
+        return classAsObj
+    }, {})
+}

@@ -5,13 +5,24 @@
 		{{#each heroes}}
 			<div class="hero">
 		<img class="hero-image" src="{{image}}" alt="{{name}}">
-		<p>Name : {{name}}</p>
-				<p>Class : {{class}}</p>
-				<p>Health : {{health}}</p>
-				<p>Level : {{level}}</p>
+		<div>Name : {{name}}</div>
+				<div>Class : {{class}}</div>
+				<div>Health : {{health}}</div>
+				<div>Level : {{level}}</div>
 				{{#if mana}}
-				<p>Mana :{{mana}} </p>
+				<div>Mana :{{mana}} </div>
 				{{/if}}
+				<label for="skills">Skills:</label>
+				{{#each skills}}
+				<div>{{type}}, damage: {{damage}},
+					{{#if rage}}
+					rage: {{rage}}
+					{{else}}
+					MP cost:{{manaRequired}}
+					{{/if}}
+				</div>
+				{{/each}}
+				<button id="enter-world"><a href="enter-world"></a>Enter World</button>
 			</div>
 			{{else}}
 			<p>You don't have any heroes yet!</p>

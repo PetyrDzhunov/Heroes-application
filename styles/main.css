@@ -78,3 +78,33 @@
 .hero:hover {
     border: 2px solid var(--main-blue);
 }
+
+.navbar {
+    justify-items: baseline;
+}
+
+#enter-world {
+    background-color: #4CAF50;
+    /* Green */
+    border: solid 1px black;
+    border-radius: 6px;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#enter-world:hover {
+    background-color: yellow;
+    color: red;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.create-hero-div {
+    display: flex;
+    justify-content: center;
+    background-color: wheat;
+}

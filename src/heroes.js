@@ -32,9 +32,9 @@ export class Barbarian {
         ]);
         this.class = 'barbarian';
         this.skills = [
-            { type: 'deep-wound', damage: randomDamage, requiredRage: randomRageRequirment },
-            { type: 'War Cry', damage: randomDamage, requiredRage: randomRageRequirment },
-            { type: 'Bash', damage: randomDamage, requiredRage: randomRageRequirment }
+            { type: 'Deep-wound', damage: randomDamage, rage: randomRageRequirment },
+            { type: 'War Cry', damage: randomDamage, rage: randomRageRequirment },
+            { type: 'Bash', damage: randomDamage, rage: randomRageRequirment }
         ];
         this.strenght = 17;
         this.aggility = 14;
@@ -76,4 +76,35 @@ export class Mage {
         this.health = this.stamina * 10;
         this.mana = this.intelligence * 10;
     }
-}
+};
+
+export class Hunter {
+    constructor(name) {
+        this.name = name;
+        this.level = 1;
+        this.armor = ['cloth', 'leather']
+        this.weapons = ['bow', 'crossbow', 'gun'];
+        this.image = getRandomImage([
+            'https://i.pinimg.com/originals/40/b7/7b/40b77b3e2e6ec811bc06087a2bf7b44e.jpg',
+            'https://cdna.artstation.com/p/assets/images/images/025/714/908/large/minwook-kim-20-4-artwork.jpg?1586708610',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrySs0UkvtPgfeLrNJvrQRkpPmlLilfFuKGpKX0IsrTtur_2JWPpGP1mWB6ZSzvVPRgjI&usqp=CAU',
+            'https://i.pinimg.com/originals/ee/6c/9e/ee6c9e8eca8340146a476fed8c98a200.png',
+            'https://img4.goodfon.com/wallpaper/nbig/1/a2/sylvanas-windrunner-world-of-warcraft-wow-warcraft-elf-kapiu.jpg',
+            'https://external-preview.redd.it/bQjgCQSxtIGrVqQxst_Ot_esOFEZp4wQ4LIOo3e5XqI.jpg?auto=webp&s=c4981aad2501ce2af188b347095dd2cf65e07834',
+            'https://static.wikia.nocookie.net/wowpedia/images/0/07/Night_elf_archer.jpg/revision/latest/scale-to-width-down/1634?cb=20181014140111',
+            'https://i.imgur.com/LJXaoJn.jpg'
+        ])
+        this.skills = [
+            { type: 'frost-arrow', damage: randomDamage, manaRequired: randomManaRequirment },
+            { type: 'arcane-shot', damage: randomDamage, manaRequired: randomManaRequirment },
+            { type: 'multishot', damage: randomDamage, manaRequired: randomManaRequirment }
+        ]
+        this.class = 'hunter';
+        this.strenght = 11;
+        this.aggility = 17;
+        this.stamina = 11;
+        this.intelligence = 11;
+        this.health = this.stamina * 10;
+        this.mana = this.intelligence * 10;
+    }
+};
