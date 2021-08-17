@@ -21,6 +21,8 @@
 
 .heroes-container {
     display: inline;
+    color: red;
+    border: solid black 1px;
 }
 
 .navigation-link-blue {
@@ -36,3 +38,14 @@
 .btn-primary {
     align-items: center;
 }
+
+.skills-container {}
+
+.skill-span:hover {
+    color: black;
+    transition: 0.5s ease;
+    cursor: pointer;
+    padding: 0 auto;
+}
+
+.heroes-container {}

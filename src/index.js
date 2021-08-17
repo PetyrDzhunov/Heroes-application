@@ -1,6 +1,5 @@
 import { userModel, db, getUserData } from "./util.js";
 import { homePage } from './controllers/home.js'
-import { Barbarian } from "./heroes.js";
 import { registerPage, registerPost, loginPage, loginPost } from "./controllers/user.js";
 
 const app = Sammy('#app', function() {

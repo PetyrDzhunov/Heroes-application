@@ -2,14 +2,11 @@ const randomDamage = () => Math.floor(Math.random() * 20 + 1);
 const randomRageRequirment = () => Math.floor(Math.random() * 15 + 1);
 const randomManaRequirment = () => Math.floor(Math.random() * 30 + 1);
 
-function getRandomImage(array) {
-    return array[Math.floor(Math.random() * array.length)]
-}
+const getRandomImage = (array) => array[Math.floor(Math.random() * array.length)];
 
 export class Barbarian {
     constructor(name) {
         this.name = name;
-        this.health = this.stamina * 10;
         this.rage = 0;
         this.weapons = ['one-handed axe', 'two-handed axe', 'spear', 'polearm', 'one-handed mace', 'two-handed mace', 'one-handed sword', 'two-handed sword'];
         this.shield = [
@@ -43,6 +40,7 @@ export class Barbarian {
         this.aggility = 14;
         this.stamina = 14;
         this.intelligence = 7;
+        this.health = this.stamina * 10;
     };
     generateRage(rage) {
         this.rage += rage
@@ -52,13 +50,10 @@ export class Barbarian {
 export class Mage {
     constructor(name) {
         this.name = name;
-        this.health = this.stamina * 10;
-        this.mana = this.intelligence * 10;
         this.level = 1;
         this.armor = ['cloth']
         this.weapons = ['staff', 'one-handed-dagger', 'off-hand', 'one-handed-sword'];
         this.image = getRandomImage([
-            'https://static.wikia.nocookie.net/fenar/images/3/37/Pryomancer.jpg/revision/latest?cb=20201004194216',
             'https://cogeeking.files.wordpress.com/2017/02/170223mage.jpg?w=636',
             'https://assets.tentonhammer.com/guides/attached_images/000/011/818/medium/1200FrostMage.jpg?1584978399',
             'https://cdnb.artstation.com/p/assets/images/images/016/410/833/large/fabian-klejewski-mage-portfolio-jpg-small.jpg?1552056931',
@@ -73,9 +68,12 @@ export class Mage {
             { type: 'fireball', damage: randomDamage, manaRequired: randomManaRequirment },
             { type: 'arcane shock', damage: randomDamage, manaRequired: randomManaRequirment }
         ]
+        this.class = 'mage';
         this.strenght = 9;
         this.aggility = 11;
         this.stamina = 8;
         this.intelligence = 17;
+        this.health = this.stamina * 10;
+        this.mana = this.intelligence * 10;
     }
 }

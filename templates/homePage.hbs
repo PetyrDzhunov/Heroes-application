@@ -1,21 +1,24 @@
 {{> header}}
-	<div class="home-container">
-		<div>
+<div class="home-container">
 			{{#each heroes}}
-			<div id="heroes-container">
+	<div class="heroes-container">
+		<div class="hero-container">
 				<div><img class="hero-image" src="{{image}}" alt="{{name}}"></div>
 				<div>Name : {{name}}</div>
 				<div>Class : {{class}}</div>
 				<div>Health : {{health}}</div>
 				<div>Level : {{level}}</div>
-				<div>Mana : {{mana}}</div>
-				<div>Skills : {{#each skills}}</div>
-					<span>type: {{type}}</span>
-					<span>damage : {{damage}}</span>
+				{{#if mana}}
+				<div>Mana :{{mana}} </div>
+				{{/if}}
+				<div class="skills-container">Skills : {{#each skills}}
+				<p class="skill-span">type: {{type}},damage : {{damage}}</p>
+				</div>
 			{{/each}}
 			{{else}}
 			<span>You don't have any heroes yet!</span>
 			{{/each}}
 		</div>
 	</div>
+</div>
 {{> footer}}
