@@ -1,6 +1,12 @@
 const apiKey = 'AIzaSyBgcLHM3nJuJwteuW6NPOs2P0gJ7avANEE';
-const dataBaseUrl = 'https://heroes-application-default-rtdb.europe-west1.firebasedatabase.app/';
+// const dataBaseUrl = 'https://console.firebase.google.com/project/heroes-application/database/data/';
+// {
+//     email : '' , 
+//     uid : '' , 
+//     heroes : [
 
+//     ]
+// }
 const endpoints = {
     LOGIN: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=`,
     REGISTER: `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=`,

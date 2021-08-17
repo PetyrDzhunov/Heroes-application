@@ -1,14 +1,15 @@
-import { extendContext, getUserData } from "../util.js";
+import { db, extendContext, getUserData } from "../util.js";
 import { getAllHeroes } from "../heroes-service.js";
-import { Barbarian, Mage } from "../heroes.js";
+import { Barbarian, Mage, Hunter } from "../heroes.js";
 
 
 export async function homePage(context) {
-    let pesho = new Barbarian("Pesho");
-    let gosho = new Barbarian("Gosho");
-    let stelko = new Mage("Stelko")
-    let heroes = [pesho, gosho, stelko];
-    const data = Object.assign({ heroes }, this.app.userData)
+    let user = getUserData();
+    let response = await db.collection('heroes').get();
+    context.heroes = response.docs.map((hero) => { return {...hero.data() } });
+    let heroes = context.heroes;
+    console.log(context);
+    const data = Object.assign(this.app.userData, { heroes })
     await extendContext(context);
     this.partial('./templates/homePage.hbs', data)
 };
