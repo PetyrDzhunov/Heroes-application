@@ -37,12 +37,10 @@ export async function loginPost(context) {
 };
 
 
-export function logout(context) {
+export async function logout(context) {
     console.log(context);
     console.log('in logout func');
-    userModel.signOut()
-        .then((response) => {
-            clearUserData();
-            this.redirect('/home');
-        })
+    let response = await userModel.signOut()
+    clearUserData();
+    this.redirect('/home');
 };
