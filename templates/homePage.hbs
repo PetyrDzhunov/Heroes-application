@@ -21,7 +21,7 @@
 					{{/if}}
 				</div>
 				{{/each}}
-				<button id="enter-world"><a href="enter-world"></a>Enter World</button>
+				<button id="enter-world"><a href="/enter-world"></a>Enter World</button>
 			</div>
 			{{else}}
 			<p>You don't have any heroes yet!</p>
@@ -29,40 +29,3 @@
 	</div>
 </div>
 {{> footer}}
-{{!-- 
-<div class="heroes-container">
-	<div class="hero-container">
-		{{#each heroes}}
-		<img class="hero-image" src="{{image}}" alt="{{name}}">
-		<div>Name : {{name}}</div>
-				<p>Class : {{class}}</p>
-				<p>Health : {{health}}</p>
-				<p>Level : {{level}}</p>
-				{{#if mana}}
-				<p>Mana :{{mana}} </p>
-				{{/if}}
-	</div>
-</div> --
-
-{{!-- 
-<div class="home-container">
-			{{#each heroes}}
-	<div class="heroes-container">
-		<div class="hero-container">
-				<div><img class="hero-image" src="{{image}}" alt="{{name}}"></div>
-				<div>Name : {{name}}</div>
-				<div>Class : {{class}}</div>
-				<div>Health : {{health}}</div>
-				<div>Level : {{level}}</div>
-				{{#if mana}}
-				<div>Mana :{{mana}} </div>
-				{{/if}}
-				 {{#each skills}}
-				<p class="skill-span">type: {{type}},damage : {{damage}}</p>
-			{{/each}}
-			{{else}}
-			<span>You don't have any heroes yet!</span>
-		</div>
-			{{/each}}
-	</div>
-</div> --}}

@@ -13,9 +13,6 @@ const endpoints = {
     HEROES: `heroes`
 };
 
-export async function getAllHeroes() {
-    return get(dataBaseUrl + endpoints['HEROES'])
-};
 
 async function request(url, method, body) {
     let options = {

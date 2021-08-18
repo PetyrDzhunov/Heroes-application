@@ -1,4 +1,3 @@
-import { userModel, db, getUserData } from "./util.js";
 import { homePage } from './controllers/home.js'
 import { registerPage, registerPost, loginPage, loginPost, logout } from "./controllers/user.js";
 import { createNewHero, createNewHeroPost } from "./controllers/catalog.js";
