@@ -6,7 +6,7 @@ export async function registerPage(context) {
     this.partial('./templates/register.hbs');
 };
 
-export function registerPost(context) {
+export async function registerPost(context) {
     const { email, password, rePassword } = context.params;
     console.log(email, password, rePassword);
     if (password != rePassword) {
@@ -14,7 +14,7 @@ export function registerPost(context) {
     };
     userModel.createUserWithEmailAndPassword(email, password)
         .then((userData) => {
-            this.redirect('/login')
+            context.redirect('/login')
         })
         .catch(errorHandler)
 };
@@ -25,12 +25,24 @@ export async function loginPage(context) {
     this.partial('./templates/login.hbs');
 };
 
-export function loginPost(context) {
-    const { email, password } = context.params;
-    userModel.signInWithEmailAndPassword(email, password)
-        .then((userData) => {
-            saveUserData(userData);
-            this.redirect('/home')
+export async function loginPost(context) {
+    try {
+        const { email, password } = context.params;
+        let result = await userModel.signInWithEmailAndPassword(email, password)
+        saveUserData(result);
+        context.redirect('/home')
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+
+export function logout(context) {
+    console.log(context);
+    console.log('in logout func');
+    userModel.signOut()
+        .then((response) => {
+            clearUserData();
+            this.redirect('/home');
         })
-        .catch(errorHandler)
 };

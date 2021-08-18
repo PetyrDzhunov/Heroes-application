@@ -1,30 +1,27 @@
 import { userModel, db, getUserData } from "./util.js";
 import { homePage } from './controllers/home.js'
-import { registerPage, registerPost, loginPage, loginPost } from "./controllers/user.js";
+import { registerPage, registerPost, loginPage, loginPost, logout } from "./controllers/user.js";
 import { createNewHero, createNewHeroPost } from "./controllers/catalog.js";
 const app = Sammy('#app', function() {
     this.use('Handlebars', 'hbs');
-    const user = getUserData();
-    this.userData = {
-        loggedIn: user ? true : false,
-        ...user,
-    };
-    console.log(db);
-
     this.get('/', homePage);
     this.get('/home', homePage);
     //Register
 
     this.get('/register', registerPage);
-    this.post('/register', registerPost);
+    this.post('/register', (ctx) => { registerPost(ctx); });
 
     //Login
-    this.get('/login', loginPage)
-    this.post('/login', loginPost)
+    this.get('/login', loginPage);
+    this.post('/login', (ctx) => { loginPost(ctx); });
 
     //create-hero
     this.get('/create-hero', createNewHero);
-    this.post('/create-hero', createNewHeroPost)
+    this.post('/create-hero', createNewHeroPost);
+
+    //logout
+    this.get('/logout', logout)
+
 });
 
 

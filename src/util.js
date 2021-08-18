@@ -5,6 +5,9 @@ export const db = firebase.firestore()
 
 
 export async function extendContext(context) {
+    const user = getUserData();
+    context.loggedIn = Boolean(user);
+    context.email = user ? user.email : '';
     const partials = await Promise.all([
         context.load('./templates/partials/header.hbs'),
         context.load('./templates/partials/footer.hbs')
@@ -40,4 +43,11 @@ export function classToObject(theClass) {
         classAsObj[key] = originalClass[key]
         return classAsObj
     }, {})
+}
+
+export async function getAllMyHeroes(creator) {
+    let response = await db.collection('heroes').get();
+    let heroes = await response.docs.map((hero) => { return {...hero.data() } });
+    let myHeroes = heroes.filter((hero) => hero.creator === creator);
+    return myHeroes
 }

@@ -3,9 +3,8 @@ import { Barbarian, Hunter, Mage } from "../heroes.js"
 
 
 export async function createNewHero(context) {
-    const data = Object.assign(this.app.userData);
     await extendContext(context)
-    this.partial('./templates/create-hero.hbs', data);
+    this.partial('./templates/create-hero.hbs');
 }
 
 export function createNewHeroPost(context) {

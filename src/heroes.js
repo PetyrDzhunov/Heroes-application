@@ -45,9 +45,21 @@ export class Barbarian {
     generateRage(rage) {
         this.rage += rage
     }
+    toJSON() {
+        var jsonedObject = {};
+        for (var x in this) {
+
+            if (x === "toJSON" || x === "constructor") {
+                continue;
+            }
+            jsonedObject[x] = this[x];
+        }
+        return jsonedObject;
+    }
 };
 
 export class Mage {
+    s
     constructor(name) {
         this.name = name;
         this.level = 1;
@@ -76,6 +88,18 @@ export class Mage {
         this.health = this.stamina * 10;
         this.mana = this.intelligence * 10;
     }
+
+    toJSON() {
+        var jsonedObject = {};
+        for (var x in this) {
+
+            if (x === "toJSON" || x === "constructor") {
+                continue;
+            }
+            jsonedObject[x] = this[x];
+        }
+        return jsonedObject;
+    }
 };
 
 export class Hunter {
@@ -91,7 +115,7 @@ export class Hunter {
             'https://i.pinimg.com/originals/ee/6c/9e/ee6c9e8eca8340146a476fed8c98a200.png',
             'https://img4.goodfon.com/wallpaper/nbig/1/a2/sylvanas-windrunner-world-of-warcraft-wow-warcraft-elf-kapiu.jpg',
             'https://external-preview.redd.it/bQjgCQSxtIGrVqQxst_Ot_esOFEZp4wQ4LIOo3e5XqI.jpg?auto=webp&s=c4981aad2501ce2af188b347095dd2cf65e07834',
-            'https://static.wikia.nocookie.net/wowpedia/images/0/07/Night_elf_archer.jpg/revision/latest/scale-to-width-down/1634?cb=20181014140111',
+            'https://static.wikia.nocookie.net/wowpedia/images/0/07/Night_elf_archer.jpg/revision/latest/scale-to-width-down/1634?cb=20181014140111.jpg',
             'https://i.imgur.com/LJXaoJn.jpg'
         ])
         this.skills = [
@@ -106,5 +130,16 @@ export class Hunter {
         this.intelligence = 11;
         this.health = this.stamina * 10;
         this.mana = this.intelligence * 10;
+    }
+
+    toJSON() {
+        var jsonedObject = {};
+        for (var x in this) {
+            if (x === "toJSON" || x === "constructor") {
+                continue;
+            }
+            jsonedObject[x] = this[x];
+        }
+        return jsonedObject;
     }
 };
