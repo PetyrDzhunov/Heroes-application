@@ -1,4 +1,5 @@
 import init from './db-init.js';
+import { Barbarian, Mage, Hunter } from './heroes.js';
 init();
 export const userModel = firebase.auth();
 export const db = firebase.firestore()
@@ -50,4 +51,16 @@ export async function getAllMyHeroes(creator) {
     let heroes = await response.docs.map((hero) => { return {...hero.data() } });
     let myHeroes = heroes.filter((hero) => hero.creator === creator);
     return myHeroes
+}
+
+export function checkHero(name, hero) {
+    if (hero === 'barbarian') {
+        return new Barbarian(name);
+    };
+    if (hero === 'mage') {
+        return new Mage(name)
+    };
+    if (hero === 'hunter') {
+        return new Hunter(name)
+    };
 }
