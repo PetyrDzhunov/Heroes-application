@@ -77,14 +77,11 @@ export function validateHero(name, hero, heroes) {
     console.log(name, hero, heroes);
     let currentHero = heroes.find((hero) => hero.name === name);
     let heroClass = heroes.find((currHero) => currHero.class === hero);
-    console.log(heroClass);
-    console.log(currentHero);
     if (currentHero) {
         showErrorNotificationWithTextContent('You already have a character with this name!')
         hideNotification(errorNotification)
         return false;
     };
-
     if (heroClass) {
         showErrorNotificationWithTextContent('You can have only 1 hero per class!')
         hideNotification(errorNotification)
@@ -95,8 +92,8 @@ export function validateHero(name, hero, heroes) {
         hideNotification(errorNotification)
         return false;
     };
-
-    showSuccessNotificationWithTextContent()
+    showSuccessNotificationWithTextContent('Sucessfully created a new hero!')
+    hideNotification(successNotification);
 }
 
 export function getNotifications() {

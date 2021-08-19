@@ -13,6 +13,10 @@ body {
     --main-orange: #FFA000;
 }
 
+a {
+    cursor: pointer;
+}
+
 .navigation-link {
     color: white;
     font-size: 20px;
@@ -109,7 +113,7 @@ body {
 .create-hero-div {
     display: flex;
     justify-content: center;
-    background-color: wheat;
+    background-color: white;
 }
 
 footer {
