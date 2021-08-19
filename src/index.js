@@ -16,7 +16,7 @@ const app = Sammy('#app', function() {
 
     //create-hero
     this.get('/create-hero', createNewHero);
-    this.post('/create-hero', createNewHeroPost);
+    this.post('/create-hero', (ctx) => { createNewHeroPost(ctx); });
 
     //logout
     this.get('/logout', logout)
