@@ -120,3 +120,13 @@ footer {
     /* Height of the footer */
     background: #6cf;
 }
+
+#error-notification,
+#success-notification {
+    display: none;
+    width: 100%;
+    color: red;
+    background-color: yellow;
+    display: flex;
+    text-align: center;
+}

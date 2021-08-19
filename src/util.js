@@ -64,3 +64,44 @@ export function checkHero(name, hero) {
         return new Hunter(name)
     };
 }
+
+export function validateHero(name, hero, heroes) {
+    let { errorNotification, successNotification } = getNotifications();
+    console.log(name, hero, heroes);
+    let currentHero = heroes.find((hero) => hero.name === name);
+    let heroClass = heroes.find((currHero) => currHero.class === hero);
+    console.log(heroClass);
+    console.log(currentHero);
+    if (currentHero) {
+        errorNotification.style.display = 'block';
+        errorNotification.textContent = 'Already have hero with this name!'
+        showNotification(errorNotification)
+        return false;
+    };
+
+    if (heroClass) {
+        errorNotification.style.display = 'block';
+        errorNotification.textContent = 'You can have only 1 hero per class!'
+        showNotification(errorNotification)
+        return false;
+    };
+    if (heroes.length >= 5) {
+        errorNotification.style.display = 'block';
+        errorNotification.textContent = 'You can have maximum 5 heroes per account!'
+        showNotification(errorNotification)
+        return false;
+    };
+}
+
+export function getNotifications() {
+    return {
+        errorNotification: document.getElementById('error-notification'),
+        successNotification: document.getElementById('success-notification')
+    };
+};
+
+function showNotification(notification) {
+    setTimeout(() => {
+        notification.style.display = 'none';
+    }, 5000);
+}

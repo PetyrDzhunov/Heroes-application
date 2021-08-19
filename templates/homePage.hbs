@@ -1,6 +1,7 @@
 {{> header}}
 <div class="heroes-container">
 		<div class="hero-container">
+		{{#if loggedIn}}
 		{{#each heroes}}
 			<div class="hero">
 		<img class="hero-image" src="{{image}}" alt="{{name}}">
@@ -26,6 +27,9 @@
 			{{else}}
 			<p>You don't have any heroes yet!</p>
 			{{/each}}
+			{{else}}
+			<p>You need to be logged to see your heroes!</p>
+			{{/if}}
 	</div>
 </div>
 {{> footer}}

@@ -12,12 +12,10 @@ export async function homePage(context) {
         let heroes = await getAllMyHeroes(user.email)
         user.heroes = heroes;
         const data = Object.assign(this.userData, { heroes })
-        console.log(data)
         await extendContext(context);
         this.partial('./templates/homePage.hbs', data)
     } else {
         await extendContext(context);
-
         this.partial('./templates/homePage.hbs')
     }
 };
