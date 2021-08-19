@@ -156,3 +156,22 @@ label {
     color: red;
     text-decoration: none;
 }
+
+.guest-link {
+    text-decoration: none;
+    color: white;
+    display: block;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+}
+
+.guest-link:hover {
+    color: orange;
+    transition: 0.8s ease;
+}
+
+.guest-paragraph {
+    color: red;
+    font-size: xx-large
+}

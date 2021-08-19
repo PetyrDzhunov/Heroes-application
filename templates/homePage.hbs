@@ -28,7 +28,11 @@
 			<p>You don't have any heroes yet!</p>
 			{{/each}}
 			{{else}}
-			<p>You need to be logged to see your heroes!</p>
+			<div class='guest-home'>
+				<p class="guest-paragraph">Hello there , would you like to try out my new game :) ?</p>
+			 	<a class='guest-link' href="/register">You can register here!</a>
+				<a class='guest-link' href="/login">Already have an account?</a>
+			</div>
 			{{/if}}
 	</div>
 </div>
