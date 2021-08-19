@@ -12,9 +12,10 @@
 				{{#if mana}}
 				<div>Mana :{{mana}} </div>
 				{{/if}}
-				<label for="skills">Skills:</label>
+				<div class="skills-label">Skills:</div>
 				{{#each skills}}
-				<div>{{type}}, damage: {{damage}},
+				<div class='div-skills'>
+				{{type}}, damage: {{damage}},
 					{{#if rage}}
 					rage: {{rage}}
 					{{else}}
