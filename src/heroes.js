@@ -1,6 +1,6 @@
-const randomDamage = () => Math.floor(Math.random() * 20 + 1);
-const randomRageRequirment = () => Math.floor(Math.random() * 15 + 1);
-const randomManaRequirment = () => Math.floor(Math.random() * 30 + 1);
+// const randomDamage = () => Math.floor(Math.random() * 20 + 1);
+// const randomRageRequirment = () => Math.floor(Math.random() * 15 + 1);
+// const randomManaRequirment = () => Math.floor(Math.random() * 30 + 1);
 
 const getRandomImage = (array) => array[Math.floor(Math.random() * array.length)];
 
@@ -32,9 +32,9 @@ export class Barbarian {
         ]);
         this.class = 'barbarian';
         this.skills = [
-            { type: 'Deep-wound', damage: randomDamage, rage: randomRageRequirment },
-            { type: 'War Cry', damage: randomDamage, rage: randomRageRequirment },
-            { type: 'Bash', damage: randomDamage, rage: randomRageRequirment }
+            { type: 'Deep-wound', damage: 8, rage: 7 },
+            { type: 'War Cry', damage: 6, rage: 10 },
+            { type: 'Bash', damage: 9, rage: 12 }
         ];
         this.strenght = 17;
         this.aggility = 14;
@@ -76,9 +76,9 @@ export class Mage {
             'http://4.bp.blogspot.com/-B_UCRz0R28g/VVKgsvKtTrI/AAAAAAAADvI/Qkqu-DRSDIE/s1600/FantasyFemale1-Black.jpg'
         ])
         this.skills = [
-            { type: 'frostbolt', damage: randomDamage, manaRequired: randomManaRequirment },
-            { type: 'fireball', damage: randomDamage, manaRequired: randomManaRequirment },
-            { type: 'arcane shock', damage: randomDamage, manaRequired: randomManaRequirment }
+            { type: 'frostbolt', damage: 9, manaRequired: 14 },
+            { type: 'fireball', damage: 12, manaRequired: 18 },
+            { type: 'arcane shock', damage: 11, manaRequired: 17 }
         ]
         this.class = 'mage';
         this.strenght = 9;
@@ -119,9 +119,9 @@ export class Hunter {
             'https://i.imgur.com/LJXaoJn.jpg'
         ])
         this.skills = [
-            { type: 'frost-arrow', damage: randomDamage, manaRequired: randomManaRequirment },
-            { type: 'arcane-shot', damage: randomDamage, manaRequired: randomManaRequirment },
-            { type: 'multishot', damage: randomDamage, manaRequired: randomManaRequirment }
+            { type: 'frost-arrow', damage: 13, manaRequired: 19 },
+            { type: 'arcane-shot', damage: 11, manaRequired: 21 },
+            { type: 'multishot', damage: 6, manaRequired: 25 }
         ]
         this.class = 'hunter';
         this.strenght = 11;
