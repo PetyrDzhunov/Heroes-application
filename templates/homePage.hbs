@@ -23,7 +23,8 @@
 					{{/if}}
 				</div>
 				{{/each}}
-				<button id="enter-world"><a href="/enter-world"></a>Enter World</button>
+				<a href="/enter-world/{{heroId}}"><button id="enter-world">Enter World</button></a>
+				<a href="/delete/{{heroId}}"><button id="delete-hero">Delete</button></a>
 			</div>
 			{{else}}
 			<p>You don't have any heroes yet!</p>

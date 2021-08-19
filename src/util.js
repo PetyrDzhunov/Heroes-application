@@ -48,10 +48,17 @@ export function classToObject(theClass) {
 
 export async function getAllMyHeroes(creator) {
     let response = await db.collection('heroes').get();
-    let heroes = await response.docs.map((hero) => { return {...hero.data() } });
+    let heroes = await response.docs.map((hero) => { return { heroId: hero.id, ...hero.data() } });
     let myHeroes = heroes.filter((hero) => hero.creator === creator);
     return myHeroes
-}
+};
+
+export async function getHero(id) {
+    let user = getUserData();
+    let myHeroes = await getAllMyHeroes(user.email);
+    let hero = myHeroes.find((hero) => hero.heroId === id);
+    return hero || undefined
+};
 
 export function checkHero(name, hero) {
     if (hero === 'barbarian') {
@@ -99,19 +106,19 @@ export function getNotifications() {
     };
 };
 
-function hideNotification(notification) {
+export function hideNotification(notification) {
     setTimeout(() => {
         notification.style.display = 'none';
     }, 5000);
 };
 
-function showErrorNotificationWithTextContent(textContent) {
+export function showErrorNotificationWithTextContent(textContent) {
     let { errorNotification, successNotification } = getNotifications();
     errorNotification.style.display = 'block';
     errorNotification.textContent = textContent
 };
 
-function showSuccessNotificationWithTextContent(textContent) {
+export function showSuccessNotificationWithTextContent(textContent) {
     let { errorNotification, successNotification } = getNotifications();
     successNotification.style.display = 'block';
     successNotification.textContent = textContent;
