@@ -1,4 +1,5 @@
-import { extendContext, getUserData, db, classToObject, errorHandler, checkHero, validateHero, getAllMyHeroes } from "../util.js";
+import { extendContext, getUserData, db, classToObject, errorHandler } from "../util.js";
+import { Barbarian, Hunter, Mage } from "../heroes.js"
 
 
 export async function createNewHero(context) {
@@ -6,17 +7,21 @@ export async function createNewHero(context) {
     this.partial('./templates/create-hero.hbs');
 }
 
-export async function createNewHeroPost(context) {
+export function createNewHeroPost(context) {
     let { name, hero } = context.params;
     let user = getUserData();
-    let heroes = await getAllMyHeroes(user.email);
+    let heroes = user.heroes;
     if (user) {
-        if (validateHero(name, hero, heroes) === false) {
-            return;
+        if (hero === 'barbarian') {
+            hero = new Barbarian(name);
         };
-
-        let currHero = checkHero(name, hero)
-        let newHero = JSON.parse(JSON.stringify(currHero)); // loosing methods though!!! converting a class instance to a plain object.
+        if (hero === 'mage') {
+            hero = new Mage(name)
+        };
+        if (hero === 'hunter') {
+            hero = new Hunter(name)
+        };
+        let newHero = JSON.parse(JSON.stringify(hero)); // loosing methods though!!! converting a class instance to a plain object.
         Object.assign(newHero, { creator: user.email })
         db.collection('heroes')
             .add(newHero)
@@ -24,6 +29,5 @@ export async function createNewHeroPost(context) {
                 context.redirect('/home')
             })
             .catch(errorHandler)
-
-    };
-};
+    }
+}

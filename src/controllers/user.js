@@ -1,6 +1,4 @@
-import { extendContext, userModel, errorHandler, saveUserData, getUserData, clearUserData } from "../util.js";
-
-
+import { extendContext, userModel, errorHandler, saveUserData, getUserData, clearUserData, getAllMyHeroes, getHero, getNotifications, showSuccessNotificationWithTextContent, db, hideNotification } from "../util.js";
 export async function registerPage(context) {
     await extendContext(context)
     this.partial('./templates/register.hbs');
@@ -38,9 +36,23 @@ export async function loginPost(context) {
 
 
 export async function logout(context) {
-    console.log(context);
-    console.log('in logout func');
     let response = await userModel.signOut()
     clearUserData();
     this.redirect('/home');
 };
+
+export async function deleteHero(context) {
+    let { errorNotification, successNotification } = getNotifications();
+
+    const { id } = context.params;
+    let currentHero = await getHero(id);
+    db.collection("heroes").doc(id).delete().then(() => {
+        showSuccessNotificationWithTextContent("Hero successfully deleted!");
+        hideNotification(successNotification)
+        context.redirect('/home')
+    }).catch((error) => {
+        errorHandler(error)
+    });
+
+
+}
