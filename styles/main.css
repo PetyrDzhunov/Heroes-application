@@ -121,12 +121,38 @@ footer {
     background: #6cf;
 }
 
-#error-notification,
-#success-notification {
+#error-notification {
     display: none;
     width: 100%;
     color: red;
-    background-color: yellow;
+    background-color: white;
     display: flex;
     text-align: center;
+}
+
+#success-notification {
+    display: none;
+    width: 100%;
+    color: green;
+    background-color: white;
+    display: flex;
+    text-align: center;
+}
+
+.white-thing {
+    color: white;
+}
+
+#emailHelp,
+label {
+    color: white;
+}
+
+.form-info {
+    color: white;
+}
+
+.navigation-link-updated {
+    color: red;
+    text-decoration: none;
 }

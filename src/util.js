@@ -73,24 +73,23 @@ export function validateHero(name, hero, heroes) {
     console.log(heroClass);
     console.log(currentHero);
     if (currentHero) {
-        errorNotification.style.display = 'block';
-        errorNotification.textContent = 'Already have hero with this name!'
-        showNotification(errorNotification)
+        showErrorNotificationWithTextContent('You already have a character with this name!')
+        hideNotification(errorNotification)
         return false;
     };
 
     if (heroClass) {
-        errorNotification.style.display = 'block';
-        errorNotification.textContent = 'You can have only 1 hero per class!'
-        showNotification(errorNotification)
+        showErrorNotificationWithTextContent('You can have only 1 hero per class!')
+        hideNotification(errorNotification)
         return false;
     };
     if (heroes.length >= 5) {
-        errorNotification.style.display = 'block';
-        errorNotification.textContent = 'You can have maximum 5 heroes per account!'
-        showNotification(errorNotification)
+        showErrorNotificationWithTextContent('You can have maximum 5 heroes per account!')
+        hideNotification(errorNotification)
         return false;
     };
+
+    showSuccessNotificationWithTextContent()
 }
 
 export function getNotifications() {
@@ -100,8 +99,20 @@ export function getNotifications() {
     };
 };
 
-function showNotification(notification) {
+function hideNotification(notification) {
     setTimeout(() => {
         notification.style.display = 'none';
     }, 5000);
-}
+};
+
+function showErrorNotificationWithTextContent(textContent) {
+    let { errorNotification, successNotification } = getNotifications();
+    errorNotification.style.display = 'block';
+    errorNotification.textContent = textContent
+};
+
+function showSuccessNotificationWithTextContent(textContent) {
+    let { errorNotification, successNotification } = getNotifications();
+    successNotification.style.display = 'block';
+    successNotification.textContent = textContent;
+};
