@@ -60,15 +60,15 @@ export async function getHero(id) {
     return hero || undefined
 };
 
-export function checkHero(name, hero) {
+export function checkHero(name, hero, gender) {
     if (hero === 'barbarian') {
-        return new Barbarian(name);
+        return new Barbarian(name, gender);
     };
     if (hero === 'mage') {
-        return new Mage(name)
+        return new Mage(name, gender)
     };
     if (hero === 'hunter') {
-        return new Hunter(name)
+        return new Hunter(name, gender)
     };
 }
 
