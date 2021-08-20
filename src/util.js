@@ -120,3 +120,15 @@ export function showSuccessNotificationWithTextContent(textContent) {
     successNotification.style.display = 'block';
     successNotification.textContent = textContent;
 };
+
+
+export function getUserNameFromEmail(email) {
+    let result = email.substr(0, email.indexOf('@')); // maham do @ vsichko - Peter
+    let firstLetter = result.substring(0, 1); // vzemam p
+    firstLetter = firstLetter.toUpperCase(); // praq go P
+    console.log(firstLetter);
+    let finalLetters = result.substring(1); // vzemam vsihcko ostnaalo
+    console.log(finalLetters);
+    let username = firstLetter.concat(finalLetters); // concatvam
+    return username
+}
