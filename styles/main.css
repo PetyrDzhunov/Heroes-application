@@ -206,3 +206,55 @@ label {
     transition: 0.5s ease;
     cursor: pointer;
 }
+
+.about-container {
+    height: 750px;
+    width: auto;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-information {
+    width: 50%;
+    border: solid 2px yellow;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.about-paragraph {
+    color: red;
+    font-size: xx-large;
+}
+
+.about-contacts {
+    color: blue;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+}
+
+.facebook,
+.instagram,
+.gitHub,
+.linkedIn {
+    padding: 16px 32px;
+}
+
+#paragraph-above-contacts {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: blue;
+    font-size: xx-large;
+}

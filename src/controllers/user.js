@@ -53,6 +53,9 @@ export async function deleteHero(context) {
     }).catch((error) => {
         errorHandler(error)
     });
+};
 
-
+export async function aboutPage(context) {
+    await extendContext(context);
+    this.partial('./templates/about.hbs')
 }
