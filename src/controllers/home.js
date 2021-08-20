@@ -1,4 +1,4 @@
-import { db, extendContext, getAllMyHeroes, getUserData } from "../util.js";
+import { db, extendContext, getAllMyHeroes, getUserData, getUserNameFromEmail } from "../util.js";
 import { Barbarian, Mage, Hunter } from "../heroes.js";
 
 
@@ -8,14 +8,20 @@ export async function homePage(context) {
         loggedIn: Boolean(user),
         ...user,
     };
+
+
+
     if (user) {
-        let heroes = await getAllMyHeroes(user.email)
+        let username = getUserNameFromEmail(user.email);
+        context.username = username;
+        console.log(username);
+        let heroes = await getAllMyHeroes(user.email);
         user.heroes = heroes;
-        const data = Object.assign(this.userData, { heroes })
+        const data = Object.assign(this.userData, { heroes });
         await extendContext(context);
-        this.partial('./templates/homePage.hbs', data)
+        this.partial('./templates/homePage.hbs', data);
     } else {
         await extendContext(context);
-        this.partial('./templates/homePage.hbs')
+        this.partial('./templates/homePage.hbs');
     }
 };
