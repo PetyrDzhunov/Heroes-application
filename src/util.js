@@ -1,5 +1,9 @@
+import { Barbarian } from './controllers/heroes/barbarian.js';
+import { Hunter } from './controllers/heroes/hunter.js';
+import { Mage } from './controllers/heroes/mage.js';
+import { Priest } from './controllers/heroes/priest.js';
 import init from './db-init.js';
-import { Barbarian, Mage, Hunter, Priest } from './heroes.js';
+
 init();
 export const userModel = firebase.auth();
 export const db = firebase.firestore()
@@ -133,3 +137,7 @@ export function getUserNameFromEmail(email) {
     let username = firstLetter.concat(finalLetters);
     return username;
 }
+
+export let today = new Date();
+export let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+export const getRandomImage = (array) => array[Math.floor(Math.random() * array.length)];
