@@ -8,9 +8,9 @@ export class Rogue {
         this.level = 1;
         this.armor = ['cloth', 'leather']
         this.weapons = [
-            { type: 'one-handed-mace', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKcDj7-JjrrDFOk4ffVoMnt3ZohhgWJXsI7Ked07y5NSmpvPrk_9nfo2EiOXacRQRMo_Y&usqp=CAU' },
+            { type: 'one-handed-mace', img: 'https://wow.zamimg.com/modelviewer/live/webthumbs/item/110/120686.png' },
             { type: 'one-handed-dagger', img: 'http://www.gamingtoptens.com/wp-content/uploads/2020/02/p-1.png' },
-            { type: 'one-handed-axe', img: 'https://wow.zamimg.com/uploads/screenshots/normal/532308-felomelorn-fire-mage-artifact.jpg' },
+            { type: 'one-handed-axe', img: 'https://static.wikia.nocookie.net/elderscrolls/images/5/50/Elvenwaraxe.png/revision/latest?cb=20120409211008' },
             { type: 'one-handed-sword', img: 'https://cdnb.artstation.com/p/assets/images/images/028/339/971/large/rohit-modak-5.jpg?1594188738' }
         ]
         this.image =
