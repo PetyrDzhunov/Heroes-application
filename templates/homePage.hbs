@@ -15,7 +15,9 @@
 				<div class="skills-label">Skills:</div>
 				{{#each skills}}
 				<div class='div-skills'>
-				{{type}}, damage: {{damage}},
+				{{type}}, {{#if damage}} damage :{{damage}},
+				{{else}} heal : {{heal}},
+				{{/if}}
 					{{#if rage}}
 					rage: {{rage}}
 					{{else}}
