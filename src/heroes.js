@@ -1,6 +1,8 @@
 // const randomDamage = () => Math.floor(Math.random() * 20 + 1);
 // const randomRageRequirment = () => Math.floor(Math.random() * 15 + 1);
 // const randomManaRequirment = () => Math.floor(Math.random() * 30 + 1);
+let today = new Date();
+let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
 const getRandomImage = (array) => array[Math.floor(Math.random() * array.length)];
 
@@ -9,7 +11,16 @@ export class Barbarian {
         this.gender = gender;
         this.name = name;
         this.rage = 0;
-        this.weapons = ['one-handed axe', 'two-handed axe', 'spear', 'polearm', 'one-handed mace', 'two-handed mace', 'one-handed sword', 'two-handed sword'];
+        this.weapons = [
+            { type: 'one-handed axe', img: 'https://i.pinimg.com/originals/69/8f/c8/698fc801b098c3ed13380e8c7626bbba.png' },
+            { type: 'two-handed axe', img: 'https://www.pngkey.com/png/full/211-2110105_nordic-battleaxe-of-ice-skyrim-wiki-battle-axe.png' },
+            { type: 'spear', img: 'https://cdnb.artstation.com/p/assets/images/images/024/783/559/4k/jordan-hartley-image0-15.jpg?1583514306' },
+            { type: 'polearm', img: 'https://i.pinimg.com/originals/4f/3f/40/4f3f4048caae5ca683a86c45b5e8d996.jpg' },
+            { type: 'one-handed mace', img: 'https://wow.zamimg.com/modelviewer/live/webthumbs/item/110/120686.png' },
+            { type: 'two-handed mace', img: 'https://preview.free3d.com/img/2017/07/2269216126195992394/v2mra7rh-900.jpg' },
+            { type: 'one-handed sword', img: 'https://i.pinimg.com/474x/8e/78/08/8e7808ea172ce10adbd0ff71626f9914--game-ideas-swords.jpg' },
+            { type: 'two-handed sword', img: 'https://i.pinimg.com/236x/f3/12/fd/f312fd92e5181f793f6c3eddf13d98be.jpg' }
+        ];
         this.shield = [
             { type: 'Fire Shield', bonus: 5 },
             { type: 'Frost Shield', bonus: 7 },
@@ -50,6 +61,7 @@ export class Barbarian {
         this.stamina = 14;
         this.intelligence = 7;
         this.health = this.stamina * 10;
+        this.createdOnDate = date
     };
     generateRage(rage) {
         this.rage += rage
@@ -63,7 +75,12 @@ export class Mage {
         this.name = name;
         this.level = 1;
         this.armor = ['cloth']
-        this.weapons = ['staff', 'one-handed-dagger', 'off-hand', 'one-handed-sword'];
+        this.weapons = [
+            { type: 'staff', img: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKcDj7-JjrrDFOk4ffVoMnt3ZohhgWJXsI7Ked07y5NSmpvPrk_9nfo2EiOXacRQRMo_Y&usqp=CAU' },
+            { type: 'one-handed-dagger', img: 'http://www.gamingtoptens.com/wp-content/uploads/2020/02/p-1.png' },
+            { type: 'off-hand', img: 'https://wow.zamimg.com/uploads/screenshots/normal/532308-felomelorn-fire-mage-artifact.jpg' },
+            { type: 'one-handed-sword', img: 'https://cdnb.artstation.com/p/assets/images/images/028/339/971/large/rohit-modak-5.jpg?1594188738' }
+        ]
         this.image =
             this.gender == 'female' ?
             getRandomImage([
@@ -94,6 +111,7 @@ export class Mage {
         this.intelligence = 17;
         this.health = this.stamina * 10;
         this.mana = this.intelligence * 10;
+        this.createdOnDate = date;
     }
 };
 
@@ -103,7 +121,11 @@ export class Hunter {
         this.name = name;
         this.level = 1;
         this.armor = ['cloth', 'leather']
-        this.weapons = ['bow', 'crossbow', 'gun'];
+        this.weapons = [
+            { type: 'bow', img: 'https://ae01.alicdn.com/kf/HTB1a78CIXXXXXbZXVXXq6xXFXXX5/Purple-Camo-Dream-Aluminum-Alloy-Compound-Bow-With-20-70-lbs-Draw-Weight-Camo-And-Black.jpg' },
+            { type: 'crossbow', img: 'https://lh3.googleusercontent.com/proxy/ipiK70oaKfVb9f6LmghoReTuQVj3hhypPBCHffu82JVVRncH8PO8kBKJhE6v3opzQo41PHLE87clqfqxKCi4opStk6U54gRSnIHA1h2q6a1kWXKKtSBkspq91b5zGBE' },
+            { type: 'gun', img: 'https://cdnb.artstation.com/p/assets/images/images/009/491/885/large/stuart-rain-rifle-coverart.jpg?1519298971' },
+        ]
         this.image =
             this.gender == 'female' ?
             getRandomImage([
@@ -138,5 +160,6 @@ export class Hunter {
         this.intelligence = 11;
         this.health = this.stamina * 10;
         this.mana = this.intelligence * 10;
+        this.createdOnDate = date;
     }
 };

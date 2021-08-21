@@ -42,10 +42,8 @@ export async function logout(context) {
 };
 
 export async function deleteHero(context) {
-    let { errorNotification, successNotification } = getNotifications();
-
+    let { successNotification } = getNotifications();
     const { id } = context.params;
-    let currentHero = await getHero(id);
     db.collection("heroes").doc(id).delete().then(() => {
         showSuccessNotificationWithTextContent("Hero successfully deleted!");
         hideNotification(successNotification)

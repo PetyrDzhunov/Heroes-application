@@ -23,8 +23,12 @@
 					{{/if}}
 				</div>
 				{{/each}}
+				<div class="hero-buttons">
+				<a href="/details/{{heroId}}"><button id="details-hero">Details</button></a>
 				<a href="/enter-world/{{heroId}}"><button id="enter-world">Enter World</button></a>
 				<a href="/delete/{{heroId}}"><button id="delete-hero">Delete</button></a>
+				</div>
+				
 			</div>
 			{{else}}
 			<p>You don't have any heroes yet!</p>
