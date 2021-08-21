@@ -1,5 +1,5 @@
 import init from './db-init.js';
-import { Barbarian, Mage, Hunter } from './heroes.js';
+import { Barbarian, Mage, Hunter, Priest } from './heroes.js';
 init();
 export const userModel = firebase.auth();
 export const db = firebase.firestore()
@@ -70,6 +70,9 @@ export function checkHero(name, hero, gender) {
     if (hero === 'hunter') {
         return new Hunter(name, gender)
     };
+    if (hero === 'priest') {
+        return new Priest(name, gender)
+    }
 }
 
 export function validateHero(name, hero, heroes) {
