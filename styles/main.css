@@ -5,7 +5,11 @@
 }
 
 body {
-    background-image: url('https://wallpaperaccess.com/full/2632318.jpg');
+    background: url('https://wallpaperaccess.com/full/2632318.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 :root {
@@ -38,12 +42,6 @@ a {
     height: 250px;
 }
 
-.heroes-container {
-    display: inline;
-    color: red;
-    border: solid black 1px;
-}
-
 .navigation-link-blue {
     color: blue;
     text-decoration: none;
@@ -65,21 +63,40 @@ a {
     padding: 0 auto;
 }
 
-.hero-container {
+.heroes-container {
+    /* display: inline;
+    color: red;
+    border: solid black 1px; */
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: baseline;
     width: 100%;
 }
 
+.hero-container {
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    background-color: white;
+}
+
 .hero {
-    vertical-align: top;
+    /* vertical-align: top;
     padding: 1%;
     margin: 0.5%;
     border: solid black 1px;
     border-radius: 6px;
-    background-color: white;
+    background-color: white; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
 
 .hero:hover {
