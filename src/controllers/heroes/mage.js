@@ -32,9 +32,9 @@ export class Mage {
                 'https://cdn.wallpapersafari.com/47/7/AEO3rz.jpg'
             ])
         this.skills = [
-            { type: 'frostbolt', damage: 9, manaRequired: 14 },
-            { type: 'fireball', damage: 12, manaRequired: 18 },
-            { type: 'arcane shock', damage: 11, manaRequired: 17 }
+            { type: 'Frostbolt', damage: 9, manaRequired: 14 },
+            { type: 'Fireball', damage: 12, manaRequired: 18 },
+            { type: 'Arcane shock', damage: 11, manaRequired: 17 }
         ]
         this.class = 'mage';
         this.strenght = 9;

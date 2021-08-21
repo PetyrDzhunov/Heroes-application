@@ -35,9 +35,9 @@ export class Hunter {
                 'https://gamemakerstuff.files.wordpress.com/2018/05/archer1.jpg?w=545'
             ])
         this.skills = [
-            { type: 'frost-arrow', damage: 13, manaRequired: 19 },
-            { type: 'arcane-shot', damage: 11, manaRequired: 21 },
-            { type: 'multishot', damage: 6, manaRequired: 25 }
+            { type: 'Frost-arrow', damage: 13, manaRequired: 19 },
+            { type: 'Arcane-shot', damage: 11, manaRequired: 21 },
+            { type: 'Multishot', damage: 6, manaRequired: 25 }
         ]
         this.class = 'hunter';
         this.strenght = 11;

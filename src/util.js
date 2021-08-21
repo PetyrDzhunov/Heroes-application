@@ -2,6 +2,7 @@ import { Barbarian } from './controllers/heroes/barbarian.js';
 import { Hunter } from './controllers/heroes/hunter.js';
 import { Mage } from './controllers/heroes/mage.js';
 import { Priest } from './controllers/heroes/priest.js';
+import { Rogue } from './controllers/heroes/rogue.js';
 import init from './db-init.js';
 
 init();
@@ -77,6 +78,9 @@ export function checkHero(name, hero, gender) {
     if (hero === 'priest') {
         return new Priest(name, gender)
     }
+    if (hero === 'rogue') {
+        return new Rogue(name, gender)
+    }
 }
 
 export function validateHero(name, hero, heroes) {
@@ -117,13 +121,13 @@ export function hideNotification(notification) {
 };
 
 export function showErrorNotificationWithTextContent(textContent) {
-    let { errorNotification, successNotification } = getNotifications();
+    let { errorNotification } = getNotifications();
     errorNotification.style.display = 'block';
     errorNotification.textContent = textContent
 };
 
 export function showSuccessNotificationWithTextContent(textContent) {
-    let { errorNotification, successNotification } = getNotifications();
+    let { successNotification } = getNotifications();
     successNotification.style.display = 'block';
     successNotification.textContent = textContent;
 };
