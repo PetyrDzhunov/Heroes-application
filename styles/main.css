@@ -96,7 +96,7 @@ a {
     border: solid 1px black;
     border-radius: 6px;
     color: white;
-    padding: 15px 32px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -187,22 +187,42 @@ label {
     color: blue;
 }
 
+#details-hero {
+    background-color: blue;
+    border: solid 1px black;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#details-hero:hover {
+    background-color: yellow;
+    color: red;
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
 #delete-hero {
     background-color: red;
     border: solid 1px black;
     border-radius: 6px;
     color: white;
-    padding: 15px 32px;
+    padding: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    width: 48%;
+    align-items: center;
+    justify-content: center;
 }
 
 #delete-hero:hover {
-    background-color: blue;
-    color: red;
+    background-color: black;
+    color: white;
     transition: 0.5s ease;
     cursor: pointer;
 }
@@ -257,4 +277,90 @@ label {
     align-items: center;
     color: blue;
     font-size: xx-large;
+}
+
+.hero-buttons {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.additional-hero-info-img {
+    width: 600px;
+    height: 600px;
+}
+
+.additional-image-div {
+    display: flex;
+    justify-content: center;
+}
+
+.createdOn {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+.weapon-type {
+    color: white;
+}
+
+.weapons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.weapon {
+    padding: 12px 24px;
+}
+
+.label-weapons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+}
+
+.additional-hero-stats {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    color: white;
+}
+
+#strenght,
+#aggility,
+#intelligence,
+#stamina {
+    padding: 12px 24px;
+    color: tomato;
+    font-size: larger;
+}
+
+.weapon-img {
+    background-color: white;
+}
+
+.back-home-btn {
+    background-color: green;
+    border: solid 1px black;
+    border-radius: 6px;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    width: 8%;
+    padding: 20px 32px;
+}
+
+.back-home-btn:hover {
+    background-color: yellow;
+    color: red;
+    transition: 0.5s ease;
+    cursor: pointer;
 }

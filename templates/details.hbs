@@ -1,0 +1,25 @@
+{{>header}}
+<a href="/home"><button class="back-home-btn">Back</button></a>
+<div class="additional-hero-info">
+	<div class="additional-image-div">
+		<img class='additional-hero-info-img' src="{{image}}" alt="{{name}}">
+	</div>
+	<div class="additional-createdOn-info">
+		<span class="createdOn">Created on: {{createdOnDate}}</span>
+	</div>
+	<label class="label-weapons" for="weapons">Weapons that this class can use!</label>
+	<div class="weapons">
+		{{#each weapons}}
+		<div class="weapon">
+			<img class='weapon-img'src="{{img}}" width="100px" height='100px'>
+		</div>
+		{{/each}}
+	</div>
+	<div class="additional-hero-stats">
+		<span id="strenght">Strenght : {{strenght}}</span>
+		<span id="aggility">Aggility : {{aggility}}</span>
+		<span id="stamina">Stamina : {{stamina}}</span>
+		<span id="intelligence">Intelligence : {{intelligence}}</span>
+	</div>
+</div>
+{{>footer}}
