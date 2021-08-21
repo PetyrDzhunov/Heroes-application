@@ -11,16 +11,27 @@
 				<div>Level : {{level}}</div>
 				{{#if mana}}
 				<div>Mana :{{mana}} </div>
+				{{else}}
+				<div>Rage :{{rage}} </div>
+				{{/if}}
+				{{#if energy}}
+				<div>Energy :{{energy}} </div>
 				{{/if}}
 				<div class="skills-label">Skills:</div>
 				{{#each skills}}
 				<div class='div-skills'>
-				{{type}}, {{#if damage}} damage :{{damage}},
-				{{else}} heal : {{heal}},
-				{{/if}}
+
+				{{type}}, Damage: {{damage}},
+
+					{{#if energy}}
+					Energy : {{energy}}
+					{{/if}}
+
 					{{#if rage}}
-					rage: {{rage}}
-					{{else}}
+					Rage: {{rage}}
+					{{/if}}
+
+					{{#if manaRequired}}
 					MP cost:{{manaRequired}}
 					{{/if}}
 				</div>

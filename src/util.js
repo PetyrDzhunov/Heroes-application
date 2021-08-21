@@ -1,5 +1,10 @@
+import { Barbarian } from './controllers/heroes/barbarian.js';
+import { Hunter } from './controllers/heroes/hunter.js';
+import { Mage } from './controllers/heroes/mage.js';
+import { Priest } from './controllers/heroes/priest.js';
+import { Rogue } from './controllers/heroes/rogue.js';
 import init from './db-init.js';
-import { Barbarian, Mage, Hunter, Priest } from './heroes.js';
+
 init();
 export const userModel = firebase.auth();
 export const db = firebase.firestore()
@@ -73,6 +78,9 @@ export function checkHero(name, hero, gender) {
     if (hero === 'priest') {
         return new Priest(name, gender)
     }
+    if (hero === 'rogue') {
+        return new Rogue(name, gender)
+    }
 }
 
 export function validateHero(name, hero, heroes) {
@@ -113,13 +121,13 @@ export function hideNotification(notification) {
 };
 
 export function showErrorNotificationWithTextContent(textContent) {
-    let { errorNotification, successNotification } = getNotifications();
+    let { errorNotification } = getNotifications();
     errorNotification.style.display = 'block';
     errorNotification.textContent = textContent
 };
 
 export function showSuccessNotificationWithTextContent(textContent) {
-    let { errorNotification, successNotification } = getNotifications();
+    let { successNotification } = getNotifications();
     successNotification.style.display = 'block';
     successNotification.textContent = textContent;
 };
@@ -133,3 +141,7 @@ export function getUserNameFromEmail(email) {
     let username = firstLetter.concat(finalLetters);
     return username;
 }
+
+export let today = new Date();
+export let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+export const getRandomImage = (array) => array[Math.floor(Math.random() * array.length)];
