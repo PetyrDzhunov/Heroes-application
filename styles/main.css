@@ -83,7 +83,6 @@ a {
     flex-direction: row;
     width: 100%;
     align-items: center;
-    background-color: white;
 }
 
 .hero {
@@ -95,8 +94,9 @@ a {
     background-color: white; */
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 33.33%;
     align-items: center;
+    background-color: white;
 }
 
 .hero:hover {
@@ -177,6 +177,12 @@ label {
     text-decoration: none;
 }
 
+.guest-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .guest-link {
     text-decoration: none;
     color: white;
@@ -184,6 +190,7 @@ label {
     justify-content: space-between;
     text-align: center;
     align-items: center;
+    font-size: larger;
 }
 
 .guest-link:hover {

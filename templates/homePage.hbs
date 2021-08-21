@@ -9,10 +9,11 @@
 				<div>Class : {{class}}</div>
 				<div>Health : {{health}}</div>
 				<div>Level : {{level}}</div>
+				{{#if rage}}
+				<div>Rage :{{rage}} </div>
+				{{/if}}
 				{{#if mana}}
 				<div>Mana :{{mana}} </div>
-				{{else}}
-				<div>Rage :{{rage}} </div>
 				{{/if}}
 				{{#if energy}}
 				<div>Energy :{{energy}} </div>
@@ -31,7 +32,7 @@
 					Rage: {{rage}}
 					{{/if}}
 
-					{{#if manaRequired}}
+					{{#if mana}}
 					MP cost:{{manaRequired}}
 					{{/if}}
 				</div>

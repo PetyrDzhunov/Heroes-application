@@ -55,7 +55,7 @@ export class Barbarian {
         this.aggility = 14;
         this.stamina = 14;
         this.intelligence = 7;
-        this.rage = 0;
+        this.rage = 1;
         this.health = this.stamina * 10;
         this.createdOnDate = date
     };
