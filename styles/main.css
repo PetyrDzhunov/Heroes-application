@@ -127,10 +127,23 @@ a {
     cursor: pointer;
 }
 
+.create-hero-container {
+    display: flex;
+    justify-content: center;
+}
+
 .create-hero-div {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: red;
+    text-align: center;
+    width: 50%;
+}
+
+#heroes-span,
+#gender-div {
+    color: white;
+    font-size: larger;
 }
 
 footer {

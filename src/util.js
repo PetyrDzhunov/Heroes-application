@@ -85,7 +85,6 @@ export function checkHero(name, hero, gender) {
 
 export function validateHero(name, hero, heroes) {
     let { errorNotification, successNotification } = getNotifications();
-    console.log(name, hero, heroes);
     let currentHero = heroes.find((hero) => hero.name === name);
     let heroClass = heroes.find((currHero) => currHero.class === hero);
     if (currentHero) {

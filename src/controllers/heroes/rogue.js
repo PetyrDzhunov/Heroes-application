@@ -10,7 +10,7 @@ export class Rogue {
         this.weapons = [
             { type: 'one-handed-mace', img: 'https://wow.zamimg.com/modelviewer/live/webthumbs/item/110/120686.png' },
             { type: 'one-handed-dagger', img: 'http://www.gamingtoptens.com/wp-content/uploads/2020/02/p-1.png' },
-            { type: 'one-handed-axe', img: 'https://static.wikia.nocookie.net/elderscrolls/images/5/50/Elvenwaraxe.png/revision/latest?cb=20120409211008' },
+            { type: 'one-handed-axe', img: 'https://cdnb.artstation.com/p/assets/images/images/022/645/607/large/andrii-sedykh-axe-warcraft003.jpg?1576178229' },
             { type: 'one-handed-sword', img: 'https://cdnb.artstation.com/p/assets/images/images/028/339/971/large/rohit-modak-5.jpg?1594188738' }
         ]
         this.image =
