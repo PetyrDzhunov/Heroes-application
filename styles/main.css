@@ -399,3 +399,12 @@ label {
     font-size: xx-large;
     justify-content: center;
 }
+
+.additional-info,
+.level-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    color: white;
+}
