@@ -74,11 +74,6 @@ a {
 }
 
 .hero-container {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch; */
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -86,12 +81,8 @@ a {
 }
 
 .hero {
-    /* vertical-align: top;
-    padding: 1%;
-    margin: 0.5%;
     border: solid black 1px;
     border-radius: 6px;
-    background-color: white; */
     display: flex;
     flex-direction: column;
     width: 33.33%;
@@ -100,7 +91,7 @@ a {
 }
 
 .hero:hover {
-    border: 2px solid var(--main-blue);
+    border: 3px solid var(--main-blue);
 }
 
 .navbar {
