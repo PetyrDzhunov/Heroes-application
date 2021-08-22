@@ -1,4 +1,4 @@
-import { today, date, getRandomImage } from "../../util.js";
+import { today, date, getRandomImage } from "../util.js";
 
 
 export class Mage {

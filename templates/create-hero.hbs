@@ -1,8 +1,9 @@
 {{> header}}
-<div class="create-hero-div">
+<div class="create-hero-container">
+	<div class="create-hero-div">
 	<form action="/create-hero" method="POST">
 	<span id="heroes-span" for="heroes">Choose a hero:</span>
-	<select name="hero" id="hero">
+	<select  class='select-hero' name="hero" id="hero">
 		<option value="barbarian">Barbarian</option>
 		<option value="mage">Mage</option>
 		<option value="hunter">Hunter</option>
@@ -19,6 +20,7 @@
 	<input type="text" name="name" id="hero-name">
 	<input type="submit" value="Submit">
 	</form>
+	</div>
 </div>
 {{> footer}}
 

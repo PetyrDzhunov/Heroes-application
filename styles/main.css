@@ -74,33 +74,24 @@ a {
 }
 
 .hero-container {
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch; */
     display: flex;
     flex-direction: row;
     width: 100%;
+    align-items: center;
+}
+
+.hero {
+    border: solid red 2px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
     align-items: center;
     background-color: white;
 }
 
-.hero {
-    /* vertical-align: top;
-    padding: 1%;
-    margin: 0.5%;
-    border: solid black 1px;
-    border-radius: 6px;
-    background-color: white; */
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-}
-
 .hero:hover {
-    border: 2px solid var(--main-blue);
+    border: 3px solid var(--main-blue);
 }
 
 .navbar {
@@ -127,10 +118,23 @@ a {
     cursor: pointer;
 }
 
+.create-hero-container {
+    display: flex;
+    justify-content: center;
+}
+
 .create-hero-div {
     display: flex;
     justify-content: center;
-    background-color: white;
+    background-color: red;
+    text-align: center;
+    width: 50%;
+}
+
+#heroes-span,
+#gender-div {
+    color: white;
+    font-size: larger;
 }
 
 footer {
@@ -143,20 +147,20 @@ footer {
 
 #error-notification {
     display: none;
-    width: 100%;
     color: red;
     background-color: white;
     display: flex;
     text-align: center;
+    font-size: xx-large;
 }
 
 #success-notification {
     display: none;
-    width: 100%;
     color: green;
     background-color: white;
     display: flex;
     text-align: center;
+    font-size: xx-large;
 }
 
 .white-thing {
@@ -177,6 +181,12 @@ label {
     text-decoration: none;
 }
 
+.guest-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .guest-link {
     text-decoration: none;
     color: white;
@@ -184,6 +194,7 @@ label {
     justify-content: space-between;
     text-align: center;
     align-items: center;
+    font-size: larger;
 }
 
 .guest-link:hover {
@@ -304,7 +315,7 @@ label {
 
 .additional-hero-info-img {
     width: 600px;
-    height: 600px;
+    height: 500px;
 }
 
 .additional-image-div {
@@ -380,4 +391,20 @@ label {
     color: red;
     transition: 0.5s ease;
     cursor: pointer;
+}
+
+#no-heroes-paragraph {
+    display: flex;
+    color: red;
+    font-size: xx-large;
+    justify-content: center;
+}
+
+.additional-info,
+.level-info {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    color: white;
 }
