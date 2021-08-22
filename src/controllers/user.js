@@ -1,4 +1,4 @@
-import { extendContext, userModel, errorHandler, saveUserData, getUserData, clearUserData, getAllMyHeroes, getHero, getNotifications, showSuccessNotificationWithTextContent, db, hideNotification } from "../util.js";
+import { extendContext, userModel, errorHandler, saveUserData, getUserData, clearUserData, getAllMyHeroes, getHero, getNotifications, showSuccessNotificationWithTextContent, db, hideNotification, getUserNameFromEmail } from "../util.js";
 export async function registerPage(context) {
     await extendContext(context)
     this.partial('./templates/register.hbs');
@@ -56,4 +56,15 @@ export async function deleteHero(context) {
 export async function aboutPage(context) {
     await extendContext(context);
     this.partial('./templates/about.hbs')
+}
+
+export async function enterWorld(context) {
+    const { id } = context.params;
+    let user = getUserData();
+    let hero = await getHero(id);
+    console.log(hero);
+    let username = getUserNameFromEmail(user.email);
+    context.username = username;
+    await extendContext(context);
+    this.partial('../templates/enter-world.hbs')
 }

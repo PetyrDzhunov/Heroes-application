@@ -1,5 +1,5 @@
 import { homePage } from './controllers/home.js'
-import { registerPage, registerPost, loginPage, loginPost, logout, deleteHero, aboutPage } from "./controllers/user.js";
+import { registerPage, registerPost, loginPage, loginPost, logout, deleteHero, aboutPage, enterWorld } from "./controllers/user.js";
 import { createNewHero, createNewHeroPost, detailsPage } from "./controllers/catalog.js";
 const app = Sammy('#app', function() {
     this.use('Handlebars', 'hbs');
@@ -29,6 +29,9 @@ const app = Sammy('#app', function() {
 
     //details
     this.get('/details/:id', detailsPage)
+
+    //enter-world
+    this.get('/enter-world/:id', enterWorld)
 
 });
 
