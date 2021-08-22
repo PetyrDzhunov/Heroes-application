@@ -1,8 +1,8 @@
-import { Barbarian } from './controllers/heroes/barbarian.js';
-import { Hunter } from './controllers/heroes/hunter.js';
-import { Mage } from './controllers/heroes/mage.js';
-import { Priest } from './controllers/heroes/priest.js';
-import { Rogue } from './controllers/heroes/rogue.js';
+import { Barbarian } from './heroes/barbarian.js';
+import { Hunter } from './heroes/hunter.js';
+import { Mage } from './heroes/mage.js';
+import { Priest } from './heroes/priest.js';
+import { Rogue } from './heroes/rogue.js';
 import init from './db-init.js';
 
 init();

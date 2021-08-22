@@ -1,4 +1,4 @@
-import { today, date, getRandomImage } from "../../util.js";
+import { today, date, getRandomImage } from "../util.js";
 
 
 export class Barbarian {
@@ -58,8 +58,6 @@ export class Barbarian {
         this.rage = 1;
         this.health = this.stamina * 10;
         this.createdOnDate = date
+        this.generateRagePerHit = 7;
     };
-    generateRage(rage) {
-        this.rage += rage
-    }
 };
