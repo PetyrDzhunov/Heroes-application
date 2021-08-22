@@ -81,7 +81,7 @@ a {
 }
 
 .hero {
-    border: solid black 1px;
+    border: solid red 2px;
     border-radius: 6px;
     display: flex;
     flex-direction: column;
@@ -147,20 +147,20 @@ footer {
 
 #error-notification {
     display: none;
-    width: 100%;
     color: red;
     background-color: white;
     display: flex;
     text-align: center;
+    font-size: xx-large;
 }
 
 #success-notification {
     display: none;
-    width: 100%;
     color: green;
     background-color: white;
     display: flex;
     text-align: center;
+    font-size: xx-large;
 }
 
 .white-thing {
@@ -391,4 +391,11 @@ label {
     color: red;
     transition: 0.5s ease;
     cursor: pointer;
+}
+
+#no-heroes-paragraph {
+    display: flex;
+    color: red;
+    font-size: xx-large;
+    justify-content: center;
 }
