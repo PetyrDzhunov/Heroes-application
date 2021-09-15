@@ -32,7 +32,7 @@ export class Priest {
                 'https://wow.zamimg.com/uploads/screenshots/small/569814.jpg',
                 'https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1b186973-6c13-43c0-b931-6de701476d53/d1r9ch8-e6004c88-4696-4964-9b8c-10d04fa5a07d.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzFiMTg2OTczLTZjMTMtNDNjMC1iOTMxLTZkZTcwMTQ3NmQ1M1wvZDFyOWNoOC1lNjAwNGM4OC00Njk2LTQ5NjQtOWI4Yy0xMGQwNGZhNWEwN2QuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.yUeGAA9QQwis2mWuJQixeAu_f4MzotB_qFTql2fhr7w',
                 'https://i.pinimg.com/736x/d3/af/d2/d3afd2267c830fbe454ee7c121347c64.jpg',
-                'hhttps://i.pinimg.com/originals/b6/bc/b1/b6bcb1e218ffc2106bc35f0e26e9a950.jpg',
+                'https://i.pinimg.com/originals/b6/bc/b1/b6bcb1e218ffc2106bc35f0e26e9a950.jpg',
                 'https://www.drivethrurpg.com/images/11550/213983.jpg',
                 'https://i.pinimg.com/736x/d3/af/d2/d3afd2267c830fbe454ee7c121347c64.jpg'
             ])
