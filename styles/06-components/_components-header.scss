@@ -51,7 +51,7 @@
                 cursor: pointer;
             }
             text-transform: uppercase;
-            color: $grey-700;
+            font-weight: bolder;
         }
         &-image {
             img {
@@ -60,13 +60,13 @@
             }
         }
         &-character {
-            animation: from-grey-to-secondary 1s ease-out alternate 1;
+            animation: from-secondary-to-purple 1s ease-out 1 forwards;
+            color: black;
             transition: color 0.3s ease-out;
             @for $i from 1 to 7 {
                 &:nth-child(#{$i}) {
-                    color: $secondary-color;
+                    color: $purple-300;
                     animation-delay: 0.05s *$i;
-                    opacity: 0.3+$i;
                 }
             }
         }

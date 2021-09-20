@@ -84,6 +84,24 @@ h2,
   }
 }
 
+@-webkit-keyframes from-secondary-to-purple {
+  from {
+    color: #FF9100;
+  }
+  to {
+    color: #9F2B68;
+  }
+}
+
+@keyframes from-secondary-to-purple {
+  from {
+    color: #FF9100;
+  }
+  to {
+    color: #9F2B68;
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -114,6 +132,9 @@ a {
 
 body {
   margin: 12px 0;
+  background-image: url("/assets/images/background-image.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 abbr[title] {
@@ -357,7 +378,7 @@ main {
 
 .c-header__logo-description {
   text-transform: uppercase;
-  color: #565656;
+  font-weight: bolder;
 }
 
 .c-header__logo-description:hover {
@@ -370,52 +391,47 @@ main {
 }
 
 .c-header__logo-character {
-  -webkit-animation: from-grey-to-secondary 1s ease-out alternate 1;
-          animation: from-grey-to-secondary 1s ease-out alternate 1;
+  -webkit-animation: from-secondary-to-purple 1s ease-out 1 forwards;
+          animation: from-secondary-to-purple 1s ease-out 1 forwards;
+  color: black;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
 }
 
 .c-header__logo-character:nth-child(1) {
-  color: #FF9100;
+  color: #9F2B68;
   -webkit-animation-delay: 0.05s;
           animation-delay: 0.05s;
-  opacity: 1.3;
 }
 
 .c-header__logo-character:nth-child(2) {
-  color: #FF9100;
+  color: #9F2B68;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
-  opacity: 2.3;
 }
 
 .c-header__logo-character:nth-child(3) {
-  color: #FF9100;
+  color: #9F2B68;
   -webkit-animation-delay: 0.15s;
           animation-delay: 0.15s;
-  opacity: 3.3;
 }
 
 .c-header__logo-character:nth-child(4) {
-  color: #FF9100;
+  color: #9F2B68;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
-  opacity: 4.3;
 }
 
 .c-header__logo-character:nth-child(5) {
-  color: #FF9100;
+  color: #9F2B68;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
-  opacity: 5.3;
 }
 
 .c-header__logo-character:nth-child(6) {
-  color: #FF9100;
+  color: #9F2B68;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
-  opacity: 6.3;
 }
 
 .hero {
@@ -468,10 +484,89 @@ main {
   margin-left: 15px;
   -webkit-transition: color 0.3s ease-out;
   transition: color 0.3s ease-out;
-  color: #565656;
+  color: #9F2B68;
 }
 
 .c-footer__link:hover {
   color: #FF9100;
   opacity: 0.8;
+}
+
+.c-form-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-login-form {
+  background: #565656;
+  opacity: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border: 3px solid #41BEAD;
+  padding-bottom: 24px;
+}
+
+.c-login-form__no-account-yet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-login-form__no-account-yet-title {
+  color: #44A9F8;
+  margin-right: 30px;
+}
+
+.c-login-form__no-account-yet-link {
+  font-size: 26px;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+  margin-right: 30px;
+}
+
+.c-login-form__no-account-yet-link:hover {
+  color: #41BEAD;
+}
+
+.c-login-form__label {
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+
+.c-login-form__title {
+  color: #44A9F8;
+  padding-bottom: 0;
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
 }

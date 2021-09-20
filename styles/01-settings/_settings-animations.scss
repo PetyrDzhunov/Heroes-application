@@ -6,3 +6,12 @@
         color: $secondary-color;
     }
 }
+
+@keyframes from-secondary-to-purple {
+    from {
+        color: $secondary-color;
+    }
+    to {
+        color: $purple-300
+    }
+}
