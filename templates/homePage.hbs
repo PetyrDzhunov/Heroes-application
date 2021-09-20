@@ -1,10 +1,10 @@
 {{> header}}
-<div class="heroes-container">
-		<div class="hero-container">
+<div class="o-container-centered--row">
+		<div class="o-container-centered--column">
 		{{#if loggedIn}}
 		{{#each heroes}}
-			<div class="hero">
-		<img class="hero-image" src="{{image}}" alt="{{name}}">
+			<div class="hero o-container-centered--column">
+		<img class="hero__image" src="{{image}}" alt="{{name}}">
 		<div>Name : {{name}}</div>
 				<div>Class : {{class}}</div>
 				<div>Health : {{health}}</div>
@@ -18,9 +18,9 @@
 				{{#if energy}}
 				<div>Energy :{{energy}} </div>
 				{{/if}}
-				<div class="skills-label">Skills:</div>
+				<div class="hero__skills-label">Skills:</div>
 				{{#each skills}}
-				<div class='div-skills'>
+				<div class='hero__skills'>
 
 				{{type}}, Damage: {{damage}},
 
@@ -37,7 +37,7 @@
 					{{/if}}
 				</div>
 				{{/each}}
-				<div class="hero-buttons">
+				<div class="hero__cta-container">
 				<a href="/details/{{heroId}}"><button id="details-hero">Details</button></a>
 				<a href="/enter-world/{{heroId}}"><button id="enter-world">Enter World</button></a>
 				<a href="/delete/{{heroId}}"><button id="delete-hero">Delete</button></a>

@@ -1,0 +1,12 @@
+.o-container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    &--row {
+        flex-flow: row wrap;
+    }
+    &--column {
+        flex-flow: column wrap;
+    }
+}
