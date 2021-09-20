@@ -1,0 +1,8 @@
+@keyframes from-grey-to-secondary {
+    from {
+        color: $grey-700;
+    }
+    to {
+        color: $secondary-color;
+    }
+}

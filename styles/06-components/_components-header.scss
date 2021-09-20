@@ -1,0 +1,74 @@
+.c-header {
+    display: grid;
+    background: $primary-300;
+    grid-template-columns: 1fr 4fr;
+    max-height: 120px;
+    border-radius: $box-radius;
+    box-shadow: $primary-shadow;
+    &__nav {
+        display: flex;
+        width: 100%;
+        &-list {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+        }
+        &-list-item-username {
+            align-self: center;
+        }
+        &-list-item {
+            padding: 0 18px;
+        }
+        &-link {
+            margin-right: 20px;
+            color: $grey-700;
+            transition: color;
+            font-size: 18px;
+            &:hover {
+                transition: 0.3s ease-out;
+                color: $secondary-color;
+                opacity: 0.8;
+            }
+        }
+        &-link-username {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__logo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        &-description {
+            &:hover {
+                cursor: pointer;
+            }
+            text-transform: uppercase;
+            color: $grey-700;
+        }
+        &-image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        &-character {
+            animation: from-grey-to-secondary 1s ease-out alternate 1;
+            transition: color 0.3s ease-out;
+            @for $i from 1 to 7 {
+                &:nth-child(#{$i}) {
+                    color: $secondary-color;
+                    animation-delay: 0.05s *$i;
+                    opacity: 0.3+$i;
+                }
+            }
+        }
+    }
+}

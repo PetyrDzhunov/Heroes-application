@@ -1,6 +1,12 @@
 @import './01-settings/_settings-typography';
+@import './01-settings/_settings-shadows';
 @import './01-settings/_settings-colors';
+@import './01-settings/_settings-borders';
+@import './01-settings/_settings-animations';
 @import './03-generic/_generic-normalize';
+@import './04-elements/_elements-links';
+@import './04-elements/_elements-main';
 @import './05-objects/_object-containers';
+@import './06-components/_components-header';
 @import './06-components/_components-hero';
 @import './06-components/_components-footer';
