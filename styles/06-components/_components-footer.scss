@@ -1,0 +1,22 @@
+.c-footer {
+    width: 100%;
+    background-color: $primary-300;
+    align-self: end;
+    border-radius: $box-radius;
+    box-shadow: $primary-shadow;
+    &__items-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    &__link {
+        margin-left: 15px;
+        transition: color 0.3s ease-out;
+        color: $grey-700;
+        &:hover {
+            color: $secondary-color;
+            opacity: 0.8;
+        }
+    }
+}

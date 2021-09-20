@@ -1,14 +1,47 @@
-<header>
-	<nav class="navbar navbar-dark bg-primary">
+<header class="c-header">
+	<section class="c-header__logo">
+		<article class="c-header__logo-description">
+			<span class="c-header__logo-character h2-like">h</span>
+			<span class="c-header__logo-character h2-like">e</span>
+			<span class="c-header__logo-character h2-like">r</span>
+			<span class="c-header__logo-character h2-like">o</span>
+			<span class="c-header__logo-character h2-like">e</span>
+			<span class="c-header__logo-character h2-like">s</span>
+		</article>
+			<article class="c-header__logo-image">
+				<a href="/home">
+				<img src="/assets/images/barbarian.png" alt="">
+				</a>
+			</article>
+	</section>
+	<nav class="c-header__nav">
 		{{#if loggedIn}}
-			<p class="navigation-link">Welcome , {{username}}</p>
-        	<a class="navigation-link" href="/home">Play game</a>
-        	<a class="navigation-link" href="/create-hero">Create new Hero</a>
-			<a  class="navigation-link" href="/logout">Logout</a>
+		<li class="c-header__nav-list-item c-header__nav-list-item-username">
+			<a class="c-header__nav-link c-header__nav-link-username">Welcome , {{username}}</a>
+			</li>	
+		<ul class="c-header__nav-list">
+			<li class="c-header__nav-list-item">
+        	<a class="c-header__nav-link" href="/home">Play game</a>
+			</li>
+			<li class="c-header__nav-list-item">
+        	<a class="c-header__nav-link" href="/create-hero">Create new Hero</a>
+			</li>
+			<li class="c-header__nav-list-item">
+			<a  class="c-header__nav-link" href="/logout">Logout</a>
+			</li>
 			{{else}}
-        	<a class="navigation-link" href="/about">About</a>
-       		<a class="navigation-link" href="/register">Register</a>
-       		<a class="navigation-link" href="/login">Login</a>
+		<ul class="c-header__nav-list">
+			<li class="c-header__nav-list-item">
+        	<a class="c-header__nav-link" href="/about">About</a>
+			</li>
+			<li class="c-header__nav-list-item">
+       		<a class="c-header__nav-link" href="/register">Register</a>
+			</li>
+			<li class="c-header__nav-list-item">
+       		<a class="c-header__nav-link" href="/login">Login</a>
+			</li>
+		</ul>
+		</ul>
 		 {{/if}}
 	</nav>
 </header>

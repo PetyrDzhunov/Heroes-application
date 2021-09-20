@@ -1,0 +1,18 @@
+.hero {
+    border: solid red 2px;
+    border-radius: 6px;   
+    background-color: white;
+    &__image {
+        width: 300px;
+        border-radius: 8px;
+        height: 250px;
+    }
+    &__skills-label {}
+    &__cta-container {
+		display: flex;
+		text-align: center;
+		justify-content: center;
+	}
+
+	
+}
