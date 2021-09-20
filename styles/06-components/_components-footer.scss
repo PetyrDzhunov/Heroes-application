@@ -1,14 +1,21 @@
 .c-footer {
-    position: relative;
+    position: absolute;
     bottom: 0;
     width: 100%;
     height: 80px;
     background-color: $primary-300;
+    bottom: 0;
     &__items-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
         height: 100%;
     }
-    &__link {}
+    &__link {
+        margin-left: 15px;
+        transition: color 0.3s ease-out;
+        &:hover {
+            color: $red-500;
+        }
+    }
 }
