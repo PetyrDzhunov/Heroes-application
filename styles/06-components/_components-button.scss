@@ -1,0 +1,21 @@
+.btn {
+    border-radius: $button-radius;
+    padding: 8px 24px;
+    box-shadow: none;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: $grey-700;
+    transition: color 0.5s ease-out;
+    &--primary {
+        background: $primary-300;
+        border: solid 1px $secondary-color;
+    }
+    &--secondary {
+        background: $secondary-color;
+        border: solid 1px $primary-300;
+    }
+    &:hover {
+        color: #fff;
+    }
+}
