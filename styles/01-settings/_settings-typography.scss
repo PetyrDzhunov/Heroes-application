@@ -33,6 +33,35 @@ h2,
 h3,
 h4,
 h5,
-h6 {
+h6,
+.h1-like,
+.h2-like,
+.h3-like,
+.h4-like {
     font-family: "Montserrat", sans-serif;
+}
+
+h4,
+.h4-like {
+    font-weight: 600;
+    line-height: 24px;
+    font-style: normal;
+    // font-size: 20px;
+}
+
+h1,
+.h1-like {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 600;
+    // font-size: 36px;
+    line-height: 44px;
+}
+
+h2,
+.h2-like {
+    font-size: 30px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 30px;
 }
