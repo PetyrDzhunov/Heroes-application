@@ -139,3 +139,37 @@ progress {
 summary {
     display: list-item;
 }
+
+::placeholder {
+    color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+}
+
+::placeholder {
+    color: #fff !important;
+}
+
+.ui-autocomplete,
+.ui-state-hover,
+.ui-state-active,
+#support-search-input,
+.ui-autocomplete-input {
+    color: $primary-300 !important;
+}
+
+.ui-autocomplete-input::placeholder {
+    color: #fff !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: $secondary-color;
+}

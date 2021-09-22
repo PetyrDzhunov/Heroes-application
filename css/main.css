@@ -247,6 +247,76 @@ summary {
   display: list-item;
 }
 
+::-webkit-input-placeholder {
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px transparent inset !important;
+}
+
+::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+::-ms-input-placeholder {
+  color: #fff !important;
+}
+
+::placeholder {
+  color: #fff !important;
+}
+
+.ui-autocomplete,
+.ui-state-hover,
+.ui-state-active,
+#support-search-input,
+.ui-autocomplete-input {
+  color: #41BEAD !important;
+}
+
+.ui-autocomplete-input::-webkit-input-placeholder {
+  color: #fff !important;
+}
+
+.ui-autocomplete-input:-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.ui-autocomplete-input::-ms-input-placeholder {
+  color: #fff !important;
+}
+
+.ui-autocomplete-input::placeholder {
+  color: #fff !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset;
+  -webkit-text-fill-color: #FF9100;
+}
+
 li {
   text-transform: uppercase;
   list-style: none;
@@ -543,8 +613,6 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-preferred-size: 50%;
-      flex-basis: 50%;
   border-radius: 12px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -570,7 +638,7 @@ main {
 }
 
 .c-login-form__no-account-yet-title {
-  color: #44A9F8;
+  color: #41BEAD;
   margin-right: 30px;
 }
 
@@ -585,13 +653,38 @@ main {
   color: #41BEAD;
 }
 
+.c-login-form__user-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  width: 80%;
+}
+
+.c-login-form__user-box-password, .c-login-form__user-box-email {
+  width: 100%;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid #41BEAD;
+  padding: 10px 0;
+  outline: none;
+  font-size: 16px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #FF9100 !important;
+}
+
 .c-login-form__label {
   font-size: 24px;
   margin-bottom: 6px;
+  color: #fff;
 }
 
 .c-login-form__title {
-  color: #44A9F8;
+  color: #41BEAD;
   padding-bottom: 0;
   margin: 0;
   margin-top: 16px;

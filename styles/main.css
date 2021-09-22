@@ -50,7 +50,8 @@ a {
     align-items: center;
 }
 
-.skill-span:hover {
+
+/*.skill-span:hover { 
     color: black;
     transition: 0.5s ease;
     cursor: pointer;
@@ -60,7 +61,7 @@ a {
 .heroes-container {
     /* display: inline;
     color: red;
-    border: solid black 1px; */
+    border: solid black 1px; 
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -79,7 +80,7 @@ a {
 
 #enter-world {
     background-color: #4CAF50;
-    /* Green */
+    
     border: solid 1px black;
     border-radius: 6px;
     color: white;
@@ -378,3 +379,4 @@ label {
     color: white;
     font-size: xx-large;
 }
+/*
