@@ -1,0 +1,18 @@
+.create-hero-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    &__classes {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: space-around;
+        &__class {
+            &-title:nth-child(1) {
+                margin-top: 30px;
+            }
+            &-title {
+                margin: 0 auto;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,89 @@
+.c-register-form {
+    background: $grey-700;
+    opacity: 1;
+    border-radius: $image-radius;
+    box-shadow: $secondary-shadow;
+    border: 3px solid $primary-300;
+    padding-bottom: 24px;
+    &__have-account-already {
+        display: flex;
+        flex-flow: row wrap;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
+        &-title {
+            color: $primary-300;
+            margin-right: 30px;
+            margin-left: 30px;
+        }
+        &-link {
+            font-size: 26px;
+            color: $primary-300;
+            transition: color 0.5s ease-out;
+            margin-right: 30px;
+            &:hover {
+                color: $secondary-color
+            }
+        }
+    }
+    &__user-box {
+        display: flex;
+        flex-flow: column wrap;
+        width: 80%;
+        position: relative;
+        &__label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 20px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
+        &-email:focus~&__label {
+            top: -20px;
+            left: 0;
+            color: $primary-500;
+            font-size: 14px;
+        }
+        &-email:valid~&__label {
+            top: -20px;
+            left: 0;
+            color: $primary-500;
+            font-size: 14px;
+        }
+        &-password:focus~&__label {
+            top: -20px;
+            left: 0;
+            color: $primary-500;
+            font-size: 14px;
+        }
+        &-password:valid~&__label {
+            top: -20px;
+            left: 0;
+            color: $primary-500;
+            font-size: 14px;
+        }
+        &-password,
+        &-email {
+            width: 100%;
+            margin-bottom: 30px;
+            border: none;
+            font-size: 22px;
+            border-bottom: 1px solid $primary-300;
+            padding: 10px 0;
+            outline: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: $secondary-color !important;
+        }
+    }
+    &__title {
+        color: $primary-300;
+        padding-bottom: 0;
+        margin: 0;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}

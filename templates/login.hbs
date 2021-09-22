@@ -1,18 +1,21 @@
 {{> header}}
-<div class="c-form-wrapper">
-<form action="/login" method="POST" class="c-login-form o-container-centered--column">
+<section class="o-container-centered o-container-centered--column">
+<form action="/login" method="POST"  class="c-login-form o-container-centered o-container-centered--column">
 <h1 class="c-login-form__title">Login</h1>
-
-<label for="email"  class="c-login-form__label">Email</label>
-<input type="text" class="c-login-form__email" placeholder="Email..." name="email">
-<label for="password" class="c-login-form__label">Password</label>
-<input type="password" class="c-login-form__password" placeholder="Password..." name="password">
+  <div class="c-login-form__user-box">
+      <input required="" type="text" class="c-login-form__user-box-email"name="email" >
+      <label class="c-login-form__user-box__label">Email</label>
+  </div>
+    <div class="c-login-form__user-box">
+      <input required="" type="password" class="c-login-form__user-box-password" name="password">
+      <label class="c-login-form__user-box__label">Password</label>
+    </div>
 <button type="submit" class="btn btn--primary c-login-form__submit">Submit</button>
 <article class="c-login-form__no-account-yet">
   <h2 class="c-login-form__no-account-yet-title">New User?</h2>
   <a href="/register" class="c-login-form__no-account-yet-link">Register Here</a>
 </article>
-</div>
+</section>
 
 </form>
 {{> footer}}
