@@ -378,15 +378,25 @@ main {
 .btn--primary {
   background: #41BEAD;
   border: solid 1px #FF9100;
+  -webkit-transition: background-color 0.5s ease-out;
+  transition: background-color 0.5s ease-out;
+}
+
+.btn--primary:hover {
+  background: #FF9100;
+  border: solid 1px #41BEAD;
 }
 
 .btn--secondary {
   background: #FF9100;
   border: solid 1px #41BEAD;
+  -webkit-transition: color background-color border 0.5s ease-out;
+  transition: color background-color border 0.5s ease-out;
 }
 
-.btn:hover {
-  color: #fff;
+.btn--secondary:hover {
+  background-color: #41BEAD;
+  border: solid 1px #FF9100;
 }
 
 .c-header {
@@ -629,9 +639,7 @@ main {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   width: 100%;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -640,17 +648,19 @@ main {
 .c-login-form__no-account-yet-title {
   color: #41BEAD;
   margin-right: 30px;
+  margin-left: 30px;
 }
 
 .c-login-form__no-account-yet-link {
   font-size: 26px;
+  color: #41BEAD;
   -webkit-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
   margin-right: 30px;
 }
 
 .c-login-form__no-account-yet-link:hover {
-  color: #41BEAD;
+  color: #FF9100;
 }
 
 .c-login-form__user-box {
@@ -662,25 +672,32 @@ main {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   width: 80%;
+  position: relative;
+}
+
+.c-login-form__user-box__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .c-login-form__user-box-password, .c-login-form__user-box-email {
   width: 100%;
   margin-bottom: 30px;
   border: none;
+  font-size: 22px;
   border-bottom: 1px solid #41BEAD;
   padding: 10px 0;
   outline: none;
-  font-size: 16px;
   background-clip: text;
   -webkit-background-clip: text;
   color: #FF9100 !important;
-}
-
-.c-login-form__label {
-  font-size: 24px;
-  margin-bottom: 6px;
-  color: #fff;
 }
 
 .c-login-form__title {
@@ -691,6 +708,16 @@ main {
   margin-bottom: 16px;
 }
 
-.c-login-form__submit {
-  margin-top: 20px;
+.c-login-form__user-box-email:focus ~ .c-login-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-login-form__user-box-password:focus ~ label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
 }

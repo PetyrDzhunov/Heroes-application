@@ -18,18 +18,20 @@
         display: flex;
         flex-flow: row wrap;
         width: 100%;
-        justify-content: flex-end;
+        justify-items: center;
         align-items: center;
         &-title {
             color: $primary-300;
             margin-right: 30px;
+            margin-left: 30px;
         }
         &-link {
             font-size: 26px;
+            color: $primary-300;
             transition: color 0.5s ease-out;
             margin-right: 30px;
             &:hover {
-                color: $primary-300;
+                color: $secondary-color
             }
         }
     }
@@ -37,24 +39,30 @@
         display: flex;
         flex-flow: column wrap;
         width: 80%;
+        position: relative;
+        &__label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding: 10px 0;
+            font-size: 20px;
+            color: #fff;
+            pointer-events: none;
+            transition: .5s;
+        }
         &-password,
         &-email {
             width: 100%;
             margin-bottom: 30px;
             border: none;
+            font-size: 22px;
             border-bottom: 1px solid $primary-300;
             padding: 10px 0;
             outline: none;
-            font-size: 16px;
             background-clip: text;
             -webkit-background-clip: text;
             color: $secondary-color !important;
         }
-    }
-    &__label {
-        font-size: 24px;
-        margin-bottom: 6px;
-        color: #fff;
     }
     &__title {
         color: $primary-300;
@@ -63,7 +71,21 @@
         margin-top: 16px;
         margin-bottom: 16px;
     }
-    &__submit {
-        margin-top: 20px;
+}
+
+.c-login-form {
+    &__user-box {
+        &-email:focus~&__label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 14px;
+        }
+        &-password:focus~label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 14px;
+        }
     }
 }
