@@ -687,6 +687,20 @@ main {
   transition: .5s;
 }
 
+.c-login-form__user-box-email:focus ~ .c-login-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-login-form__user-box-password:focus ~ .c-login-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
 .c-login-form__user-box-password, .c-login-form__user-box-email {
   width: 100%;
   margin-bottom: 30px;
@@ -706,18 +720,4 @@ main {
   margin: 0;
   margin-top: 16px;
   margin-bottom: 16px;
-}
-
-.c-login-form__user-box-email:focus ~ .c-login-form__user-box__label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 14px;
-}
-
-.c-login-form__user-box-password:focus ~ label {
-  top: -20px;
-  left: 0;
-  color: #03e9f4;
-  font-size: 14px;
 }

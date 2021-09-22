@@ -50,6 +50,18 @@
             pointer-events: none;
             transition: .5s;
         }
+        &-email:focus~&__label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 14px;
+        }
+        &-password:focus~&__label {
+            top: -20px;
+            left: 0;
+            color: #03e9f4;
+            font-size: 14px;
+        }
         &-password,
         &-email {
             width: 100%;
@@ -74,18 +86,5 @@
 }
 
 .c-login-form {
-    &__user-box {
-        &-email:focus~&__label {
-            top: -20px;
-            left: 0;
-            color: #03e9f4;
-            font-size: 14px;
-        }
-        &-password:focus~label {
-            top: -20px;
-            left: 0;
-            color: #03e9f4;
-            font-size: 14px;
-        }
-    }
+    &__user-box {}
 }
