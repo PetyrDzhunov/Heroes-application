@@ -344,8 +344,7 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-items: center;
 }
 
 .o-container-centered--row {
@@ -599,30 +598,9 @@ main {
   opacity: 0.8;
 }
 
-.c-form-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
 .c-login-form {
   background: #565656;
   opacity: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   border-radius: 12px;
   -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -694,7 +672,21 @@ main {
   font-size: 14px;
 }
 
+.c-login-form__user-box-email:valid ~ .c-login-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
 .c-login-form__user-box-password:focus ~ .c-login-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-login-form__user-box-password:valid ~ .c-login-form__user-box__label {
   top: -20px;
   left: 0;
   color: #03e9f4;
@@ -715,6 +707,122 @@ main {
 }
 
 .c-login-form__title {
+  color: #41BEAD;
+  padding-bottom: 0;
+  margin: 0;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+.c-register-form {
+  background: #565656;
+  opacity: 1;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  border: 3px solid #41BEAD;
+  padding-bottom: 24px;
+}
+
+.c-register-form__have-account-already {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  width: 100%;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.c-register-form__have-account-already-title {
+  color: #41BEAD;
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+.c-register-form__have-account-already-link {
+  font-size: 26px;
+  color: #41BEAD;
+  -webkit-transition: color 0.5s ease-out;
+  transition: color 0.5s ease-out;
+  margin-right: 30px;
+}
+
+.c-register-form__have-account-already-link:hover {
+  color: #FF9100;
+}
+
+.c-register-form__user-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  width: 80%;
+  position: relative;
+}
+
+.c-register-form__user-box__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #fff;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.c-register-form__user-box-email:focus ~ .c-register-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-register-form__user-box-email:valid ~ .c-register-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-register-form__user-box-password:focus ~ .c-register-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-register-form__user-box-password:valid ~ .c-register-form__user-box__label {
+  top: -20px;
+  left: 0;
+  color: #03e9f4;
+  font-size: 14px;
+}
+
+.c-register-form__user-box-password, .c-register-form__user-box-email {
+  width: 100%;
+  margin-bottom: 30px;
+  border: none;
+  font-size: 22px;
+  border-bottom: 1px solid #41BEAD;
+  padding: 10px 0;
+  outline: none;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: #FF9100 !important;
+}
+
+.c-register-form__title {
   color: #41BEAD;
   padding-bottom: 0;
   margin: 0;

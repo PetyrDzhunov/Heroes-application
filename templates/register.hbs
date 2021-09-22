@@ -1,22 +1,24 @@
 {{> header}}
- <h1 class="white-thing">Register</h1>
-        <p class="form-info">Already registered?
-            <a  class='navigation-link-updated' href="/login">Login now</a> and have some fun!
-        </p>
-<form action="/register" method="POST">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
-    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<section class="o-container-centered o-container-centered--column">
+<form action="/register" method="POST" class="c-register-form o-container-centered o-container-centered--column">
+<h1 class="c-register-form__title">Register</h1>
+  <div class="c-register-form__user-box">
+    <input required=""type="text" class="c-register-form__user-box-email"name="email">
+    <label class="c-register-form__user-box__label">Email address</label>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+  <div class="c-register-form__user-box">
+    <input required=""type="password" class="c-register-form__user-box-password" name="password">
+    <label class="c-register-form__user-box__label">Password</label>
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Repeat password</label>
-    <input type="password" class="form-control" id="exampleInputPassword2"  placeholder="Password" name="rePassword">
+  <div class="c-register-form__user-box">
+    <input required=""type="password" class="c-register-form__user-box-password" name="rePassword">
+    <label class="c-register-form__user-box__label">Repeat password</label>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn--primary c-register-form__submit">Submit</button>
+  <article class="c-register-form__have-account-already">
+    <h2 class="c-register-form__have-account-already-title">Already registered?</h2>
+    <a href="/login" class="c-register-form__have-account-already-link">Login now</a>
+  </article>
+</section>
 </form>
 {{> footer}}			

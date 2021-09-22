@@ -1,20 +1,11 @@
-.c-form-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.c-login-form {
+.c-register-form {
     background: $grey-700;
     opacity: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border-radius: $image-radius;
     box-shadow: $secondary-shadow;
     border: 3px solid $primary-300;
     padding-bottom: 24px;
-    &__no-account-yet {
+    &__have-account-already {
         display: flex;
         flex-flow: row wrap;
         width: 100%;
@@ -53,13 +44,25 @@
         &-email:focus~&__label {
             top: -20px;
             left: 0;
-            color: #03e9f4;
+            color: $primary-500;
+            font-size: 14px;
+        }
+        &-email:valid~&__label {
+            top: -20px;
+            left: 0;
+            color: $primary-500;
             font-size: 14px;
         }
         &-password:focus~&__label {
             top: -20px;
             left: 0;
-            color: #03e9f4;
+            color: $primary-500;
+            font-size: 14px;
+        }
+        &-password:valid~&__label {
+            top: -20px;
+            left: 0;
+            color: $primary-500;
             font-size: 14px;
         }
         &-password,
@@ -83,8 +86,4 @@
         margin-top: 16px;
         margin-bottom: 16px;
     }
-}
-
-.c-login-form {
-    &__user-box {}
 }
