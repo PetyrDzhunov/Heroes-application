@@ -36,7 +36,7 @@ export class Priest {
                 'https://www.drivethrurpg.com/images/11550/213983.jpg',
                 'https://i.pinimg.com/736x/d3/af/d2/d3afd2267c830fbe454ee7c121347c64.jpg'
             ])
-        this.class = 'priest';
+        this.class = 'Priest';
         this.skills = [
             { type: 'Holy fire', damage: 8, manaRequired: 11 },
             { type: 'War Cry', damage: 6, manaRequired: 10 },

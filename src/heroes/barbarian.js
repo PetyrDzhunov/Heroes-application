@@ -44,7 +44,7 @@ export class Barbarian {
                 'https://cdna.artstation.com/p/assets/images/images/004/655/594/medium/kim-ha-yeong-1-0.jpg?1485321692',
                 'https://www.noupe.com/wp-content/uploads/2020/09/Male-Human-Viking-Fighter-Barbarian-Pathfinder-PFRPG-DND-DD-3_5-5th-ed-d20-fantasy.png'
             ])
-        this.class = 'barbarian';
+        this.class = 'Barbarian';
         this.skills = [
             { type: 'Deep-wound', damage: 8, rage: 7 },
             { type: 'War Cry', damage: 6, rage: 10 },

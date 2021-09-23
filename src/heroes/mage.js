@@ -36,7 +36,7 @@ export class Mage {
             { type: 'Fireball', damage: 12, manaRequired: 18 },
             { type: 'Arcane shock', damage: 11, manaRequired: 17 }
         ]
-        this.class = 'mage';
+        this.class = 'Mage';
         this.strenght = 9;
         this.aggility = 11;
         this.stamina = 8;

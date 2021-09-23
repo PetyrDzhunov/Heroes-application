@@ -40,7 +40,7 @@ export class Rogue {
             { type: 'Ambush', damage: 18, energy: 18 },
             { type: 'Eviscerate', damage: 11, energy: 17 }
         ]
-        this.class = 'rogue';
+        this.class = 'Rogue';
         this.strenght = 12;
         this.aggility = 18;
         this.stamina = 11;

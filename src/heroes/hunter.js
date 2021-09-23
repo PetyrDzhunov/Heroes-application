@@ -39,7 +39,7 @@ export class Hunter {
             { type: 'Arcane-shot', damage: 11, manaRequired: 21 },
             { type: 'Multishot', damage: 6, manaRequired: 25 }
         ]
-        this.class = 'hunter';
+        this.class = 'Hunter';
         this.strenght = 11;
         this.aggility = 17;
         this.stamina = 11;
