@@ -1,0 +1,30 @@
+.u-underline {
+    border-bottom: 3px solid $primary-300;
+    width: 75%;
+    position: relative;
+    margin-left: 20px;
+    &::before {
+        position: absolute;
+        top: 58.5px;
+        content: ' ';
+        width: 16px;
+        height: 16px;
+        z-index: 1;
+        left: -15px;
+        background-size: 100% 100%;
+        background-position: 50%;
+        background-image: url('/assets/images/nav-under-border-cap.png');
+    }
+    &::after {
+        position: absolute;
+        top: 58.5px;
+        content: ' ';
+        width: 16px;
+        height: 16px;
+        z-index: 1;
+        background-size: 100% 100%;
+        background-position: 50%;
+        right: -15px;
+        background-image: url('/assets/images/nav-under-border-cap.png');
+    }
+}

@@ -1,5 +1,6 @@
 {{> header}}
-<section class="create-hero-section">
+	<form action="/create-hero" method="POST" о>
+		<section class="create-hero-section">
 	<article class="create-hero-section__classes">
 		<article class="create-hero-section__classes__class">
 			<h1 class="create-hero-section__classes__class-title">Barbarian</h1>
@@ -27,11 +28,29 @@
 		</article>
 	</article>
 	<article class="create-hero-section__images">
-		<h2 class="create-hero-section__images-title">Classes</h2>
-		<p class="create-hero-section__images-description">Each class in Heroes is unique and has access to different skills.Which hero will you choose?</p>
-		<img src="{{image}}" alt="">
+		<article class="create-hero-section__images-description">
+			<h2 class="create-hero-section__images-title">Classes</h2>
+			<p class="create-hero-section__images-text">Each class in Heroes is unique and has access to different skills.Which hero will you choose?</p>
+		</article>
+
+		<article class="create-hero-section__images-image-wrapper">
+		<img class="create-hero-section__images-image" src="" alt="">
+		</article>
+
+		<article class="create-hero-section__images-pick-section-wrapper">
+		<label for="name" class="create-hero-section__images-pick-section-wrapper-label">Name</label>
+		<input type="text" name="name" class="create-hero-section__images-pick-section-wrapper-name">
+		<label for="class" class="create-hero-section__images-pick-section-wrapper-label">Class</label>
+		<input type="text" name="hero" id="hero-class" class="create-hero-section__images-pick-section-wrapper-class">
+		<select name="gender" id="gender" class="create-hero-section__images-pick-section-wrapper-select-menu">
+		<option value="male" class="create-hero-section__images-pick-section-wrapper-select-menu-option">male</option>
+		<option value="female" class="create-hero-section__images-pick-section-wrapper-select-menu-option">female</option>
+		</select>
+		<input type="submit" value="Create hero" class="btn btn--primary create-hero-section__images-pick-section-wrapper-submit">
+		</article>
 	</article>
-</section>
+		</section>
+	</form>
 
 
 {{> footer}}

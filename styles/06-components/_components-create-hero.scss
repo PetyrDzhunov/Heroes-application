@@ -1,17 +1,137 @@
 .create-hero-section {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    height: 100%;
     &__classes {
         display: flex;
         flex-flow: column wrap;
         justify-content: space-around;
+        align-items: flex-start;
         &__class {
-            &-title:nth-child(1) {
-                margin-top: 30px;
-            }
             &-title {
+                width: fit-content;
+                align-self: flex-start;
                 margin: 0 auto;
                 cursor: pointer;
+                padding-bottom: 20px;
+                color: $secondary-color;
+                font-weight: bolder;
+                font-size: 36px;
+            }
+            &-description {
+                color: #fff;
+                font-weight: bolder;
+                font-size: 24px;
+                line-height: 1.3;
+            }
+        }
+    }
+    &__images {
+        display: grid;
+        grid-template-rows: 0.1fr 1.1fr 0.5fr;
+        &-description {
+            display: flex;
+            flex-flow: column wrap;
+            justify-items: center;
+            align-items: center;
+            color: $secondary-color;
+        }
+        &-title {
+            font-weight: bolder;
+            font-size: 32px;
+        }
+        &-text {
+            font-weight: bolder;
+            font-size: 20px;
+        }
+        &-image-wrapper {
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            border-radius: $image-radius;
+            min-width: 500px;
+            max-height: 300px;
+            margin: 0 auto;
+            img {
+                width: 100%;
+                max-width: 500px;
+                max-height: 300px;
+                border-radius: $image-radius;
+                transition: .5s ease-out;
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+                }
+            }
+        }
+        &-pick-section-wrapper {
+            display: flex;
+            flex-flow: column wrap;
+            width: 40%;
+            justify-items: center;
+            margin: 0 auto;
+            background: $grey-700;
+            opacity: 1;
+            border-radius: $image-radius;
+            box-shadow: $secondary-shadow;
+            border: 3px solid $primary-300;
+            &-label {
+                color: $primary-300;
+                font-size: 20px;
+                font-weight: bolder;
+                margin: 15px 0;
+                text-align: center;
+            }
+            &-class {
+                width: 75%;
+                margin: 0 auto 20px auto;
+                border: none;
+                font-size: 22px;
+                border-bottom: 1px solid $primary-300;
+                outline: none;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: $secondary-color !important;
+            }
+            &-name {
+                width: 75%;
+                margin: 0 auto 20px auto;
+                border: none;
+                font-size: 22px;
+                border-bottom: 1px solid $primary-300;
+                outline: none;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: $secondary-color !important;
+            }
+            &-submit {
+                align-self: center;
+                margin-top: 15px;
+                margin-bottom: 15px;
+            }
+            &-select-menu {
+                padding-right: 10px;
+                text-align: center;
+                width: 30%;
+                margin: 0 auto;
+                padding: 8px 0px;
+                outline: none;
+                border: none;
+                background: transparent;
+                border: 1px solid $primary-300;
+                border-radius: $image-radius;
+                cursor: pointer;
+                color: $secondary-color;
+                font-size: 20px;
+                &:hover {
+                    cursor: pointer;
+                }
+                &-option {
+                    color: $secondary-color;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
             }
         }
     }

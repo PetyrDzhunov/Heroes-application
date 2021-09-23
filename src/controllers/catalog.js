@@ -1,11 +1,16 @@
-import { extendContext, getUserData, db, classToObject, errorHandler, checkHero, validateHero, getAllMyHeroes, getHero, getUserNameFromEmail } from "../util.js";
+import { extendContext, getUserData, db, classToObject, errorHandler, checkHero, validateHero, getAllMyHeroes, getHero, getUserNameFromEmail, showMoreInformationAboutClass } from "../util.js";
+
+
 
 export async function createNewHero(context) {
     let user = getUserData()
     let username = getUserNameFromEmail(user.email);
     context.username = username;
     await extendContext(context)
-    this.partial('./templates/create-hero.hbs');
+    this.partial('./templates/create-hero.hbs')
+        .then(() => {
+            showMoreInformationAboutClass()
+        })
 }
 
 export async function createNewHeroPost(context) {
@@ -28,6 +33,8 @@ export async function createNewHeroPost(context) {
 
     };
 };
+
+
 
 export async function detailsPage(context) {
     const { id } = context.params;
