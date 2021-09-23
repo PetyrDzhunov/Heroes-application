@@ -8,6 +8,9 @@ import init from './db-init.js';
 init();
 export const userModel = firebase.auth();
 export const db = firebase.firestore()
+let titles = document.getElementsByClassName('create-hero-section__classes__class-title');
+let heroImages = [{ name: 'Barbarian', src: '../assets/images/Barbarian.jpg', }, { name: 'Mage', src: './assets/images/Mage.jpg' }, { name: 'Rogue', src: './assets/images/Rogue.jpg' }, { name: 'Priest', src: './assets/images/Priest.jpg' }, { name: 'Hunter', src: './assets/images/Hunter.jpg' }];
+
 
 
 export async function extendContext(context) {
@@ -66,19 +69,19 @@ export async function getHero(id) {
 };
 
 export function checkHero(name, hero, gender) {
-    if (hero === 'barbarian') {
+    if (hero === 'Barbarian') {
         return new Barbarian(name, gender);
     };
-    if (hero === 'mage') {
+    if (hero === 'Mage') {
         return new Mage(name, gender)
     };
-    if (hero === 'hunter') {
+    if (hero === 'Hunter') {
         return new Hunter(name, gender)
     };
-    if (hero === 'priest') {
+    if (hero === 'Priest') {
         return new Priest(name, gender)
     }
-    if (hero === 'rogue') {
+    if (hero === 'Rogue') {
         return new Rogue(name, gender)
     }
 }
@@ -140,6 +143,43 @@ export function getUserNameFromEmail(email) {
     let username = firstLetter.concat(finalLetters);
     return username;
 }
+
+export async function showMoreInformationAboutClass() {
+    let titlesArray = Array.from(titles);
+    titlesArray.forEach((title) => {
+        title.addEventListener('click', revealInformation);
+    });
+}
+
+
+
+function revealInformation(e) {
+    let titlesArray = Array.from(titles);
+    let titlesArrayCopy = [...titlesArray];
+    let currentHero = e.target.textContent;
+    let currentImageSrc = heroImages.find((image) => image.name === currentHero);
+    let imageElement = document.querySelector('.create-hero-section__images-image');
+    imageElement.src = currentImageSrc.src;
+    let currTitle = titlesArrayCopy.find((title) => title === e.target);
+    titlesArrayCopy.splice(titlesArrayCopy.indexOf(currTitle), 1)
+    let inputForClass = document.getElementById('hero-class')
+
+    let hiddenParagraph = e.target.nextSibling.nextSibling;
+    if ([...hiddenParagraph.classList].includes('u-hidden')) {
+        hiddenParagraph.classList.remove('u-hidden');
+        currTitle.classList.add('u-underline');
+        inputForClass.value = currTitle.textContent
+
+        titlesArrayCopy.forEach((title) => {
+            title.nextSibling.nextSibling.classList.add('u-hidden');
+            title.classList.remove('u-underline');
+        });
+    } else {
+        hiddenParagraph.classList.add('u-hidden');
+        currTitle.classList.remove('u-underline');
+    }
+}
+
 
 export let today = new Date();
 export let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();

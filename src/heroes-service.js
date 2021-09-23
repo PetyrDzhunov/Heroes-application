@@ -1,12 +1,4 @@
 const apiKey = 'AIzaSyBgcLHM3nJuJwteuW6NPOs2P0gJ7avANEE';
-// const dataBaseUrl = 'https://console.firebase.google.com/project/heroes-application/database/data/';
-// {
-//     email : '' , 
-//     uid : '' , 
-//     heroes : [
-
-//     ]
-// }
 const endpoints = {
     LOGIN: `https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=`,
     REGISTER: `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=`,
@@ -31,18 +23,18 @@ async function request(url, method, body) {
     return data;
 };
 
-async function get(url) {
-    return request(url, 'GET')
-};
+// async function get(url) {
+//     return request(url, 'GET')
+// };
 
-async function post(url, body) {
-    return request(url, 'POST', body);
-};
+// async function post(url, body) {
+//     return request(url, 'POST', body);
+// };
 
-async function del(url) {
-    return request(url, 'DELETE');
-};
+// async function del(url) {
+//     return request(url, 'DELETE');
+// };
 
-async function patch(url, body) {
-    return request(url, 'PATCH', body);
-};
+// async function patch(url, body) {
+//     return request(url, 'PATCH', body);
+// };

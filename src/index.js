@@ -2,9 +2,12 @@ import { homePage } from './controllers/home.js'
 import { registerPage, registerPost, loginPage, loginPost, logout, deleteHero, aboutPage, enterWorld } from "./controllers/user.js";
 import { createNewHero, createNewHeroPost, detailsPage } from "./controllers/catalog.js";
 const app = Sammy('#app', function() {
+
     this.use('Handlebars', 'hbs');
     this.get('/', homePage);
     this.get('/home', homePage);
+
+
     //Register
 
     this.get('/register', registerPage);
