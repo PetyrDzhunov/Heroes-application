@@ -1022,6 +1022,36 @@ main {
   cursor: pointer;
 }
 
+.c-notifications {
+  display: none;
+  width: 300px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: middle;
+  font-size: 32px;
+  border-radius: 12px;
+  padding-top: 20px;
+}
+
+.c-notifications-text {
+  color: #fff;
+}
+
+.c-notifications__error {
+  background-color: #B00020;
+  color: #fff;
+}
+
+.c-notifications__success {
+  background-color: #4BB543;
+  color: #fff;
+}
+
 .u-hidden {
   display: none;
 }

@@ -9,7 +9,7 @@ init();
 export const userModel = firebase.auth();
 export const db = firebase.firestore()
 let titles = document.getElementsByClassName('create-hero-section__classes__class-title');
-let heroImages = [{ name: 'Barbarian', src: '../assets/images/Barbarian.jpg', }, { name: 'Mage', src: './assets/images/Mage.jpg' }, { name: 'Rogue', src: './assets/images/Rogue.jpg' }, { name: 'Priest', src: './assets/images/Priest.jpg' }, { name: 'Hunter', src: './assets/images/Hunter.jpg' }];
+let heroImages = [{ name: 'Barbarian', src: './assets/images/Barbarian.jpg', }, { name: 'Mage', src: './assets/images/Mage.jpg' }, { name: 'Rogue', src: './assets/images/Rogue.jpg' }, { name: 'Priest', src: './assets/images/Priest.jpg' }, { name: 'Hunter', src: './assets/images/Hunter.jpg' }];
 
 
 
@@ -105,21 +105,35 @@ export function validateHero(name, hero, heroes) {
         hideNotification(errorNotification)
         return false;
     };
+
+    if (name === '') {
+        showErrorNotificationWithTextContent('The name should contain at least 3 letters')
+        hideNotification(errorNotification)
+        return false;
+    };
+
+    if (name.length < 3) {
+        showErrorNotificationWithTextContent('The name should contain at least 3 letters')
+        hideNotification(errorNotification)
+        return false;
+    };
+
+
     showSuccessNotificationWithTextContent('Sucessfully created a new hero!')
     hideNotification(successNotification);
 }
 
 export function getNotifications() {
     return {
-        errorNotification: document.getElementById('error-notification'),
-        successNotification: document.getElementById('success-notification')
+        errorNotification: document.querySelector('.c-notifications__error'),
+        successNotification: document.querySelector('.c-notifications__success')
     };
 };
 
 export function hideNotification(notification) {
     setTimeout(() => {
         notification.style.display = 'none';
-    }, 5000);
+    }, 3000);
 };
 
 export function showErrorNotificationWithTextContent(textContent) {

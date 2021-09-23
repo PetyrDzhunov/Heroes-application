@@ -1,0 +1,25 @@
+.c-notifications {
+    display: none;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 32px;
+    border-radius: $image-radius;
+    padding-top: 20px;
+    &-text {
+        color: #fff
+    }
+    &__error {
+        background-color: $error-color;
+        color: #fff
+    }
+    &__success {
+        background-color: $success-color;
+        color: #fff
+    }
+}
