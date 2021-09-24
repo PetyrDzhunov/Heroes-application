@@ -1,18 +1,88 @@
-.hero {
-    border: solid red 2px;
-    border-radius: 6px;   
-    background-color: white;
-    &__image {
-        width: 300px;
-        border-radius: 8px;
-        height: 250px;
-    }
-    &__skills-label {}
-    &__cta-container {
-		display: flex;
-		text-align: center;
-		justify-content: center;
-	}
+.heroes-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-column-gap: 16px;
+    border-radius: $image-radius;
+    justify-items: center;
+    align-items: center;
+}
 
-	
+.c-card-hero {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    border-radius: $image-radius;
+    transition: 0.5s ease-out;
+    &:hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+    &__image-wrapper {
+        border-top-left-radius: $image-radius;
+        border-top-right-radius: $image-radius;
+        &-image {
+            border-top-left-radius: $image-radius;
+            border-top-right-radius: $image-radius;
+            height: 500px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        background: #fff;
+        font-size: 18px;
+        font-weight: bolder;
+        &-name {
+            color: $primary-300;
+        }
+        &-class {
+            color: $dark-green;
+        }
+        &-health {
+            color: $primary-300;
+        }
+        &-level {
+            color: $dark-green;
+        }
+        &-mana,
+        &-rage,
+        &-energy {
+            color: $primary-300;
+        }
+        &-skills {
+            color: $purple-300;
+            font-weight: bolder;
+            &-skill {
+                background: #fff;
+                color: $dark-green;
+                font-weight: bolder;
+                font-size: 18px;
+            }
+        }
+    }
+    &__cta-container {
+        margin: 0;
+        display: flex;
+        flex-flow: row wrap;
+        background: #fff;
+        border-bottom-left-radius: $image-radius;
+        border-bottom-right-radius: $image-radius;
+    }
+    &__link {}
+    &__no-heroes {
+        grid-column: 3/4;
+        display: flex;
+        flex-flow: column wrap;
+        background: $grey-500;
+        color: #fff;
+        border-radius: $image-radius;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+        &-links {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
 }

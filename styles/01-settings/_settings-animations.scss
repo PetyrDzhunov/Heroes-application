@@ -50,3 +50,39 @@
         width: 230px;
     }
 }
+
+@keyframes fire-above-text {
+    0% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 0 0 0 yellow, 0 0 5px yellow, -2px -5px 5px yellow, 4px -10px 10px yellow;
+    }
+    25% {
+        text-shadow: 0 3px 20px red, 0 0 30px red, 0 0 20px orange, 0 0 5px yellow, -2px -5px 5px yellow, 3px -10px 10px yellow, -4px -15px 20px yellow;
+    }
+    50% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 -5px 10px orange, -2px -5px 5px yellow, 3px -10px 10px yellow, -4px -15px 20px yellow, 2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+    75% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 -5px 10px orange, 3px -5px 5px yellow, -4px -10px 10px yellow, 2px -20px 30px rgba(255, 255, 0, 0.5), 0px -25px 40px rgba(255, 255, 0, 0)
+    }
+    100% {
+        text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 0 0 0 yellow, 0 0 5px yellow, -2px -5px 5px yellow, 4px -10px 10px yellow;
+    }
+}
+
+@keyframes glow-above-and-below-block {
+    0% {
+        box-shadow: 0 3px 20px $primary-300, 0 0 20px $primary-300, 0 0 10px $secondary-color, 0 0 0 $primary-300, 0 0 5px $primary-300, -2px -5px 5px $primary-300, 4px -10px 10px $primary-300;
+    }
+    25% {
+        box-shadow: 0 3px 20px $primary-300, 0 0 30px $primary-300, 0 0 20px $secondary-color, 0 0 5px $primary-300, -2px -5px 5px $primary-300, 3px -10px 10px $primary-300, -4px -15px 20px $primary-300;
+    }
+    50% {
+        box-shadow: 0 3px 20px $primary-300, 0 0 20px $primary-300, 0 -5px 10px $secondary-color, -2px -5px 5px $primary-300, 3px -10px 10px $primary-300, -4px -15px 20px $primary-300, 2px -20px 30px rgba(255, 255, 0, 0.5);
+    }
+    75% {
+        box-shadow: 0 3px 20px $primary-300, 0 0 20px $primary-300, 0 -5px 10px $secondary-color, 3px -5px 5px $primary-300, -4px -10px 10px $primary-300, 2px -20px 30px rgba(255, 255, 0, 0.5), 0px -25px 40px rgba(255, 255, 0, 0)
+    }
+    100% {
+        box-shadow: 0 3px 20px $primary-300, 0 0 20px $primary-300, 0 0 10px $secondary-color, 0 0 0 $primary-300, 0 0 5px $primary-300, -2px -5px 5px $primary-300, 4px -10px 10px $primary-300;
+    }
+}

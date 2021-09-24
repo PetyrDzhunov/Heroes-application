@@ -124,12 +124,11 @@ export function validateHero(name, hero, heroes) {
         return false;
     }
 
-    if (hero !== "Barbarian" || hero !== "Priest" || hero !== "Rogue" || hero !== "Hunter" || hero !== "Mage") {
+    if (hero !== "Barbarian" && hero !== "Priest" && hero !== "Rogue" && hero !== "Hunter" && hero !== "Mage") {
         showErrorNotificationWithTextContent('You should choose a valid class in order to play!')
         hideNotification(errorNotification);
         return false;
     }
-
 
     showSuccessNotificationWithTextContent('Sucessfully created a new hero!')
     hideNotification(successNotification);
