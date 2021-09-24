@@ -1,0 +1,21 @@
+{{>header}}
+<section class="c-heroes-armory">
+		<article class="c-heroes-armory__header">
+			<span class="c-heroes-armory__header-span">Class</span>
+			<span class="c-heroes-armory__header-span">Level</span>
+			<span class="c-heroes-armory__header-span">Name</span>
+			<span class="c-heroes-armory__header-span">Created</span>
+		</article>
+	{{#each heroes}}
+	<article class="c-heroes-armory__hero-row">
+		<span class="c-heroes-armory__hero-row-class">{{class}}</span>
+		<span class="c-heroes-armory__hero-row-level">{{level}}</span>
+		<span class="c-heroes-armory__hero-row-name">{{name}}</span>
+		<span class="c-heroes-armory__hero-row-created">{{createdOnDate}}</span>
+	</article>
+	{{else}}
+	<span class="c-heroes-armory__no-heroes-yet">No heroes created yet.</span>
+	{{/each}}
+
+</section>
+{{>footer}}
