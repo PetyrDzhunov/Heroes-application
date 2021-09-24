@@ -43,5 +43,11 @@
                 animation: 2s glow-above-and-below-block infinite alternate linear;
             }
         }
+        &-button {
+            margin-top: 80px;
+            text-align: center;
+            font-size: 20px;
+            letter-spacing: 10px;
+        }
     }
 }
