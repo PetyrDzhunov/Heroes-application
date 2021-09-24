@@ -561,6 +561,29 @@ main {
   border: solid 1px #FF9100;
 }
 
+.btn--fancy {
+  background: #41bead;
+  background: linear-gradient(124deg, #41bead 0%, #9f2b68 50%, #ff9100 100%);
+  color: #bd9b4e;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.btn--fancy:hover {
+  color: #e9c964;
+  background: #ff9100;
+  background: linear-gradient(124deg, #ff9100 0%, #9f2b68 50%, #41bead 100%);
+}
+
+.btn--big {
+  padding: 20px 140px;
+}
+
+.btn--shiny {
+  -webkit-box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+          box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+}
+
 .c-header {
   display: -ms-grid;
   display: grid;
@@ -1383,6 +1406,13 @@ main {
   background-color: #41BEAD;
   -webkit-animation: 2s glow-above-and-below-block infinite alternate linear;
           animation: 2s glow-above-and-below-block infinite alternate linear;
+}
+
+.c-guest-homepage__subtitle-button {
+  margin-top: 80px;
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 10px;
 }
 
 .u-hidden {

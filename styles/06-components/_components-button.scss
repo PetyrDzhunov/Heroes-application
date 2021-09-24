@@ -25,4 +25,21 @@
             border: solid 1px $secondary-color;
         }
     }
+    &--fancy {
+        background: rgb(65, 190, 173);
+        background: linear-gradient(124deg, rgba(65, 190, 173, 1) 0%, rgba(159, 43, 104, 1) 50%, rgba(255, 145, 0, 1) 100%);
+        color: $fancy-color;
+        transition: 0.3s ease-out;
+        &:hover {
+            color: #e9c964;
+            background: rgb(255, 145, 0);
+            background: linear-gradient(124deg, rgba(255, 145, 0, 1) 0%, rgba(159, 43, 104, 1) 50%, rgba(65, 190, 173, 1) 100%);
+        }
+    }
+    &--big {
+        padding: 20px 140px;
+    }
+    &--shiny {
+        box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+    }
 }
