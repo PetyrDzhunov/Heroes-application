@@ -102,6 +102,140 @@ h2,
   }
 }
 
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+    width: 300px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  13% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  25% {
+    opacity: 0.75;
+    width: 275px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  38% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  50% {
+    opacity: 0.5;
+    width: 250px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  63% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    opacity: 0.25;
+    width: 240px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  87% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  100% {
+    opacity: 0;
+    width: 230px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+    width: 300px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  13% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  25% {
+    opacity: 0.75;
+    width: 275px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  38% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  50% {
+    opacity: 0.5;
+    width: 250px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  63% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  75% {
+    opacity: 0.25;
+    width: 240px;
+    -webkit-transform: rotate(-15deg);
+            transform: rotate(-15deg);
+  }
+  87% {
+    -webkit-transform: rotate(15deg);
+            transform: rotate(15deg);
+  }
+  100% {
+    opacity: 0;
+    width: 230px;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
 *,
 ::before,
 ::after {
@@ -1027,15 +1161,23 @@ main {
   width: 300px;
   height: 150px;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 10%;
+  right: 5%;
+  -webkit-transition: 3s;
+  transition: 3s;
   text-align: center;
   vertical-align: middle;
   font-size: 32px;
   border-radius: 12px;
   padding-top: 20px;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .c-notifications-text {
@@ -1043,12 +1185,28 @@ main {
 }
 
 .c-notifications__error {
-  background-color: #B00020;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  background-color: #dc3545;
   color: #fff;
 }
 
 .c-notifications__success {
-  background-color: #4BB543;
+  -webkit-animation-name: fade-out;
+          animation-name: fade-out;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  background-color: #28a745;
   color: #fff;
 }
 
