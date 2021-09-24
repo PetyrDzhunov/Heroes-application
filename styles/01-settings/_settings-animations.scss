@@ -16,24 +16,6 @@
     }
 }
 
-@keyframes fade-in {
-    0% {
-        opacity: 0;
-    }
-    25% {
-        opacity: 0.25;
-    }
-    50% {
-        opacity: 0.5;
-    }
-    75% {
-        opacity: 0.75;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
 @keyframes fade-out {
     0% {
         opacity: 1;
@@ -49,27 +31,22 @@
         transform: rotate(-15deg);
     }
     38% {
-        transform: rotate(15deg);
+        transform: rotate(0deg);
     }
     50% {
         opacity: 0.5;
         width: 250px;
-        transform: rotate(-15deg);
     }
     63% {
-        transform: rotate(15deg);
+        opacity: 0.75;
     }
     75% {
         opacity: 0.25;
         width: 240px;
-        transform: rotate(-15deg);
     }
-    87% {
-        transform: rotate(15deg);
-    }
+    87% {}
     100% {
         opacity: 0;
         width: 230px;
-        transform: rotate(0deg);
     }
 }
