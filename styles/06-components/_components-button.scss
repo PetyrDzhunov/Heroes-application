@@ -19,7 +19,7 @@
     &--secondary {
         background: $secondary-color;
         border: solid 1px $primary-300;
-        transition: color background-color border 0.5s ease-out;
+        transition: background-color 0.5s ease-out;
         &:hover {
             background-color: $primary-300;
             border: solid 1px $secondary-color;

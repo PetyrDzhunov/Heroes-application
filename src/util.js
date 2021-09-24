@@ -107,17 +107,28 @@ export function validateHero(name, hero, heroes) {
     };
 
     if (name === '') {
-        showErrorNotificationWithTextContent('The name should contain at least 3 letters')
+        showErrorNotificationWithTextContent('The name should contain at least 3 letters!')
         hideNotification(errorNotification)
         return false;
     };
 
     if (name.length < 3) {
-        showErrorNotificationWithTextContent('The name should contain at least 3 letters')
+        showErrorNotificationWithTextContent('The name should contain at least 3 letters!')
         hideNotification(errorNotification)
         return false;
     };
 
+    if (hero === '') {
+        showErrorNotificationWithTextContent('You should choose a class to make a new hero!')
+        hideNotification(errorNotification);
+        return false;
+    }
+
+    if (hero !== "Barbarian" && hero !== "Priest" && hero !== "Rogue" && hero !== "Hunter" && hero !== "Mage") {
+        showErrorNotificationWithTextContent('You should choose a valid class in order to play!')
+        hideNotification(errorNotification);
+        return false;
+    }
 
     showSuccessNotificationWithTextContent('Sucessfully created a new hero!')
     hideNotification(successNotification);
@@ -133,7 +144,7 @@ export function getNotifications() {
 export function hideNotification(notification) {
     setTimeout(() => {
         notification.style.display = 'none';
-    }, 3000);
+    }, 5000);
 };
 
 export function showErrorNotificationWithTextContent(textContent) {

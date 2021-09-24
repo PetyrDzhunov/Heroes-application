@@ -1,29 +1,30 @@
 {{> header}}
-<div class="o-container-centered--row">
-		<div class="o-container-centered--column">
+<section class="heroes-wrapper">
+
 		{{#if loggedIn}}
 		{{#each heroes}}
-			<div class="hero o-container-centered--column">
-		<img class="hero__image" src="{{image}}" alt="{{name}}">
-		<div>Name : {{name}}</div>
-				<div>Class : {{class}}</div>
-				<div>Health : {{health}}</div>
-				<div>Level : {{level}}</div>
+			<section class="c-card-hero">
+				<article class="c-card-hero__image-wrapper">
+		<img class="c-card-hero__image-wrapper-image" src="{{image}}" alt="{{name}}">
+				</article>
+				<article class="c-card-hero__content">
+		<article class="c-card-hero__content-name">Name : {{name}}</article>
+				<article class="c-card-hero__content-class">Class : {{class}}</article>
+				<article class="c-card-hero__content-health">Health : {{health}}</article>
+				<article class="c-card-hero__content-level">Level : {{level}}</article>
 				{{#if rage}}
-				<div>Rage :{{rage}} </div>
+				<article class="c-card-hero__content-rage">Rage :{{rage}} </article>
 				{{/if}}
 				{{#if mana}}
-				<div>Mana :{{mana}} </div>
+				<article class="c-card-hero__content-mana">Mana :{{mana}} </article>
 				{{/if}}
 				{{#if energy}}
-				<div>Energy :{{energy}} </div>
+				<article class="c-card-hero__content-energy">Energy :{{energy}} </article>
 				{{/if}}
-				<div class="hero__skills-label">Skills:</div>
+				<article class="c-card-hero__content-skills">Skills:</article>
 				{{#each skills}}
-				<div class='hero__skills'>
-
+				<article class='c-card-hero__content-skills-skill'>
 				{{type}}, Damage: {{damage}},
-
 					{{#if energy}}
 					Energy : {{energy}}
 					{{/if}}
@@ -35,20 +36,39 @@
 					{{#if mana}}
 					MP cost:{{manaRequired}}
 					{{/if}}
-				</div>
+					</article>
+				</article>
 				{{/each}}
-				<div class="hero__cta-container">
-				<a href="/details/{{heroId}}"><button id="details-hero">Details</button></a>
-				<a href="/enter-world/{{heroId}}"><button id="enter-world">Enter World</button></a>
-				<a href="/delete/{{heroId}}"><button id="delete-hero">Delete</button></a>
-				</div>
+				<article class="c-card-hero__cta-container">
+				<a class="c-card-hero__link" href="/details/{{heroId}}"><button class="btn btn--primary">Details</button></a>
+				<a class="c-card-hero__link" href="/enter-world/{{heroId}}"><button class="btn btn--secondary">Enter World</button></a>
+				<a class="c-card-hero__link" href="/delete/{{heroId}}"><button class="btn btn--primary">Delete</button></a>
+				</article>
 				
-			</div>
+			</section>
 			{{else}}
-			<p id="no-heroes-paragraph">You don't have any heroes yet!</p>
+			<section class="c-card-hero__no-heroes">
+			<h1 class="c-card-hero__no-heroes-title">You don't have any heroes yet!</h1>
+			<article class="c-card-hero__no-heroes-links">
+				<a href="/create-hero" class="c-card-hero__no-heroes-links-link"><button class="btn btn--primary">Create new Hero</button></a>
+			</article>
+			</section>
 			{{/each}}
 			{{else}}
+			<section class="c-guest-homepage">
+				<article class="c-guest-homepage__title">
+				<span class="c-guest-homepage__title-character h1-like c-guest-homepage__title-character-1">H</span>
+				<span class="c-guest-homepage__title-character h1-like c-guest-homepage__title-character-2">E</span>
+				<span class="c-guest-homepage__title-character h1-like c-guest-homepage__title-character-3">R</span>
+				<span class="c-guest-homepage__title-character h1-like c-guest-homepage__title-character-4">O</span>
+				<span class="c-guest-homepage__title-character h1-like c-guest-homepage__title-character-5">E</span>
+				<span class="c-guest-homepage__title-character h1-like c-guest-homepage__title-character-6">S</span>
+				</article>
+				<article class="c-guest-homepage__subtitle">
+					<p class="c-guest-homepage__subtitle-text">the beginning</p>
+					<span class="c-guest-homepage__subtitle-text-border"></span>
+				</article>
+			</section>
 			{{/if}}
-	</div>
-</div>
+</section>
 {{> footer}}
