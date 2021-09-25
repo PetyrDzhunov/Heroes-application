@@ -487,8 +487,8 @@ li {
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 6fr 1fr;
-      grid-template-rows: 1fr 6fr 1fr;
+  -ms-grid-rows: 1fr 8fr 1fr;
+      grid-template-rows: 1fr 8fr 1fr;
   max-width: 1800px;
   margin: 0 auto;
   min-height: 100vh;
@@ -1352,6 +1352,7 @@ main {
   background-image: url("/assets/images/homepage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  margin-top: 30px;
 }
 
 .c-guest-homepage {
@@ -1414,6 +1415,7 @@ main {
 
 .c-heroes-armory {
   background-color: #919191;
+  margin-top: 30px;
 }
 
 .c-heroes-armory__header {
@@ -1433,7 +1435,7 @@ main {
 }
 
 .c-heroes-armory__tbody {
-  height: 740px;
+  height: 765px;
   display: block;
   overflow-x: hidden;
   overflow-y: auto;

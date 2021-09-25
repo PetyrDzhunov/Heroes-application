@@ -1,5 +1,6 @@
 .c-heroes-armory {
     background-color: $grey-500;
+    margin-top: 30px;
     &__header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -13,7 +14,7 @@
         display: block;
     }
     &__tbody {
-        height: 740px;
+        height: 765px;
         display: block;
         overflow-x: hidden;
         overflow-y: auto;
