@@ -1,5 +1,5 @@
 import { homePage } from './controllers/home.js'
-import { registerPage, registerPost, loginPage, loginPost, logout, deleteHero, aboutPage, enterWorld } from "./controllers/user.js";
+import { registerPage, registerPost, loginPage, loginPost, logout, deleteHero, armoryPage, enterWorld } from "./controllers/user.js";
 import { createNewHero, createNewHeroPost, detailsPage } from "./controllers/catalog.js";
 const app = Sammy('#app', function() {
 
@@ -28,7 +28,7 @@ const app = Sammy('#app', function() {
     this.get('/delete/:id', deleteHero)
 
     //about
-    this.get('/about', aboutPage)
+    this.get('/armory', armoryPage)
 
     //details
     this.get('/details/:id', detailsPage)

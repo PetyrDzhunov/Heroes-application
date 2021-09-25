@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-}
-
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
@@ -29,6 +25,7 @@ body {
     background-image: url('/assets/images/background-image.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 abbr[title] {

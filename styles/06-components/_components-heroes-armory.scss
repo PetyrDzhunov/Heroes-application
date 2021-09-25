@@ -1,0 +1,45 @@
+.c-heroes-armory {
+    background-color: $grey-500;
+    margin-top: 30px;
+    &__header {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        background-color: $secondary-color;
+        border-bottom: 4px solid $violet-500;
+        font-size: 30px;
+        font-weight: bolder;
+        color: $purple-300;
+    }
+    &__thead {
+        display: block;
+    }
+    &__tbody {
+        height: 765px;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    &__hero-row {
+        // height: 740px;
+        // display: block;
+        // overflow-x: hidden;
+        // overflow-y: auto;
+        background: $primary-300;
+        border-bottom: 1px solid $secondary-color;
+        font-size: 20px;
+        font-weight: bolder;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        margin: 4px 0;
+        text-align: center;
+        &-class {}
+        &-level {}
+        &-name {}
+        &-created {}
+    }
+    &__no-heroes-yet {
+        font-size: 60px;
+        text-align: center;
+        color: $primary-300;
+    }
+}

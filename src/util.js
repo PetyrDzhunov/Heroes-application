@@ -54,6 +54,15 @@ export function classToObject(theClass) {
     }, {})
 }
 
+
+
+export async function getAllHeroes() {
+    let response = await db.collection('heroes').get();
+    let heroes = await response.docs.map((hero) => { return { heroId: hero.id, ...hero.data() } });
+    console.log(heroes);
+    return heroes;
+}
+
 export async function getAllMyHeroes(creator) {
     let response = await db.collection('heroes').get();
     let heroes = await response.docs.map((hero) => { return { heroId: hero.id, ...hero.data() } });
@@ -86,10 +95,19 @@ export function checkHero(name, hero, gender) {
     }
 }
 
-export function validateHero(name, hero, heroes) {
+export async function validateHero(name, hero, heroes) {
     let { errorNotification, successNotification } = getNotifications();
     let currentHero = heroes.find((hero) => hero.name === name);
     let heroClass = heroes.find((currHero) => currHero.class === hero);
+    let allHeroes = await getAllHeroes();
+    let heroExists = allHeroes.find((currHero) => currHero.name === name);
+
+    if (heroExists) {
+        showErrorNotificationWithTextContent('There is already a character that use this name!')
+        hideNotification(errorNotification)
+        return false;
+    }
+
     if (currentHero) {
         showErrorNotificationWithTextContent('You already have a character with this name!')
         hideNotification(errorNotification)
@@ -105,6 +123,8 @@ export function validateHero(name, hero, heroes) {
         hideNotification(errorNotification)
         return false;
     };
+
+
 
     if (name === '') {
         showErrorNotificationWithTextContent('The name should contain at least 3 letters!')
