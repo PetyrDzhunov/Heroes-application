@@ -1353,6 +1353,7 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   margin-top: 30px;
+  border-radius: 12px;
 }
 
 .c-guest-homepage {
@@ -1416,6 +1417,8 @@ main {
 .c-heroes-armory {
   background-color: #919191;
   margin-top: 30px;
+  max-height: 765px;
+  border-radius: 12px;
 }
 
 .c-heroes-armory__header {
@@ -1428,6 +1431,7 @@ main {
   font-size: 30px;
   font-weight: bolder;
   color: #9F2B68;
+  border-radius: 12px;
 }
 
 .c-heroes-armory__thead {
@@ -1435,13 +1439,14 @@ main {
 }
 
 .c-heroes-armory__tbody {
-  height: 765px;
+  max-height: 765px;
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .c-heroes-armory__hero-row {
+  border-radius: 12px;
   background: #41BEAD;
   border-bottom: 1px solid #FF9100;
   font-size: 20px;
@@ -1466,18 +1471,21 @@ main {
   background-repeat: no-repeat;
   height: 850px;
   margin-top: 20px;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  opacity: 0.9;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 12px;
+  position: relative;
+}
+
+.additional-hero-info__stats-back-wrapper {
+  min-width: 400px;
 }
 
 .additional-hero-info__back {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin-right: 30px;
+  position: absolute;
+  top: 0;
+  left: 20px;
 }
 
 .additional-hero-info__back-button {
@@ -1486,15 +1494,22 @@ main {
 }
 
 .additional-hero-info__image-wrapper {
-  height: 70%;
   width: 450px;
   border-radius: 12px;
 }
 
 .additional-hero-info__image-wrapper-image {
   width: 100%;
-  height: 100%;
+  max-height: 600px;
   border-radius: 12px;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.additional-hero-info__image-wrapper-image:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .additional-hero-info__information {
@@ -1516,11 +1531,12 @@ main {
 .additional-hero-info__information-createdOn, .additional-hero-info__information-level, .additional-hero-info__information-name-class {
   font-size: 32px;
   font-family: "Acronim";
-  color: #FF9100;
+  color: #41BEAD;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
   font-weight: bolder;
+  text-align: center;
 }
 
 .additional-hero-info__label {
@@ -1555,6 +1571,14 @@ main {
       align-self: center;
   -webkit-box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
           box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+  -webkit-transition: 0.5s ease-out;
+  transition: 0.5s ease-out;
+}
+
+.additional-hero-info__weapon-wrapper:hover {
+  cursor: pointer;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .additional-hero-info__stats {
@@ -1573,6 +1597,45 @@ main {
 .additional-hero-info__stats-strenght, .additional-hero-info__stats-aggility, .additional-hero-info__stats-intelligence, .additional-hero-info__stats-stamina {
   font-family: "Acronim";
   font-size: 32px;
+  font-weight: bolder;
+  color: #41BEAD;
+  text-align: center;
+}
+
+.enter-world {
+  grid-column: 1/ span end;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/homepage.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  border-radius: 12px;
+}
+
+.enter-world__content {
+  text-align: center;
+}
+
+.enter-world__content-first-part {
+  -webkit-animation: 2s fire-above-text infinite alternate linear;
+          animation: 2s fire-above-text infinite alternate linear;
+}
+
+.enter-world__content-second-part {
+  -webkit-animation: 2s fire-above-text infinite alternate linear;
+          animation: 2s fire-above-text infinite alternate linear;
+}
+
+.enter-world__content-third-part {
+  -webkit-animation: 2s fire-above-text infinite alternate linear;
+          animation: 2s fire-above-text infinite alternate linear;
+}
+
+.enter-world__content-character {
+  font-size: 70px;
+  font-family: "Acronim";
+  letter-spacing: 10px;
   font-weight: bolder;
   color: #41BEAD;
 }

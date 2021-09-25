@@ -1,16 +1,22 @@
 {{>header}}
 <section class="additional-hero-info o-container-centered o-container-centered--row">
-<a href="/home" class="additional-hero-info__back"><button class="btn btn--primary btn--big additional-hero-info__back-button">Back</button></a>
+		<section class="additional-hero-info__stats-back-wrapper">
+			<a href="/home" class="additional-hero-info__back"><button class="btn btn--primary btn--big additional-hero-info__back-button">Back</button></a>
+		<article class="additional-hero-info__stats">
+			<span class="additional-hero-info__stats-strenght">Strenght : {{strenght}}</span>
+			<span class="additional-hero-info__stats-aggility">Aggility : {{aggility}}</span>
+			<span class="additional-hero-info__stats-stamina">Stamina : {{stamina}}</span>
+			<span class="additional-hero-info__stats-intelligence">Intelligence : {{intelligence}}</span>
+		</article>
+	</section>
 
 	<article class="additional-hero-info__image-wrapper">
-		<img class='additional-hero-info__image-wrapper-image' src="{{image}}" alt="{{name}}">
-	</article>
-
-	<article class="additional-hero-info__information">
 		<p class='additional-hero-info__information-name-class'>{{name}} - {{class}}</p>
+		<img class='additional-hero-info__image-wrapper-image' src="{{image}}" alt="{{name}}">
 		<p class="additional-hero-info__information-level"> Level : {{level}}</p>
 		<p class="additional-hero-info__information-createdOn">Created on: {{createdOnDate}}</p>
 	</article>
+
 
 
 	<article class="additional-hero-info__weapons">
@@ -22,12 +28,7 @@
 		{{/each}}
 	</article>
 
-	<article class="additional-hero-info__stats">
-		<span class="additional-hero-info__stats-strenght">Strenght : {{strenght}}</span>
-		<span class="additional-hero-info__stats-aggility">Aggility : {{aggility}}</span>
-		<span class="additional-hero-info__stats-stamina">Stamina : {{stamina}}</span>
-		<span class="additional-hero-info__stats-intelligence">Intelligence : {{intelligence}}</span>
-	</article>
+	
 
 </section>
 {{>footer}}

@@ -1,6 +1,8 @@
 .c-heroes-armory {
     background-color: $grey-500;
     margin-top: 30px;
+    max-height: 765px;
+    border-radius: $image-radius;
     &__header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -9,21 +11,19 @@
         font-size: 30px;
         font-weight: bolder;
         color: $purple-300;
+        border-radius: $image-radius;
     }
     &__thead {
         display: block;
     }
     &__tbody {
-        height: 765px;
+        max-height: 765px;
         display: block;
         overflow-x: hidden;
         overflow-y: auto;
     }
     &__hero-row {
-        // height: 740px;
-        // display: block;
-        // overflow-x: hidden;
-        // overflow-y: auto;
+        border-radius: $image-radius;
         background: $primary-300;
         border-bottom: 1px solid $secondary-color;
         font-size: 20px;

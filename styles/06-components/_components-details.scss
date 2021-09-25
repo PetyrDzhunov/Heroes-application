@@ -4,25 +4,33 @@
     background-repeat: no-repeat;
     height: 850px;
     margin-top: 20px;
-    justify-content: flex-start;
-    opacity: 0.9;
+    justify-content: center;
+    border-radius: $image-radius;
+    position: relative;
+    &__stats-back-wrapper {
+        min-width: 400px;
+    }
     &__back {
-        align-self: flex-start;
-        justify-self: center;
-        margin-right: 30px;
+        position: absolute;
+        top: 0;
+        left: 20px;
         &-button {
             margin-top: 20px;
             padding: 20px 80px;
         }
     }
     &__image-wrapper {
-        height: 70%;
         width: 450px;
         border-radius: $image-radius;
         &-image {
             width: 100%;
-            height: 100%;
+            max-height: 600px;
             border-radius: $image-radius;
+            transition: 0.5s ease-out;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+            }
         }
     }
     &__information {
@@ -38,14 +46,12 @@
         &-name-class {
             font-size: 32px;
             font-family: "Acronim";
-            color: $secondary-color;
+            color: $primary-300;
             align-self: center;
             font-weight: bolder;
+            text-align: center;
         }
     }
-    &__name-class {}
-    &__level {}
-    &__createdOn {}
     &__label {
         font-family: "Acronim";
         font-size: 32px;
@@ -65,6 +71,11 @@
     &__weapon-wrapper {
         align-self: center;
         box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+        transition: 0.5s ease-out;
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
     }
     &__stats {
         display: flex;
@@ -78,6 +89,7 @@
             font-size: 32px;
             font-weight: bolder;
             color: $primary-300;
+            text-align: center;
         }
     }
 }
