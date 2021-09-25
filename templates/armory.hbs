@@ -1,21 +1,25 @@
-{{>header}}
-<section class="c-heroes-armory">
-		<article class="c-heroes-armory__header">
-			<span class="c-heroes-armory__header-span">Class</span>
-			<span class="c-heroes-armory__header-span">Level</span>
-			<span class="c-heroes-armory__header-span">Name</span>
-			<span class="c-heroes-armory__header-span">Created</span>
-		</article>
+	{{>header}}
+<table class="c-heroes-armory">
+	<thead class="c-heroes-armory__theader">
+		<tr class="c-heroes-armory__header">
+			<th class="c-heroes-armory__header-title">Class</th>
+			<th class="c-heroes-armory__header-title">Level</th>
+			<th class="c-heroes-armory__header-title">Name</th>
+			<th class="c-heroes-armory__header-title">Created</th>
+		</tr>
+	</thead>
+	<tbody class="c-heroes-armory__tbody">
 	{{#each heroes}}
-	<article class="c-heroes-armory__hero-row">
-		<span class="c-heroes-armory__hero-row-class">{{class}}</span>
-		<span class="c-heroes-armory__hero-row-level">{{level}}</span>
-		<span class="c-heroes-armory__hero-row-name">{{name}}</span>
-		<span class="c-heroes-armory__hero-row-created">{{createdOnDate}}</span>
-	</article>
+		<tr class="c-heroes-armory__hero-row">
+		<td class="c-heroes-armory__hero-row-class">{{class}}</td>
+		<td class="c-heroes-armory__hero-row-level">{{level}}</td>
+		<td class="c-heroes-armory__hero-row-name">{{name}}</td>
+		<td class="c-heroes-armory__hero-row-created">{{createdOnDate}}</td>
+		</tr>
+
 	{{else}}
 	<span class="c-heroes-armory__no-heroes-yet">No heroes created yet.</span>
 	{{/each}}
-
-</section>
+	</tbody>
+</table>
 {{>footer}}
