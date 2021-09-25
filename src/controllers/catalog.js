@@ -18,7 +18,7 @@ export async function createNewHeroPost(context) {
     let user = getUserData();
     let heroes = await getAllMyHeroes(user.email);
     if (user) {
-        if (validateHero(name, hero, heroes) === false) {
+        if (await validateHero(name, hero, heroes) === false) {
             return;
         };
         let currHero = checkHero(name, hero, gender)
