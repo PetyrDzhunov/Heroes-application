@@ -9,7 +9,7 @@ export class Hunter {
         this.armor = ['cloth', 'leather']
         this.weapons = [
             { type: 'bow', img: 'https://ae01.alicdn.com/kf/HTB1a78CIXXXXXbZXVXXq6xXFXXX5/Purple-Camo-Dream-Aluminum-Alloy-Compound-Bow-With-20-70-lbs-Draw-Weight-Camo-And-Black.jpg' },
-            { type: 'crossbow', img: 'https://lh3.googleusercontent.com/proxy/ipiK70oaKfVb9f6LmghoReTuQVj3hhypPBCHffu82JVVRncH8PO8kBKJhE6v3opzQo41PHLE87clqfqxKCi4opStk6U54gRSnIHA1h2q6a1kWXKKtSBkspq91b5zGBE' },
+            { type: 'crossbow', img: 'https://wallpapercave.com/wp/wp9506662.jpg' },
             { type: 'gun', img: 'https://cdnb.artstation.com/p/assets/images/images/009/491/885/large/stuart-rain-rifle-coverart.jpg?1519298971' },
         ]
         this.image =

@@ -1,27 +1,33 @@
 {{>header}}
-<a href="/home"><button class="back-home-btn">Back</button></a>
-<div class="additional-hero-info">
-	<div class="additional-image-div">
-		<img class='additional-hero-info-img' src="{{image}}" alt="{{name}}">
-	</div>
-	<div class='additional-info'>{{name}} - {{class}}</div>
-	<div class="level-info"> Level : {{level}}</div>
-	<div class="additional-createdOn-info">
-		<span class="createdOn">Created on: {{createdOnDate}}</span>
-	</div>
-	<label class="label-weapons" for="weapons">Weapons that this class can use!</label>
-	<div class="weapons">
+<section class="additional-hero-info o-container-centered o-container-centered--row">
+<a href="/home" class="additional-hero-info__back"><button class="btn btn--primary btn--big additional-hero-info__back-button">Back</button></a>
+
+	<article class="additional-hero-info__image-wrapper">
+		<img class='additional-hero-info__image-wrapper-image' src="{{image}}" alt="{{name}}">
+	</article>
+
+	<article class="additional-hero-info__information">
+		<p class='additional-hero-info__information-name-class'>{{name}} - {{class}}</p>
+		<p class="additional-hero-info__information-level"> Level : {{level}}</p>
+		<p class="additional-hero-info__information-createdOn">Created on: {{createdOnDate}}</p>
+	</article>
+
+
+	<article class="additional-hero-info__weapons">
+	<label class="additional-hero-info__label">Weapons that this class can use!</label>
 		{{#each weapons}}
-		<div class="weapon">
-			<img class='weapon-img'src="{{img}}" width="100px" height='100px'>
-		</div>
+		<article class="additional-hero-info__weapon-wrapper">
+			<img class='additional-hero-info__weapon'src="{{img}}">
+		</article>
 		{{/each}}
-	</div>
-	<div class="additional-hero-stats">
-		<span id="strenght">Strenght : {{strenght}}</span>
-		<span id="aggility">Aggility : {{aggility}}</span>
-		<span id="stamina">Stamina : {{stamina}}</span>
-		<span id="intelligence">Intelligence : {{intelligence}}</span>
-	</div>
-</div>
+	</article>
+
+	<article class="additional-hero-info__stats">
+		<span class="additional-hero-info__stats-strenght">Strenght : {{strenght}}</span>
+		<span class="additional-hero-info__stats-aggility">Aggility : {{aggility}}</span>
+		<span class="additional-hero-info__stats-stamina">Stamina : {{stamina}}</span>
+		<span class="additional-hero-info__stats-intelligence">Intelligence : {{intelligence}}</span>
+	</article>
+
+</section>
 {{>footer}}

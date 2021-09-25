@@ -1,0 +1,83 @@
+.additional-hero-info {
+    background-image: url('/assets/images/homepage.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 850px;
+    margin-top: 20px;
+    justify-content: flex-start;
+    opacity: 0.9;
+    &__back {
+        align-self: flex-start;
+        justify-self: center;
+        margin-right: 30px;
+        &-button {
+            margin-top: 20px;
+            padding: 20px 80px;
+        }
+    }
+    &__image-wrapper {
+        height: 70%;
+        width: 450px;
+        border-radius: $image-radius;
+        &-image {
+            width: 100%;
+            height: 100%;
+            border-radius: $image-radius;
+        }
+    }
+    &__information {
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;
+        justify-content: space-around;
+        font-size: 32px;
+        font-family: "Acronim";
+        margin-left: 10px;
+        &-createdOn,
+        &-level,
+        &-name-class {
+            font-size: 32px;
+            font-family: "Acronim";
+            color: $secondary-color;
+            align-self: center;
+            font-weight: bolder;
+        }
+    }
+    &__name-class {}
+    &__level {}
+    &__createdOn {}
+    &__label {
+        font-family: "Acronim";
+        font-size: 32px;
+        color: $secondary-color;
+        font-weight: bolder;
+    }
+    &__weapons {
+        display: flex;
+        flex-flow: column wrap;
+        height: 100%;
+        justify-content: space-evenly
+    }
+    &__weapon {
+        width: 140px;
+        height: 140px;
+    }
+    &__weapon-wrapper {
+        align-self: center;
+        box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+    }
+    &__stats {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        &-strenght,
+        &-aggility,
+        &-intelligence,
+        &-stamina {
+            font-family: "Acronim";
+            font-size: 32px;
+            font-weight: bolder;
+            color: $primary-300;
+        }
+    }
+}
