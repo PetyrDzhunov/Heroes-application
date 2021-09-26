@@ -1691,6 +1691,12 @@ main {
   overflow-y: auto;
 }
 
+@media (max-width: 599px) {
+  .c-heroes-armory__tbody {
+    max-height: 600px;
+  }
+}
+
 .c-heroes-armory__hero-row {
   border-radius: 12px;
   background: #41BEAD;
@@ -1703,6 +1709,25 @@ main {
       grid-template-columns: 1fr 1fr 1fr 1fr;
   margin: 4px 0;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .c-heroes-armory__hero-row {
+    -ms-grid-columns: 110px 100px 180px 1fr;
+        grid-template-columns: 110px 100px 180px 1fr;
+  }
+}
+
+@media (max-width: 599px) {
+  .c-heroes-armory__hero-row-level {
+    text-align: right;
+  }
+}
+
+@media (max-width: 599px) {
+  .c-heroes-armory__hero-row-name {
+    text-align: right;
+  }
 }
 
 .c-heroes-armory__no-heroes-yet {
