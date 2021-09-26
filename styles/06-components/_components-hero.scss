@@ -10,6 +10,7 @@
         background-color: black;
         flex-direction: column;
         overflow: scroll;
+        background-image: none !important;
     }
 }
 
@@ -50,7 +51,7 @@
         font-weight: bolder;
         @include for-phone-only {
             background: transparent;
-            font-size: 14px;
+            font-size: 20px;
             margin-top: 3px;
             font-weight: normal;
         }
@@ -86,7 +87,7 @@
                     background: transparent;
                     color: $violet-500;
                     font-weight: normal;
-                    font-size: 12px;
+                    font-size: 20px;
                 }
             }
         }

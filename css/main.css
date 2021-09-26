@@ -875,6 +875,7 @@ main {
         -ms-flex-direction: column;
             flex-direction: column;
     overflow: scroll;
+    background-image: none !important;
   }
 }
 
@@ -940,7 +941,7 @@ main {
 @media (max-width: 599px) {
   .c-card-hero__content {
     background: transparent;
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 3px;
     font-weight: normal;
   }
@@ -989,7 +990,7 @@ main {
     background: transparent;
     color: #9A5DC6;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 20px;
   }
 }
 
@@ -1558,10 +1559,17 @@ main {
   width: 100%;
   height: 100%;
   background-image: url("/assets/images/homepage.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
   margin-top: 30px;
   border-radius: 12px;
+}
+
+@media (max-width: 599px) {
+  .heroes-wrapper {
+    background-image: none !important;
+    background-color: black;
+    margin-bottom: 20px;
+  }
 }
 
 .c-guest-homepage {
@@ -1570,8 +1578,14 @@ main {
   grid-column: 1/6;
 }
 
+@media (max-width: 599px) {
+  .c-guest-homepage {
+    margin-bottom: 50px;
+  }
+}
+
 .c-guest-homepage__title {
-  text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
+  text-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
   color: #41BEAD;
   font-weight: bolder;
   letter-spacing: 30px;
@@ -1580,9 +1594,25 @@ main {
           animation: 2s fire-above-text infinite alternate linear;
 }
 
+@media (max-width: 599px) {
+  .c-guest-homepage__title {
+    color: #41BEAD;
+    font-weight: bolder;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
 .c-guest-homepage__title-character {
   font-size: 120px;
   font-family: "Acronim";
+}
+
+@media (max-width: 599px) {
+  .c-guest-homepage__title-character {
+    font-size: 80px;
+  }
 }
 
 .c-guest-homepage__subtitle {
@@ -1598,6 +1628,13 @@ main {
 .c-guest-homepage__subtitle-text {
   font-family: "Acronim";
   font-size: 60px;
+}
+
+@media (max-width: 599px) {
+  .c-guest-homepage__subtitle-text {
+    font-size: 60px;
+    letter-spacing: 3px;
+  }
 }
 
 .c-guest-homepage__subtitle-text-border {
