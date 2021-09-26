@@ -17,36 +17,55 @@
 			</article>
 	</section>
 	<nav class="c-header__nav">
+		
 		{{#if loggedIn}}
 		<li class="c-header__nav-list-item c-header__nav-list-item-username">
-			<a class="c-header__nav-link c-header__nav-link-username">Welcome , {{username}}</a>
+			<a class="c-header__nav-link c-header__nav-link-username">Welcome, {{username}}</a>
 			</li>	
-		<ul class="c-header__nav-list">
-			<li class="c-header__nav-list-item">
+		<ul class="c-header__nav-list c-header__nav-list-loggedIn">
+			<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
         	<a class="c-header__nav-link" href="/home">Play game</a>
 			</li>
-			<li class="c-header__nav-list-item">
+			<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
         	<a class="c-header__nav-link" href="/create-hero">Create new Hero</a>
 			</li>
-				<li class="c-header__nav-list-item">
+				<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
         	<a class="c-header__nav-link" href="/armory">Armory</a>
 				</li>
-			<li class="c-header__nav-list-item">
+			<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
 			<a  class="c-header__nav-link" href="/logout">Logout</a>
 			</li>
+		 
 			{{else}}
-		<ul class="c-header__nav-list">
-			<li class="c-header__nav-list-item">
+		<ul class="c-header__nav-list c-header__nav-list-loggedIn">
+			<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
         	<a class="c-header__nav-link" href="/armory">Armory</a>
 			</li>
-			<li class="c-header__nav-list-item">
+			<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
        		<a class="c-header__nav-link" href="/register">Register</a>
 			</li>
-			<li class="c-header__nav-list-item">
+			<li class="c-header__nav-list-item c-header__nav-list-item-loggedIn">
        		<a class="c-header__nav-link" href="/login">Login</a>
 			</li>
 		</ul>
 		</ul>
 		 {{/if}}
+		
 	</nav>
+		 <div class="c-header__phone-menu" onclick="toggleMenu()">
+				<div class="c-header__phone-menu-line"></div>
+				<div class="c-header__phone-menu-line"></div>
+				<div class="c-header__phone-menu-line"></div>
+		</div>
 </header>
+
+<script>
+	function toggleMenu(){
+		let linksList = document.querySelector('.c-header__nav-list-loggedIn');
+		let links = document.querySelectorAll('.c-header__nav-list-item-loggedIn');
+		linksList.classList.toggle('u-active');
+		links.forEach((link) => link.classList.toggle('u-border-bottom'));
+	}
+</script>
+
+

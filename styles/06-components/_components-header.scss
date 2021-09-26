@@ -2,12 +2,25 @@
     display: grid;
     background: $primary-300;
     grid-template-columns: 1fr 4fr;
-    max-height: 120px;
+    max-height: 140px;
+    min-height: 130px;
     border-radius: $box-radius;
     box-shadow: $primary-shadow;
+    position: relative;
+    @include for-phone-only {
+        display: flex;
+        flex-direction: row;
+        max-width: 600px;
+        text-align: center;
+    }
     &__nav {
         display: flex;
         width: 100%;
+        @include for-phone-only {
+            overflow: hidden;
+            position: relative;
+            flex: 0.6;
+        }
         &-list {
             display: flex;
             justify-content: flex-end;
@@ -16,18 +29,41 @@
             padding: 0;
             height: 100%;
             width: 100%;
+            @include for-phone-only {
+                display: none;
+            }
         }
         &-list-item-username {
             align-self: center;
+            @include for-phone-only {
+                order: 1;
+                margin-right: 10px;
+                color: $purple-300;
+            }
         }
         &-list-item {
             padding: 0 18px;
+            @include for-phone-only {
+                padding: 0;
+                &:hover {
+                    color: blue;
+                }
+            }
         }
         &-link {
             margin-right: 20px;
             color: $grey-700;
             transition: color;
             font-size: 18px;
+            @include for-phone-only {
+                margin-right: 20px;
+                font-size: 12px;
+                color: $purple-300;
+                transition: .3s ease-out;
+                &:hover {
+                    color: $red-500 !important;
+                }
+            }
             &:hover {
                 transition: 0.3s ease-out;
                 color: $secondary-color;
@@ -46,7 +82,14 @@
         grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: center;
+        @include for-phone-only {
+            display: flex;
+            flex: 1;
+        }
         &-description {
+            @include for-phone-only {
+                text-align: center;
+            }
             &:hover {
                 cursor: pointer;
             }
@@ -54,6 +97,9 @@
             font-weight: bolder;
         }
         &-image {
+            @include for-phone-only {
+                flex: 0.5;
+            }
             img {
                 width: 100%;
                 height: auto;
@@ -68,6 +114,26 @@
                     color: $purple-300;
                     animation-delay: 0.05s *$i;
                 }
+            }
+        }
+    }
+    &__phone-menu {
+        display: none;
+        @include for-phone-only {
+            display: block;
+            cursor: pointer;
+            align-self: center;
+            justify-self: center;
+            width: 25px;
+            margin-right: 10px;
+            margin-top: 3px;
+            &-line {
+                display: block;
+                width: 20px;
+                height: 4px;
+                background-color: white;
+                margin-bottom: 4px;
+                margin-right: 20px;
             }
         }
     }

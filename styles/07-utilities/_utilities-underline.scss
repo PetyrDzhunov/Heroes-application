@@ -28,3 +28,8 @@
         background-image: url('/assets/images/nav-under-border-cap.png');
     }
 }
+
+.u-border-bottom {
+    border-bottom: solid 1px $secondary-color;
+    width: 100%;
+}
