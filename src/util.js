@@ -184,7 +184,7 @@ export function getUserNameFromEmail(email) {
     firstLetter = firstLetter.toUpperCase();
     let finalLetters = result.substring(1);
     let username = firstLetter.concat(finalLetters);
-    return username;
+    return username
 }
 
 export async function showMoreInformationAboutClass() {
