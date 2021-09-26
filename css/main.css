@@ -491,7 +491,7 @@ main {
       grid-template-rows: 1fr 8fr 1fr;
   max-width: 1800px;
   margin: 0 auto;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 599px) {
@@ -700,7 +700,7 @@ main {
 @media (max-width: 599px) {
   .c-header__nav-link {
     margin-right: 20px;
-    font-size: 12px;
+    font-size: 16px;
     color: #9F2B68;
     -webkit-transition: .3s ease-out;
     transition: .3s ease-out;
@@ -876,6 +876,8 @@ main {
             flex-direction: column;
     overflow: scroll;
     background-image: none !important;
+    overflow: scroll;
+    max-height: 72vh;
   }
 }
 
@@ -1749,8 +1751,25 @@ main {
   position: relative;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info {
+    overflow: scroll;
+    max-height: 75vh;
+    background-color: black;
+    background-image: none !important;
+  }
+}
+
 .additional-hero-info__stats-back-wrapper {
   min-width: 400px;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__stats-back-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .additional-hero-info__back {
@@ -1764,9 +1783,23 @@ main {
   padding: 20px 80px;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info__back-button {
+    padding: 6px 12px;
+  }
+}
+
 .additional-hero-info__image-wrapper {
   width: 450px;
   border-radius: 12px;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__image-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .additional-hero-info__image-wrapper-image {
@@ -1817,6 +1850,19 @@ main {
   font-weight: bolder;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info__label {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-bottom: 20px;
+  }
+}
+
 .additional-hero-info__weapons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1831,9 +1877,32 @@ main {
           justify-content: space-evenly;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info__weapons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 120px 120px;
+        grid-template-columns: 120px 120px;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+  }
+}
+
 .additional-hero-info__weapon {
   width: 140px;
   height: 140px;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__weapon {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .additional-hero-info__weapon-wrapper {
@@ -1844,6 +1913,12 @@ main {
           box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__weapon-wrapper {
+    margin-bottom: 6px;
+  }
 }
 
 .additional-hero-info__weapon-wrapper:hover {
