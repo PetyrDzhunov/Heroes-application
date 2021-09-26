@@ -4,7 +4,7 @@
     background-repeat: no-repeat;
     height: 850px;
     margin-top: 20px;
-    justify-content: center;
+    justify-content: space-evenly;
     border-radius: $image-radius;
     position: relative;
     @include for-phone-only {

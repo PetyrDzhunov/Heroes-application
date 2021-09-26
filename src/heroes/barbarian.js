@@ -7,13 +7,9 @@ export class Barbarian {
         this.name = name;
         this.rage = 0;
         this.weapons = [
-            { type: 'one-handed axe', img: 'https://i.pinimg.com/originals/69/8f/c8/698fc801b098c3ed13380e8c7626bbba.png' },
             { type: 'two-handed axe', img: 'https://www.pngkey.com/png/full/211-2110105_nordic-battleaxe-of-ice-skyrim-wiki-battle-axe.png' },
-            { type: 'spear', img: 'https://cdnb.artstation.com/p/assets/images/images/024/783/559/4k/jordan-hartley-image0-15.jpg?1583514306' },
             { type: 'polearm', img: 'https://i.pinimg.com/originals/4f/3f/40/4f3f4048caae5ca683a86c45b5e8d996.jpg' },
             { type: 'one-handed mace', img: 'https://wow.zamimg.com/modelviewer/live/webthumbs/item/110/120686.png' },
-            { type: 'two-handed mace', img: 'https://preview.free3d.com/img/2017/07/2269216126195992394/v2mra7rh-900.jpg' },
-            { type: 'one-handed sword', img: 'https://i.pinimg.com/474x/8e/78/08/8e7808ea172ce10adbd0ff71626f9914--game-ideas-swords.jpg' },
             { type: 'two-handed sword', img: 'https://i.pinimg.com/236x/f3/12/fd/f312fd92e5181f793f6c3eddf13d98be.jpg' }
         ];
         this.shield = [

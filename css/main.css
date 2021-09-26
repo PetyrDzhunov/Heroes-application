@@ -487,8 +487,8 @@ li {
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 8fr 1fr;
-      grid-template-rows: 1fr 8fr 1fr;
+  -ms-grid-rows: 1fr 6fr 0.7fr;
+      grid-template-rows: 1fr 6fr 0.7fr;
   max-width: 1800px;
   margin: 0 auto;
   min-height: 100vh;
@@ -1806,9 +1806,9 @@ main {
   background-repeat: no-repeat;
   height: 850px;
   margin-top: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   border-radius: 12px;
   position: relative;
 }

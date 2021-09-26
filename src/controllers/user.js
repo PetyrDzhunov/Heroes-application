@@ -57,8 +57,12 @@ export async function armoryPage(context) {
     let heroes = await getAllHeroes();
     context.heroes = heroes;
     let user = getUserData();
-    let username = getUserNameFromEmail(user.email);
-    context.username = username;
+    if (user) {
+        let username = getUserNameFromEmail(user.email);
+        context.username = username;
+    } else {
+        context.username = "Guest";
+    }
     await extendContext(context);
     this.partial('./templates/armory.hbs')
 }
