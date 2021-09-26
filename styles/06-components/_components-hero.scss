@@ -5,6 +5,12 @@
     border-radius: $image-radius;
     justify-items: center;
     align-items: center;
+    @include for-phone-only {
+        display: flex;
+        background-color: black;
+        flex-direction: column;
+        overflow: scroll;
+    }
 }
 
 .c-card-hero {
@@ -13,6 +19,12 @@
     text-align: center;
     border-radius: $image-radius;
     transition: 0.5s ease-out;
+    @include for-phone-only {
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     &:hover {
         transform: scale(1.05);
         cursor: pointer;
@@ -26,12 +38,22 @@
             height: 500px;
             width: 100%;
             object-fit: cover;
+            @include for-phone-only {
+                height: 200px;
+                object-fit: contain;
+            }
         }
     }
     &__content {
         background: #fff;
         font-size: 18px;
         font-weight: bolder;
+        @include for-phone-only {
+            background: transparent;
+            font-size: 14px;
+            margin-top: 3px;
+            font-weight: normal;
+        }
         &-name {
             color: $primary-300;
         }
@@ -52,11 +74,20 @@
         &-skills {
             color: $purple-300;
             font-weight: bolder;
+            @include for-phone-only {
+                color: $secondary-color;
+            }
             &-skill {
                 background: #fff;
                 color: $dark-green;
                 font-weight: bolder;
                 font-size: 18px;
+                @include for-phone-only {
+                    background: transparent;
+                    color: $violet-500;
+                    font-weight: normal;
+                    font-size: 12px;
+                }
             }
         }
     }
@@ -67,8 +98,22 @@
         background: #fff;
         border-bottom-left-radius: $image-radius;
         border-bottom-right-radius: $image-radius;
+        @include for-phone-only {
+            flex-flow: row;
+            background: transparent;
+            margin: 5px 0;
+        }
     }
-    &__link {}
+    &__link {
+        @include for-phone-only {
+            padding: 4px 8px;
+        }
+    }
+    &__button {
+        @include for-phone-only {
+            padding: 6px 12px;
+        }
+    }
     &__no-heroes {
         grid-column: 3/4;
         display: flex;

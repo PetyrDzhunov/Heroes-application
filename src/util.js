@@ -59,7 +59,6 @@ export function classToObject(theClass) {
 export async function getAllHeroes() {
     let response = await db.collection('heroes').get();
     let heroes = await response.docs.map((hero) => { return { heroId: hero.id, ...hero.data() } });
-    console.log(heroes);
     return heroes;
 }
 

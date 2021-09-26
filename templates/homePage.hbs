@@ -24,13 +24,13 @@
 				<article class="c-card-hero__content-skills">Skills:</article>
 				{{#each skills}}
 				<article class='c-card-hero__content-skills-skill'>
-				{{type}}, Damage: {{damage}},
+				{{type}}, {{#if damage}}Damage:{{damage}},{{else}} Heal:{{heal}}{{/if}}
 					{{#if energy}}
-					Energy : {{energy}}
+					Energy:{{energy}}
 					{{/if}}
 
 					{{#if rage}}
-					Rage: {{rage}}
+					Rage:{{rage}}
 					{{/if}}
 
 					{{#if mana}}
@@ -40,9 +40,9 @@
 				</article>
 				{{/each}}
 				<article class="c-card-hero__cta-container">
-				<a class="c-card-hero__link" href="/details/{{heroId}}"><button class="btn btn--primary">Details</button></a>
-				<a class="c-card-hero__link" href="/enter-world/{{heroId}}"><button class="btn btn--secondary">Enter World</button></a>
-				<a class="c-card-hero__link" href="/delete/{{heroId}}"><button class="btn btn--primary">Delete</button></a>
+				<a class="c-card-hero__link" href="/details/{{heroId}}"><button class="btn btn--primary c-card-hero__button">Details</button></a>
+				<a class="c-card-hero__link" href="/enter-world/{{heroId}}"><button class="btn btn--secondary c-card-hero__button">Enter World</button></a>
+				<a class="c-card-hero__link" href="/delete/{{heroId}}"><button class="btn btn--primary c-card-hero__button">Delete</button></a>
 				</article>
 				
 			</section>
