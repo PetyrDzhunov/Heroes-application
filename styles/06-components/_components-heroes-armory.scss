@@ -22,6 +22,9 @@
         display: block;
         overflow-x: hidden;
         overflow-y: auto;
+        @include for-phone-only {
+            max-height: 600px;
+        }
     }
     &__hero-row {
         border-radius: $image-radius;
@@ -33,9 +36,20 @@
         grid-template-columns: 1fr 1fr 1fr 1fr;
         margin: 4px 0;
         text-align: center;
+        @include for-phone-only {
+            grid-template-columns: 110px 100px 180px 1fr;
+        }
         &-class {}
-        &-level {}
-        &-name {}
+        &-level {
+            @include for-phone-only {
+                text-align: right;
+            }
+        }
+        &-name {
+            @include for-phone-only {
+                text-align: right;
+            }
+        }
         &-created {}
     }
     &__no-heroes-yet {
