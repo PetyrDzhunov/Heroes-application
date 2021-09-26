@@ -491,7 +491,7 @@ main {
       grid-template-rows: 1fr 8fr 1fr;
   max-width: 1800px;
   margin: 0 auto;
-  max-height: 100vh;
+  min-height: 100vh;
 }
 
 @media (max-width: 599px) {
@@ -700,7 +700,7 @@ main {
 @media (max-width: 599px) {
   .c-header__nav-link {
     margin-right: 20px;
-    font-size: 12px;
+    font-size: 16px;
     color: #9F2B68;
     -webkit-transition: .3s ease-out;
     transition: .3s ease-out;
@@ -876,6 +876,8 @@ main {
             flex-direction: column;
     overflow: scroll;
     background-image: none !important;
+    overflow: scroll;
+    max-height: 72vh;
   }
 }
 
@@ -1336,6 +1338,12 @@ main {
   height: 100%;
 }
 
+@media (max-width: 599px) {
+  .create-hero-section {
+    max-height: 75vh;
+  }
+}
+
 .create-hero-section__classes {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1349,6 +1357,15 @@ main {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+
+@media (max-width: 599px) {
+  .create-hero-section__classes {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 700px;
+  }
 }
 
 .create-hero-section__classes__class-title {
@@ -1372,11 +1389,25 @@ main {
   line-height: 1.3;
 }
 
+@media (max-width: 599px) {
+  .create-hero-section__classes__class-description {
+    font-size: 16px;
+  }
+}
+
 .create-hero-section__images {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 0.1fr 1.1fr 0.5fr;
       grid-template-rows: 0.1fr 1.1fr 0.5fr;
+}
+
+@media (max-width: 599px) {
+  .create-hero-section__images {
+    -ms-grid-rows: 0.1fr 0.5fr 1fr;
+        grid-template-rows: 0.1fr 0.5fr 1fr;
+    grid-row-gap: 30px;
+  }
 }
 
 .create-hero-section__images-description {
@@ -1404,6 +1435,13 @@ main {
   font-size: 20px;
 }
 
+@media (max-width: 599px) {
+  .create-hero-section__images-text {
+    text-align: center;
+    margin-right: 20px;
+  }
+}
+
 .create-hero-section__images-image-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1418,6 +1456,13 @@ main {
   margin: 0 auto;
 }
 
+@media (max-width: 599px) {
+  .create-hero-section__images-image-wrapper {
+    min-width: 100px;
+    max-height: 200px;
+  }
+}
+
 .create-hero-section__images-image-wrapper img {
   width: 100%;
   max-width: 500px;
@@ -1425,6 +1470,13 @@ main {
   border-radius: 12px;
   -webkit-transition: .5s ease-out;
   transition: .5s ease-out;
+}
+
+@media (max-width: 599px) {
+  .create-hero-section__images-image-wrapper img {
+    min-width: 100px;
+    max-height: 200px;
+  }
 }
 
 .create-hero-section__images-image-wrapper img:hover {
@@ -1452,12 +1504,24 @@ main {
   border: 3px solid #41BEAD;
 }
 
+@media (max-width: 599px) {
+  .create-hero-section__images-pick-section-wrapper {
+    width: auto;
+  }
+}
+
 .create-hero-section__images-pick-section-wrapper-label {
   color: #41BEAD;
   font-size: 20px;
   font-weight: bolder;
   margin: 15px 0;
   text-align: center;
+}
+
+@media (max-width: 599px) {
+  .create-hero-section__images-pick-section-wrapper-label {
+    margin: 0;
+  }
 }
 
 .create-hero-section__images-pick-section-wrapper-class {
@@ -1693,7 +1757,7 @@ main {
 
 @media (max-width: 599px) {
   .c-heroes-armory__tbody {
-    max-height: 600px;
+    max-height: 650px;
   }
 }
 
@@ -1749,8 +1813,25 @@ main {
   position: relative;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info {
+    overflow: scroll;
+    max-height: 75vh;
+    background-color: black;
+    background-image: none !important;
+  }
+}
+
 .additional-hero-info__stats-back-wrapper {
   min-width: 400px;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__stats-back-wrapper {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
 }
 
 .additional-hero-info__back {
@@ -1764,9 +1845,23 @@ main {
   padding: 20px 80px;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info__back-button {
+    padding: 6px 12px;
+  }
+}
+
 .additional-hero-info__image-wrapper {
   width: 450px;
   border-radius: 12px;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__image-wrapper {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
 }
 
 .additional-hero-info__image-wrapper-image {
@@ -1817,6 +1912,19 @@ main {
   font-weight: bolder;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info__label {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    text-align: center;
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+    margin-bottom: 20px;
+  }
+}
+
 .additional-hero-info__weapons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1831,9 +1939,32 @@ main {
           justify-content: space-evenly;
 }
 
+@media (max-width: 599px) {
+  .additional-hero-info__weapons {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: 120px 120px;
+        grid-template-columns: 120px 120px;
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+    grid-column-gap: 80px;
+    grid-row-gap: 40px;
+  }
+}
+
 .additional-hero-info__weapon {
   width: 140px;
   height: 140px;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__weapon {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .additional-hero-info__weapon-wrapper {
@@ -1844,6 +1975,12 @@ main {
           box-shadow: 0 3px 20px red, 0 0 20px red, 0 0 10px orange, 4px -5px 6px yellow, -4px -10px 10px yellow, 0 -10px 30px yellow;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
+}
+
+@media (max-width: 599px) {
+  .additional-hero-info__weapon-wrapper {
+    margin-bottom: 6px;
+  }
 }
 
 .additional-hero-info__weapon-wrapper:hover {

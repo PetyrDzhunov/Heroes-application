@@ -56,6 +56,9 @@ export async function deleteHero(context) {
 export async function armoryPage(context) {
     let heroes = await getAllHeroes();
     context.heroes = heroes;
+    let user = getUserData();
+    let username = getUserNameFromEmail(user.email);
+    context.username = username;
     await extendContext(context);
     this.partial('./templates/armory.hbs')
 }
@@ -64,7 +67,6 @@ export async function enterWorld(context) {
     const { id } = context.params;
     let user = getUserData();
     let hero = await getHero(id);
-    console.log(hero);
     let username = getUserNameFromEmail(user.email);
     context.username = username;
     await extendContext(context);
