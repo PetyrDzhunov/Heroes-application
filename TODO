@@ -1,0 +1,13 @@
+[] Fix when i create new Hero -> save my methods when creating new hero , should find a way to transform a instance of class to plain object and also to be liked by firebase...
+[x] Fix some of my css at login/register page
+[x] make a heroes capacity of 5 max
+[x] make a max class of 1 per hero
+[x]	do about page
+[x] delete hero?
+[] enter world?!
+[x] female/male (gender when creating character)
+[] some name validation on create-hero
+[x] details page
+[] think about a better way to work with my user/userData not invoking the function in every function , better call it in just 1 case so it can be always used.
+[x]fix background image - no-repeat
+[] all the cards with heroes should be the same size! no matter what!
