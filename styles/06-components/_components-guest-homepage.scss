@@ -15,8 +15,28 @@
 
 .c-guest-homepage {
     grid-column: 1/6;
+    grid-column: 1/ span end;
+    width: 100%;
+    height: 100%;
+    background-image: url('/assets/images/homepage.jpg');
+    background-repeat: no-repeat;
+    margin-top: 30px;
+    border-radius: $image-radius;
+    display: flex;
+    flex-flow: column wrap;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
     @include for-phone-only {
-        margin-bottom: 50px;
+        background-color: black;
+        min-height: 80vh;
+        display: flex;
+        flex-flow: column wrap;
+        justify-items: center;
+        align-items: center;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     &__title {
         @include for-phone-only {

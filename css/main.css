@@ -1108,6 +1108,19 @@ main {
   padding-bottom: 24px;
 }
 
+@media (max-width: 599px) {
+  .c-login-form {
+    height: 470px;
+    width: 80%;
+  }
+}
+
+@media (max-width: 599px) {
+  .c-login-form__wrapper {
+    min-height: 80vh;
+  }
+}
+
 .c-login-form__no-account-yet {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1123,10 +1136,26 @@ main {
           align-items: center;
 }
 
+@media (max-width: 599px) {
+  .c-login-form__no-account-yet {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
 .c-login-form__no-account-yet-title {
   color: #41BEAD;
   margin-right: 30px;
   margin-left: 30px;
+}
+
+@media (max-width: 599px) {
+  .c-login-form__no-account-yet-title {
+    font-size: 16px;
+    text-align: center;
+  }
 }
 
 .c-login-form__no-account-yet-link {
@@ -1135,6 +1164,14 @@ main {
   -webkit-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
   margin-right: 30px;
+}
+
+@media (max-width: 599px) {
+  .c-login-form__no-account-yet-link {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .c-login-form__no-account-yet-link:hover {
@@ -1224,6 +1261,19 @@ main {
   padding-bottom: 24px;
 }
 
+@media (max-width: 599px) {
+  .c-register-form__wrapper {
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 599px) {
+  .c-register-form {
+    height: 470px;
+    width: 80%;
+  }
+}
+
 .c-register-form__have-account-already {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1239,10 +1289,26 @@ main {
           align-items: center;
 }
 
+@media (max-width: 599px) {
+  .c-register-form__have-account-already {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+}
+
 .c-register-form__have-account-already-title {
   color: #41BEAD;
   margin-right: 30px;
   margin-left: 30px;
+}
+
+@media (max-width: 599px) {
+  .c-register-form__have-account-already-title {
+    font-size: 16px;
+    text-align: center;
+  }
 }
 
 .c-register-form__have-account-already-link {
@@ -1251,6 +1317,14 @@ main {
   -webkit-transition: color 0.5s ease-out;
   transition: color 0.5s ease-out;
   margin-right: 30px;
+}
+
+@media (max-width: 599px) {
+  .c-register-form__have-account-already-link {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .c-register-form__have-account-already-link:hover {
@@ -1340,7 +1414,13 @@ main {
 
 @media (max-width: 599px) {
   .create-hero-section {
-    max-height: 75vh;
+    min-height: 80vh;
+  }
+}
+
+@media (max-width: 599px) {
+  .create-hero-section__form {
+    min-height: 80vh;
   }
 }
 
@@ -1364,7 +1444,7 @@ main {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    height: 700px;
+    max-height: 1200px;
   }
 }
 
@@ -1507,6 +1587,8 @@ main {
 @media (max-width: 599px) {
   .create-hero-section__images-pick-section-wrapper {
     width: auto;
+    max-height: 280px;
+    padding-top: 20px;
   }
 }
 
@@ -1640,11 +1722,49 @@ main {
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
   grid-column: 1/6;
+  grid-column: 1/ span end;
+  width: 100%;
+  height: 100%;
+  background-image: url("/assets/images/homepage.jpg");
+  background-repeat: no-repeat;
+  margin-top: 30px;
+  border-radius: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media (max-width: 599px) {
   .c-guest-homepage {
-    margin-bottom: 50px;
+    background-color: black;
+    min-height: 80vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 
@@ -1731,6 +1851,12 @@ main {
   margin-bottom: 10px;
 }
 
+@media (max-width: 599px) {
+  .c-heroes-armory {
+    min-height: 75vh;
+  }
+}
+
 .c-heroes-armory__header {
   display: -ms-grid;
   display: grid;
@@ -1757,7 +1883,7 @@ main {
 
 @media (max-width: 599px) {
   .c-heroes-armory__tbody {
-    max-height: 650px;
+    min-height: 75vh;
   }
 }
 
