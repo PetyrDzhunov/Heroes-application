@@ -4,6 +4,9 @@
     max-height: 710px;
     border-radius: $image-radius;
     margin-bottom: 10px;
+    @include for-phone-only {
+        min-height: 75vh;
+    }
     &__header {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -23,7 +26,7 @@
         overflow-x: hidden;
         overflow-y: auto;
         @include for-phone-only {
-            max-height: 650px;
+            min-height: 75vh;
         }
     }
     &__hero-row {
