@@ -17,14 +17,14 @@ export async function extendContext(context) {
     const user = getUserData();
     context.loggedIn = Boolean(user);
     context.email = user ? user.email : '';
-    // const partials = await Promise.all([
-    //     context.load('./templates/partials/header.hbs'),
-    //     context.load('./templates/partials/footer.hbs')
-    // ]);
-    // context.partials = {
-    //     header: partials[0],
-    //     footer: partials[1]
-    // };
+    //     // const partials = await Promise.all([
+    //     //     context.load('./templates/partials/header.hbs'),
+    //     //     context.load('./templates/partials/footer.hbs')
+    //     // ]);
+    //     // context.partials = {
+    //     //     header: partials[0],
+    //     //     footer: partials[1]
+    //     // };
 };
 
 export async function errorHandler(error) {
