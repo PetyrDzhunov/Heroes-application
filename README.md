@@ -6,6 +6,7 @@ Its a single page application (SPA) made with JS , HTML , CSS , sammy.js for rou
 Clone the repository(takes 20seconds) write npm install in your terminal(1 minute) then write npm start in your terminal , which runs lite-server.
 
 
-![Alt Text](https://media.giphy.com/media/FqWdlvGqjLqMU8UGCn/giphy.gif)
+
+<img src="https://media.giphy.com/media/FqWdlvGqjLqMU8UGCn/giphy.gif" width="800" height="500" />
 
 
