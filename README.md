@@ -5,4 +5,7 @@ maximum 1 hero per class.
 Its a single page application (SPA) made with JS , HTML , CSS , sammy.js for routing and handlebars for templating.
 Clone the repository(takes 20seconds) write npm install in your terminal(1 minute) then write npm start in your terminal , which runs lite-server.
 
-https://ezgif.com/resize/ezgif-2-767b3a8bf9c8.gif
+
+![Alt Text](https://media.giphy.com/media/FqWdlvGqjLqMU8UGCn/giphy.gif)
+
+
