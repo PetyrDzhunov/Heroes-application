@@ -290,11 +290,10 @@ a {
 }
 
 body {
-  margin: 12px 0;
+  margin: 0;
   background-image: url("/assets/images/background-image.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  overflow: hidden;
 }
 
 abbr[title] {
@@ -491,7 +490,7 @@ main {
       grid-template-rows: 1fr 6fr 0.7fr;
   max-width: 1800px;
   margin: 0 auto;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 @media (max-width: 599px) {
@@ -920,10 +919,10 @@ main {
 .c-card-hero__image-wrapper-image {
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  height: 500px;
+  height: 250px;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media (max-width: 599px) {
@@ -1846,7 +1845,7 @@ main {
 .c-heroes-armory {
   background-color: #919191;
   margin-top: 10px;
-  max-height: 710px;
+  max-height: 740px;
   border-radius: 12px;
   margin-bottom: 10px;
 }
@@ -1875,7 +1874,7 @@ main {
 }
 
 .c-heroes-armory__tbody {
-  max-height: 710px;
+  max-height: 740px;
   display: block;
   overflow-x: hidden;
   overflow-y: auto;
@@ -1930,7 +1929,7 @@ main {
   background-image: url("/assets/images/homepage.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  height: 850px;
+  height: 540px;
   margin-top: 20px;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
@@ -1992,7 +1991,7 @@ main {
 
 .additional-hero-info__image-wrapper-image {
   width: 100%;
-  max-height: 600px;
+  max-height: 300px;
   border-radius: 12px;
   -webkit-transition: 0.5s ease-out;
   transition: 0.5s ease-out;
@@ -2016,13 +2015,13 @@ main {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 32px;
-  font-family: "Acronim";
+  font-family: 'Acronim';
   margin-left: 10px;
 }
 
 .additional-hero-info__information-createdOn, .additional-hero-info__information-level, .additional-hero-info__information-name-class {
   font-size: 32px;
-  font-family: "Acronim";
+  font-family: 'Acronim';
   color: #41BEAD;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -2032,7 +2031,7 @@ main {
 }
 
 .additional-hero-info__label {
-  font-family: "Acronim";
+  font-family: 'Acronim';
   font-size: 32px;
   color: #FF9100;
   font-weight: bolder;
@@ -2129,7 +2128,7 @@ main {
 }
 
 .additional-hero-info__stats-strenght, .additional-hero-info__stats-aggility, .additional-hero-info__stats-intelligence, .additional-hero-info__stats-stamina {
-  font-family: "Acronim";
+  font-family: 'Acronim';
   font-size: 32px;
   font-weight: bolder;
   color: #41BEAD;

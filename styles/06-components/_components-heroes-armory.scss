@@ -1,7 +1,7 @@
 .c-heroes-armory {
     background-color: $grey-500;
     margin-top: 10px;
-    max-height: 710px;
+    max-height: 740px;
     border-radius: $image-radius;
     margin-bottom: 10px;
     @include for-phone-only {
@@ -21,7 +21,7 @@
         display: block;
     }
     &__tbody {
-        max-height: 710px;
+        max-height: 740px;
         display: block;
         overflow-x: hidden;
         overflow-y: auto;

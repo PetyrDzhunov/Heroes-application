@@ -1,44 +1,58 @@
-import { homePage } from './controllers/home.js'
-import { registerPage, registerPost, loginPage, loginPost, logout, deleteHero, armoryPage, enterWorld } from "./controllers/user.js";
-import { createNewHero, createNewHeroPost, detailsPage } from "./controllers/catalog.js";
+import { homePage } from './controllers/home.js';
+import {
+  registerPage,
+  registerPost,
+  loginPage,
+  loginPost,
+  logout,
+  deleteHero,
+  armoryPage,
+  enterWorld,
+} from './controllers/user.js';
+import {
+  createNewHero,
+  createNewHeroPost,
+  detailsPage,
+} from './controllers/catalog.js';
 
+const app = Sammy('#app', function () {
+  this.use('Handlebars', 'hbs');
+  this.get('/', homePage);
+  this.get('/home', homePage);
 
-const app = Sammy('#app', function() {
+  //Register
 
-    this.use('Handlebars', 'hbs');
-    this.get('/', homePage);
-    this.get('/home', homePage);
+  this.get('/register', registerPage);
+  this.post('/register', (ctx) => {
+    registerPost(ctx);
+  });
 
+  //Login
+  this.get('/login', loginPage);
+  this.post('/login', (ctx) => {
+    loginPost(ctx);
+  });
 
-    //Register
+  //create-hero
+  this.get('/create-hero', createNewHero);
+  this.post('/create-hero', (ctx) => {
+    createNewHeroPost(ctx);
+  });
 
-    this.get('/register', registerPage);
-    this.post('/register', (ctx) => { registerPost(ctx); });
+  //logout
+  this.get('/logout', logout);
 
-    //Login
-    this.get('/login', loginPage);
-    this.post('/login', (ctx) => { loginPost(ctx); });
+  //delete
+  this.get('/delete/:id', deleteHero);
 
-    //create-hero
-    this.get('/create-hero', createNewHero);
-    this.post('/create-hero', (ctx) => { createNewHeroPost(ctx); });
+  //about
+  this.get('/armory', armoryPage);
 
-    //logout
-    this.get('/logout', logout)
+  //details
+  this.get('/details/:id', detailsPage);
 
-    //delete
-    this.get('/delete/:id', deleteHero)
-
-    //about
-    this.get('/armory', armoryPage)
-
-    //details
-    this.get('/details/:id', detailsPage)
-
-    //enter-world
-    this.get('/enter-world/:id', enterWorld)
-
+  //enter-world
+  this.get('/enter-world/:id', enterWorld);
 });
 
-
-app.run('/home')
+app.run('/home');

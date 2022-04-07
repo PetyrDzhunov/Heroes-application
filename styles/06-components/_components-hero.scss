@@ -38,9 +38,9 @@
         &-image {
             border-top-left-radius: $image-radius;
             border-top-right-radius: $image-radius;
-            height: 500px;
+            height: 250px;
             width: 100%;
-            object-fit: cover;
+            object-fit: contain;
             @include for-phone-only {
                 height: 200px;
                 object-fit: contain;
